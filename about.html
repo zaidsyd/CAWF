@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from html.awaikenthemes.com/toplax/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 May 2025 06:59:14 GMT -->
 <head>
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -11,9 +10,9 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Awaiken">
 	<!-- Page Title -->
-    <title>Toplax - Factory & Industry HTML Template</title>
+    <title>CAWF | About</title>
 	<!-- Favicon Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo/cawf black.png">
 	<!-- Google Fonts Css-->
 	<link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -34,6 +33,96 @@
 	<link rel="stylesheet" href="css/mousecursor.css">
 	<!-- Main Custom Css -->
 	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        .text-justify {
+            text-align: justify;
+        }
+
+        .cawf_slider__container {
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+            background: #000;
+            /* optional background */
+        }
+
+        .cawf_slider__wrapper div {
+            margin-left: 10px
+        }
+
+        .cawf_slider__wrapper img {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+
+        .cawf_cert_slider__wrapper .cawf_cert_slider__slide {
+            padding: 0 10px;
+        }
+
+        .cawf_cert_slider__slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Arrow custom (optional) */
+        .slick-prev:before,
+        .slick-next:before {
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 12px;
+            color: #0e0e0e;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #ffffff;
+        }
+
+        .navbar-brand img {
+            height: 80px;
+        }
+
+        .hero-slide .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-links h3 {
+            color: #b56b33;
+        }
+
+        @media (max-width:789px) {
+            .navbar-brand img {
+                height: 65px;
+            }
+
+            .cawf_cert_slider__slide img {
+                height: 200px;
+            }
+
+            .cawf_slider__wrapper img {
+                height: 150px;
+            }
+
+            .slicknav_nav .nav-item a {
+                font-weight: bold;
+            }
+        }
+    </style>
+
 </head>
 <body>
 
@@ -41,125 +130,18 @@
 	<div class="preloader">
 		<div class="loading-container">
 			<div class="loading"></div>
-			<div id="loading-icon"><img src="images/loader.svg" alt=""></div>
+			<div id="loading-icon"><img src="images/logo/cawf black.png" alt=""></div>
 		</div>
 	</div>
 	<!-- Preloader End -->
 
-    <!-- Topbar Section Start -->
-    <div class="topbar">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <div class="site-logo">
-                        <a href="index.html">
-                            <img src="images/logo.svg" alt="Logo">
-                        </a>
-                    </div>
-					<!-- Logo End -->
-                </div>
-
-                <div class="col-lg-9 col-md-12">
-                    <!-- Topbar Contact Information Start -->
-                    <div class="topbar-contact-info">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <div class="icon-box">
-                                        <img src="images/icon-phone.svg" alt="">
-                                    </div>
-                                    <p>+(123) 698-5245</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="icon-box">
-                                        <img src="images/icon-mail.svg" alt="">
-                                    </div>
-                                     <p>info@domain.com</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- Topbar Qoute Button Start -->
-                        <div class="topbar-qoute-btn">
-                            <a href="contact.html" class="btn-default"><span>Get a quote</span></a>
-                        </div>
-                        <!-- Topbar Qoute Button End -->
-                    </div>
-                    <!-- Topbar Contact Information End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar Section End -->
-
     <!-- Header Start -->
-	<header class="main-header">
-		<div class="header-sticky">
-			<nav class="navbar navbar-expand-lg">
-				<div class="container">
-                    <!-- Logo Start -->
-					<a class="navbar-brand" href="index.html">
-						<img src="images/footer-logo.svg" alt="Logo">
-					</a>
-					<!-- Logo End -->
-
-					<!-- Main Menu Start -->
-					<div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item submenu"><a class="nav-link" href="index.html">Home</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="index-2.html">Home - Image</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-video.html">Home - Video</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-slider.html">Home - Slider</a></li>
-                                    </ul>
-                                </li>                                
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
-                                    <ul>                                        
-                                        <li class="nav-item"><a class="nav-link" href="service-single.html">Service Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="project-single.html">Project Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team-single.html">Team Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing Plan</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="testimonial.html">Testimonials</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Video Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>                             
-                            </ul>
-                        </div>
-
-                        <!-- Header Social Box Start -->
-                        <div class="header-social-box d-inline-flex">
-                            <!-- Header Social Links Start -->
-                            <div class="header-social-links">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Header Social Links End -->
-                        </div>     
-                        <!-- Header Social Box End -->                   
-					</div>
-					<!-- Main Menu End -->
-					<div class="navbar-toggle"></div>
-				</div>
-			</nav>
-			<div class="responsive-menu"></div>
-		</div>
-	</header>
-	<!-- Header End -->
+    <header class="main-header" id="header">
+        <script>
+            $('#header').load('header.html');
+        </script>
+    </header>
+    <!-- Header End -->
 
     <!-- Page Header Start -->
 	<div class="page-header parallaxie">
@@ -171,7 +153,7 @@
 						<h1 class="text-anime-style-2" data-cursor="-opaque">About <span>Us</span></h1>
 						<nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">home</a></li>
+								<li class="breadcrumb-item"><a href="index-main.html">home</a></li>
 								<li class="breadcrumb-item active" aria-current="page">about us</li>
 							</ol>
 						</nav>
@@ -184,7 +166,7 @@
 	<!-- Page Header End -->
 
     <!-- About Us Start -->
-     <div class="about-us">
+    <div class="about-us">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -209,7 +191,7 @@
                         <!-- Company Experience Start -->
                         <div class="company-experience">
                             <div class="company-experience-counter">
-                                <h2><span class="counter">25</span>+</h2>
+                                <h2><span class="counter">10</span>+</h2>
                             </div>
                             <div class="company-experience-content">
                                 <p>years of experience</p>
@@ -225,9 +207,9 @@
                     <div class="about-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">about us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Building quality through <span>industrial innovation</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">At the heart of our operations is a commitment to delivering superior products through cutting-edge technology and innovative processes.</p>
+                            <h3 class="wow fadeInUp">about CAWF</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Building a Stronger    <span>Industry Together</span></h2>
+                            <p class="wow fadeInUp text-justify text-justify" data-wow-delay="0.25s">Cine Artist & Worker Welfare Federation (CAWF) is a dedicated organization committed to the welfare and empowerment of professionals in the Indian film and television industry. We provide support, advocacy, and skill development opportunities to cine artists and workers, ensuring their rights and well-being are protected.</p>
                         </div>
                         <!-- Section Title End -->
                 
@@ -239,17 +221,17 @@
                                         <!-- About Content List Start -->
                                         <div class="about-content-list wow fadeInUp" data-wow-delay="0.5s">
                                             <ul>
-                                                <li>sustainable manufacturing</li>
-                                                <li>advanced automation</li>
-                                                <li>efficient production processes</li>
-                                                <li>reliable delivery services</li>
+                                                <li>Industry-Ready Training Programs</li>
+                                                <li>Professional Mentors & Coaches</li>
+                                                <li>Real Shoot & Audition Exposure</li>
+                                                <li>Personality Development & Grooming</li>
                                             </ul>
                                         </div>
                                         <!-- About Content List End -->
                 
                                         <!-- About Content Btn Start -->
                                         <div class="about-content-btn wow fadeInUp" data-wow-delay="0.75s">
-                                            <a href="contact.html" class="btn-default"><span>contact us</span></a>
+                                            <a href="#" class="btn-default"><span>learn more</span></a>
                                         </div>
                                         <!-- About Content Btn End -->
                                     </div>
@@ -303,7 +285,7 @@
                         <!-- Section Title Start -->
                         <div class="section-title dark-section">
                             <h3 class="wow fadeInUp">our approach</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Empowering sustainable <span>growth in industry</span></h2>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Inspiring Creative   <span>Excellence Worldwide</span></h2>
                         </div>
                         <!-- Section Title End -->
                     </div>
@@ -311,7 +293,7 @@
                     <div class="col-lg-6">
                         <!-- Section Title Content Start -->
                         <div class="section-title-content dark-section wow fadeInUp" data-wow-delay="0.25s">
-                            <p>We drive sustainable solutions in factory and industrial settings, focusing on efficiency, innovation, and environmental responsibility to support long-term growth.</p>
+                            <p class="text-justify">At CAWF, we are committed to fostering a supportive and inclusive environment for all cine artists and workers. We prioritize their welfare by providing timely assistance, advocating for their rights, and creating opportunities for skill development. </p>
                         </div>
                         <!-- Section Title Content End -->
                     </div>
@@ -334,7 +316,7 @@
                                     <button class="nav-link" id="installation-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button" role="tab" aria-selected="false"><img src="images/icon-vision-nav.svg" alt=""> our vision</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="value-tab" data-bs-toggle="tab" data-bs-target="#value" type="button" role="tab" aria-selected="false"><img src="images/icon-value-nav.svg" alt=""> our value</button>
+                                    <button class="nav-link" id="value-tab" data-bs-toggle="tab" data-bs-target="#value" type="button" role="tab" aria-selected="false"><img src="images/icon-value-nav.svg" alt=""> Core value</button>
                                 </li>
                             </ul>
                         </div>
@@ -347,15 +329,15 @@
                                     <!-- Mission Vision Content Start -->
                                     <div class="mission-vision-content">
                                         <div class="mission-vision-content-header">
-                                            <p>Our mission is to transform the factory and industry sectors through sustainable practices, innovation, and advanced technology, fostering growth that benefits both business and the environment.</p>
+                                            <p class="text-justify">Our mission is to uplift the creative workforce and entertainment industry by empowering artists and workers through education, welfare initiatives, and social security programs, building a stronger, more inclusive creative community.</p>
                                         </div>
     
                                         <div class="mission-vision-content-list">
                                             <ul>
-                                                <li>Sustainable Manufacturing Practices</li>
-                                                <li>Advanced Technology Integration</li>
-                                                <li>Community Environmental Responsibility</li>
-                                                <li>Innovation-Driven Growth</li>
+                                                <li>Skill Development & Training Programs</li>
+                                                <li> Healthcare & Insurance Support</li>
+                                                <li> Social Security & Welfare Schemes</li>
+                                                <li>Artist Empowerment & Cultural Growth</li>
                                             </ul>
                                         </div>                                     
                                     </div>
@@ -382,15 +364,15 @@
                                     <!-- Mission Vision Content Start -->
                                     <div class="mission-vision-content">
                                         <div class="mission-vision-content-header">
-                                            <p>Our vision is to transform the factory and industry sectors through sustainable practices, innovation, and advanced technology, fostering growth that benefits both business and the environment.</p>
+                                            <p class="text-justify">Our vision is to build a future where every artist and worker in the creative industry thrives with dignity, opportunity, and protection — creating a sustainable ecosystem that values talent, promotes equality, and nurtures cultural excellence.</p>
                                         </div>
     
                                         <div class="mission-vision-content-list">
                                             <ul>
-                                                <li>Sustainable Manufacturing Practices</li>
-                                                <li>Advanced Technology Integration</li>
-                                                <li>Community Environmental Responsibility</li>
-                                                <li>Innovation-Driven Growth</li>
+                                                <li>Inclusive Growth for All Creatives</li>
+                                                <li>Equal Opportunities Across the Industry</li>
+                                                <li>Long-Term Social and Economic Security</li>
+                                                <li>A Thriving, Respected Artistic Community</li>
                                             </ul>
                                         </div>                                    
                                     </div>
@@ -417,15 +399,15 @@
                                     <!-- Mission Vision Content Start -->
                                     <div class="mission-vision-content">
                                         <div class="mission-vision-content-header">
-                                            <p>Our value is to transform the factory and industry sectors through sustainable practices, innovation, and advanced technology, fostering growth that benefits both business and the environment.</p>
+                                            <p class="text-justify">Our core values guide every initiative we take. We are committed to building a creative industry where integrity, respect, and innovation empower artists and workers to reach their fullest potential with pride and purpose.</p>
                                         </div>
     
                                         <div class="mission-vision-content-list">
                                             <ul>
-                                                <li>Sustainable Manufacturing Practices</li>
-                                                <li>Advanced Technology Integration</li>
-                                                <li>Community Environmental Responsibility</li>
-                                                <li>Innovation-Driven Growth</li>
+                                                <li>Integrity and Transparency</li>
+                                                <li>Respect for All Professions</li>
+                                                <li>Commitment to Social Welfare</li>
+                                                <li>Innovation with Responsibility</li>
                                             </ul>
                                         </div>                                     
                                     </div>
@@ -460,7 +442,7 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">our history</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Foundation of excellences <span>in industry</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Foundation of Excellence in<span>Entertainment Industry</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -468,7 +450,7 @@
                 <div class="col-lg-6">
                     <!-- Section Title Content Start -->
                     <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
-                        <p>Built on a legacy of quality and innovation, we have established a strong foundation in the industrial sector, consistently delivering reliable solutions that drive progress and set industry standards.</p>
+                        <p class="text-justify">Built on a legacy of trust and dedication, we have created a solid foundation in the film and television sector, consistently supporting artists and workers with welfare, advocacy, and skill development programs that uplift the community and shape industry standards.</p>
                     </div>
                     <!-- Section Title Content End -->
                 </div>
@@ -482,19 +464,19 @@
                         <div class="our-history-nav">
                             <ul class="nav nav-tabs" id="historyTab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="1920-tab" data-bs-toggle="tab" data-bs-target="#1920" type="button" role="tab" aria-selected="true">In 1920 - Planning</button>
+                                    <button class="nav-link active" id="1920-tab" data-bs-toggle="tab" data-bs-target="#1920" type="button" role="tab" aria-selected="true">2020 – Vision Established</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="1922-tab" data-bs-toggle="tab" data-bs-target="#1922" type="button" role="tab" aria-selected="false">In 1922 -  Journey Started</button>
+                                    <button class="nav-link" id="1922-tab" data-bs-toggle="tab" data-bs-target="#1922" type="button" role="tab" aria-selected="false">2021 – Official Launch</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="1925-tab" data-bs-toggle="tab" data-bs-target="#1925" type="button" role="tab" aria-selected="false">In 1925 - Journey Progress</button>
+                                    <button class="nav-link" id="1925-tab" data-bs-toggle="tab" data-bs-target="#1925" type="button" role="tab" aria-selected="false">2022 – First Welfare Initiatives</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="1930-tab" data-bs-toggle="tab" data-bs-target="#1930" type="button" role="tab" aria-selected="false">In 1930 - Global Reach</button>
+                                    <button class="nav-link" id="1930-tab" data-bs-toggle="tab" data-bs-target="#1930" type="button" role="tab" aria-selected="false">2023 – Expanded Membership</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="1940-tab" data-bs-toggle="tab" data-bs-target="#1940" type="button" role="tab" aria-selected="false">In 1940 - Industry Leadership</button>
+                                    <button class="nav-link" id="1940-tab" data-bs-toggle="tab" data-bs-target="#1940" type="button" role="tab" aria-selected="false">2024 – Industry Collaborations</button>
                                 </li>
                             </ul>
                         </div>
@@ -508,17 +490,17 @@
                                     <div class="our-history-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title">
-                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Company <span>started</span></h2>
-                                            <p>Welcome to Industry, a leading industry innovator with a rich history of excellence. With a passion for precision and a commitment to quality, we have been empowering industries and driving progress.</p>
+                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Vision   <span>Established</span></h2>
+                                            <p class="text-justify">Welcome to CAWF, a forward-thinking federation built on the vision of a fair, empowered, and inclusive entertainment industry. In 2020, we laid the groundwork for an organization dedicated to supporting the lives and careers of cine artists and workers</p>
                                         </div>
                                         <!-- Section Title End -->
     
                                         <div class="our-history-list">
                                             <ul>
-                                                <li>Quality Control System</li>
-                                                <li>Building Quality Industrial</li>
-                                                <li>Environmental Responsibility</li>
-                                                <li>Building Quality Industrial</li>
+                                                <li>Welfare & Support Systems</li>
+                                                <li>Skill Development Initiatives</li>
+                                                <li>Ethical & Fair Practices</li>
+                                                <li>Promoting transparency</li>
                                             </ul>
                                         </div>                                     
                                     </div>
@@ -546,17 +528,17 @@
                                     <div class="our-history-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title">
-                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Journey <span>started</span></h2>
-                                            <p>Welcome to Industry, a leading industry innovator with a rich history of excellence. With a passion for precision and a commitment to quality, we have been empowering industries and driving progress.</p>
+                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Official   <span> Launch</span></h2>
+                                            <p class="text-justify">In 2021, CAWF was officially registered as a non-profit welfare federation, marking a major milestone in our journey. This formal recognition empowered us to operate at a larger scale, reach more industry professionals, and strengthen our voice as a representative body.</p>
                                         </div>
                                         <!-- Section Title End -->
     
                                         <div class="our-history-list">
                                             <ul>
-                                                <li>Quality Control System</li>
-                                                <li>Building Quality Industrial</li>
-                                                <li>Environmental Responsibility</li>
-                                                <li>Building Quality Industrial</li>
+                                                <li>Legal Identity & Governance</li>
+                                                <li>Membership Enrollment Begins</li>
+                                                <li>Partnership Building</li>
+                                                <li>Foundation for Welfare Programs</li>
                                             </ul>
                                         </div>                                     
                                     </div>
@@ -584,17 +566,17 @@
                                     <div class="our-history-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title">
-                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Journey <span>progress</span></h2>
-                                            <p>Welcome to Industry, a leading industry innovator with a rich history of excellence. With a passion for precision and a commitment to quality, we have been empowering industries and driving progress.</p>
+                                            <h2 class="text-anime-style-2" data-cursor="-opaque">First Welfare  <span>Initiatives</span></h2>
+                                            <p class="text-justify">With the foundation firmly in place, 2022 marked the beginning of an extensive outreach campaign. CAWF actively connected with cine artists, technicians, and workers across regions to raise awareness about their rights, benefits, and opportunities through the federation.</p>
                                         </div>
                                         <!-- Section Title End -->
     
                                         <div class="our-history-list">
                                             <ul>
-                                                <li>Quality Control System</li>
-                                                <li>Building Quality Industrial</li>
-                                                <li>Environmental Responsibility</li>
-                                                <li>Building Quality Industrial</li>
+                                                <li>On-Ground Awareness Drives</li>
+                                                <li>Digital Enrollment Platform Launched</li>
+                                                <li>Community Building Events</li>
+                                                <li>Feedback & Listening Forums</li>
                                             </ul>
                                         </div>                                     
                                     </div>
@@ -622,17 +604,17 @@
                                     <div class="our-history-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title">
-                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Global <span>reach</span></h2>
-                                            <p>Welcome to Industry, a leading industry innovator with a rich history of excellence. With a passion for precision and a commitment to quality, we have been empowering industries and driving progress.</p>
+                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Expanded   <span>Membership</span></h2>
+                                            <p class="text-justify">As our welfare initiatives gained momentum, 2023 also became a landmark year for membership growth. CAWF expanded its reach to include a broader spectrum of industry professionals — from junior artists and backstage crew to emerging talent in regional cinema. </p>
                                         </div>
                                         <!-- Section Title End -->
     
                                         <div class="our-history-list">
                                             <ul>
-                                                <li>Quality Control System</li>
-                                                <li>Building Quality Industrial</li>
-                                                <li>Environmental Responsibility</li>
-                                                <li>Building Quality Industrial</li>
+                                                <li>Pan-India Representation</li>
+                                                <li>Inclusive Enrollment Policies</li>
+                                                <li>Member Benefits Introduced</li>
+                                                <li>Growing Community, Stronger Voice</li>
                                             </ul>
                                         </div>                                     
                                     </div>
@@ -660,17 +642,17 @@
                                     <div class="our-history-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title">
-                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Industry <span>leader</span></h2>
-                                            <p>Welcome to Industry, a leading industry innovator with a rich history of excellence. With a passion for precision and a commitment to quality, we have been empowering industries and driving progress.</p>
+                                            <h2 class="text-anime-style-2" data-cursor="-opaque">Industry   <span>Collaborations</span></h2>
+                                            <p class="text-justify">In 2024, CAWF expanded its impact through key partnerships with production houses, training institutes, and government bodies, strengthening welfare programs and creating more opportunities and protections for cine artists and workers. </p>
                                         </div>
                                         <!-- Section Title End -->
     
                                         <div class="our-history-list">
                                             <ul>
-                                                <li>Quality Control System</li>
-                                                <li>Building Quality Industrial</li>
-                                                <li>Environmental Responsibility</li>
-                                                <li>Building Quality Industrial</li>
+                                                <li>Alliances with Production Houses</li>
+                                                <li>Government & Policy Engagement</li>
+                                                <li>Training & Certification Programs</li>
+                                                <li>Joint Events & Festivals</li>
                                             </ul>
                                         </div>                                     
                                     </div>
@@ -706,8 +688,8 @@
                     <div class="what-we-do-content">
                         <!-- Section Title Start -->
                         <div class="section-title dark-section">
-                            <h3 class="wow fadeInUp">what we do</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Innovative factory and industry <span>solutions today</span></h2>
+                            <h3 class="wow fadeInUp">why choose us</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Empowering Creators Through   <span>Passion and Skill</span></h2>
                         </div>
                         <!-- Section Title End -->
 
@@ -720,8 +702,8 @@
                                         <img src="images/icon-who-we-do-1.svg" alt="">
                                     </div>
                                     <div class="what-we-item-content">
-                                        <h3>automation solutions</h3>
-                                        <p>Streamlining processes through cutting-edge technology.</p>
+                                        <h3>Guided by Industry Experts</h3>
+                                        <p class="text-justify">Receive mentorship from renowned artists and technicians with years of experience in film, TV, and digital media.</p>
                                     </div>
                                 </div>
                                 <!-- What We Do Item End -->
@@ -732,8 +714,8 @@
                                         <img src="images/icon-who-we-do-2.svg" alt="">
                                     </div>
                                     <div class="what-we-item-content">
-                                        <h3>quality control</h3>
-                                        <p>Ensuring product excellence through rigorous testing.</p>
+                                        <h3> Practical, Real-World Exposure</h3>
+                                        <p class="text-justify">Participate in hands-on sessions on active sets, studios, and live productions to gain real industry insight.</p>
                                     </div>
                                 </div>
                                 <!-- What We Do Item End -->
@@ -746,8 +728,8 @@
                                         <img src="images/icon-who-we-do-3.svg" alt="">
                                     </div>
                                     <div class="what-we-item-content">
-                                        <h3>process engineering</h3>
-                                        <p>Ensuring product excellence through rigorous testing.</p>
+                                        <h3> Skill-Driven Learning</h3>
+                                        <p class="text-justify">Our training programs focus on essential skills — from acting and camera work to editing and direction — tailored to current industry needs.</p>
                                     </div>
                                 </div>
                                 <!-- What We Do Item End -->
@@ -758,20 +740,14 @@
                                         <img src="images/icon-who-we-do-4.svg" alt="">
                                     </div>
                                     <div class="what-we-item-content">
-                                        <h3>product development</h3>
-                                        <p>Streamlining processes through cutting-edge technology.</p>
+                                        <h3>Access to Powerful Networks</h3>
+                                        <p class="text-justify">Get connected with producers, casting agents, and industry veterans through exclusive workshops, events, and collaborations.</p>
                                     </div>
                                 </div>
                                 <!-- What We Do Item End -->
                             </div>                                         
                         </div>
                         <!-- What We Do List Start -->
-
-                        <!-- What We Do Footer Start -->
-                        <div class="what-we-do-footer">
-                            <p>Lorem ipsum is a placeholder text commonly used <span>to demonstrate</span></p>
-                        </div>
-                        <!-- What We Do Footer End -->
                     </div>
                     <!-- What We Do Content End -->
                 </div>
@@ -804,7 +780,7 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">our key feature</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Core strengths in <span>industrial innovation</span></h2>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Strengthening the Creative   <span>Workforce</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -812,7 +788,7 @@
                 <div class="col-lg-6">
                     <!-- Section Title Content Start -->
                     <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
-                        <p>Our expertise in industrial innovation combines advanced technology, sustainable practices, and a skilled workforce to deliver efficient, future-ready solutions that drive industry progress.</p>
+                        <p>Our commitment lies in empowering every artist and industry worker through real support, fair opportunities, and consistent advocacy. We work to uplift the film, fashion, and creative communities by providing essential services, education, and a voice where it's needed most.</p>
                     </div>
                     <!-- Section Title Content End -->
                 </div>
@@ -827,8 +803,8 @@
                             <img src="images/icon-features-1.svg" alt="">
                         </div>
                         <div class="features-item-content">
-                            <h3>Advanced Technology Integration</h3>
-                            <p>We integrate cutting-edge technologies into every aspect of our operations, enhancing efficiency, precision, and innovation to deliver superior industrial solutions.</p>
+                            <h3>Professional Training & Career Development</h3>
+                            <p>We provide structured training programs in modeling, acting, photography, videography, and cinematography — equipping aspiring and working professionals with the skills needed to thrive in today’s competitive creative landscape.</p>
                         </div>
                     </div>
                     <!-- Our Features Item End -->
@@ -839,8 +815,8 @@
                             <img src="images/icon-features-2.svg" alt="">
                         </div>
                         <div class="features-item-content">
-                            <h3>Uncompromising Quality Standards</h3>
-                            <p>We uphold the highest quality standards across all processes, ensuring consistency, reliability, and excellence in every product and service we deliver.</p>
+                            <h3>Protection of Rights & Fair Support</h3>
+                            <p>CAWF actively supports artists and workers facing workplace injustice or exploitation. Through our welfare services, we ensure timely help, legal guidance, and fair representation for every member in need.</p>
                         </div>
                     </div>
                     <!-- Our Features Item End -->
@@ -851,8 +827,8 @@
                             <img src="images/icon-features-3.svg" alt="">
                         </div>
                         <div class="features-item-content">
-                            <h3>Continuous Innovation and R&D</h3>
-                            <p>We prioritize ongoing research and development to drive continuous innovation, staying ahead of industry trends and creating advanced solutions that meet evolving market demands.</p>
+                            <h3> Empowerment Through Opportunities & Recognition</h3>
+                            <p>We continuously create opportunities for talent to shine — from fashion events and short films to talent hunts and award shows. By recognizing achievements and enabling industry access, CAWF helps artists and workers grow with dignity and direction.</p>
                         </div>
                     </div>
                     <!-- Our Features Item End -->
@@ -878,8 +854,8 @@
                 <div class="col-lg-6">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">our process</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Streamlined processes <span>for optimal efficiency</span></h2>
+                        <h3 class="wow fadeInUp">OUR CREATIVE JOURNEY</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Guiding you from raw talent  <span> to stardom</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
@@ -887,7 +863,7 @@
                 <div class="col-lg-6">
                     <!-- Section Title Content Start -->
                     <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
-                        <p>Our process is designed to maximize efficiency and quality at every stage of production. By integrating advanced technologies and best practices, we ensure seamless workflows.</p>
+                        <p class="text-justify">Our step-by-step process is crafted to unlock your full potential. From discovering your unique spark to showcasing it on the big stage — we mentor, mold, and magnify your artistic identity.</p>
                     </div>
                     <!-- Section Title Content End -->
                 </div>
@@ -913,8 +889,8 @@
                                 <h2>01</h2>
                             </div>
                             <div class="process-step-content">
-                                <h3>understanding your needs</h3>
-                                <p>We begin by thoroughly assessing your requirements and objectives to develop a tailored approach.</p>
+                                <h3>Talent Discovery</h3>
+                                <p class="text-justify">We begin by identifying your strengths and passions through personalized assessments and creative interactions.</p>
                             </div>
                         </div>
                         <!-- Process Step Item End -->
@@ -925,8 +901,8 @@
                                 <h2>02</h2>
                             </div>
                             <div class="process-step-content">
-                                <h3>design and planning</h3>
-                                <p>Our team collaborates to create detailed project plans, ensuring all aspects of the process.</p>
+                                <h3> Skill Building & Coaching</h3>
+                                <p class="text-justify">With expert-led sessions in acting, modeling, and technical arts, we develop your core skills through hands-on practice and real-time feedback.</p>
                             </div>
                         </div>
                         <!-- Process Step Item End -->
@@ -937,8 +913,8 @@
                                 <h2>03</h2>
                             </div>
                             <div class="process-step-content">
-                                <h3>implementation</h3>
-                                <p>Utilizing advanced technologies and skilled personnel, we execute the project</p>
+                                <h3>Industry Exposure & Portfolio Launch</h3>
+                                <p class="text-justify">Get featured in curated shoots, showreels, and projects — and connect with agencies, casting directors, and studios.</p>
                             </div>
                         </div>
                         <!-- Process Step Item End -->
@@ -1113,6 +1089,169 @@
     </div>
     <!-- Our Team Section End -->
 
+    <!-- Our Faqs Section Start -->
+    <div class="our-faqs">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-5">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">FAQs</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Frequently asked <span>questions</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+                <div class="col-lg-7">
+                    <!-- Section Button Start -->
+                    <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
+                        <a href="#" class="btn-default"><span>Contact Us</span></a>
+                    </div>
+                    <!-- Section Button End -->
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Our Faqs Images Start -->
+                    <div class="our-faqs-images">
+                        <!-- Our Faqs Image Start -->
+                        <div class="our-faqs-img">
+                            <figure class="image-anime">
+                                <img src="images/our-faqs-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Our Faqs Image End -->
+
+                        <!-- Faqs Image Cta Box Start -->
+                        <div class="faqs-img-cta-box">
+                            <ul>
+                                <li><a href="tel:+919555584040"><img src="images/icon-phone-accent.svg" alt=""> +91
+                                        9555584040</a></li>
+                                <li><a href="mailto:hello@cawf.in"><img src="images/icon-mail-accent.svg" alt="">
+                                        hello@cawf.in</a></li>
+                            </ul>
+                        </div>
+                        <!-- Faqs Image Cta Box End -->
+                    </div>
+                    <!-- Our Faqs Images End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="our-faq-section">
+                        <!-- FAQ Accordion Start -->
+                        <div class="faq-accordion" id="faqaccordion">
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        What is CAWF?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            CAWF stands for Cine Artist & Workers Welfare Federation. It is a non-profit
+                                            organization that supports and empowers people working in the film and TV
+                                            industry.
+
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        Who can join CAWF?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>Any artist or worker from the entertainment industry can join — including
+                                            actors, junior artists, spot boys, lightmen, technicians, makeup artists,
+                                            cameramen, and more..</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        What benefits do members get?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Members receive access to medical support, emergency financial help, legal
+                                            aid, training workshops, and welfare programs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Is CAWF involved in media or press activities?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Yes. CAWF regularly shares news, updates, and announcements through press
+                                            conferences and media platforms to keep everyone informed.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
+                                <h2 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        How can I become a member of CAWF?
+                                    </button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            You can become a member by filling a simple registration form and submitting
+                                            basic documents. Membership can be applied online or by visiting our office.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+                        </div>
+                        <!-- FAQ Accordion End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Faqs Section End -->
+
     <!-- Our Testimonial Section Start -->
     <div class="our-testimonial">
         <div class="container">
@@ -1153,7 +1292,7 @@
                                             </div>
 
                                             <div class="testimonial-content">
-                                                <p>"The team's attention to detail and commitment to quality exceeded our expectations. They delivered on time, and their innovative solutions improved our production efficiency by 30%. Highly recommended!"</p>
+                                                <p>"I joined with zero experience, but the mentors here transformed my confidence. Today, I’m doing shoots and auditions I never imagined!"</p>
                                             </div>
 
                                             <div class="testimonial-body">
@@ -1163,8 +1302,8 @@
                                                     </figure>
                                                 </div>            
                                                 <div class="author-content">
-                                                    <h3>Brooklyn Simmons</h3>
-                                                    <p>Homeowner</p>
+                                                    <h3> Riya Sharma</h3>
+                                                    <p>Aspiring Model</p>
                                                 </div>
                                             </div>                                    
                                         </div>
@@ -1183,7 +1322,7 @@
                                             </div>
 
                                             <div class="testimonial-content">
-                                                <p>"The team's attention to detail and commitment to quality exceeded our expectations. They delivered on time, and their innovative solutions improved our production efficiency by 30%. Highly recommended!"</p>
+                                                <p>"The acting classes helped me bring life to every scene. From stage fear to screen presence — this place made it happen."</p>
                                             </div>
 
                                             <div class="testimonial-body">
@@ -1193,8 +1332,8 @@
                                                     </figure>
                                                 </div>            
                                                 <div class="author-content">
-                                                    <h3>albert flores</h3>
-                                                    <p>senior engineer</p>
+                                                    <h3> Kunal Verma</h3>
+                                                    <p>Acting Student</p>
                                                 </div>
                                             </div>                                    
                                         </div>
@@ -1212,310 +1351,17 @@
                     <!-- Our Testimonial Content End -->
                 </div>
 
-                <div class="col-lg-12">
-                    <!-- Agency Support Slider Start -->
-                    <div class="testimonial-company-slider">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <!-- Agency Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-logo">
-                                        <img src="images/company-logo-1.svg" alt="">
-                                    </div>
-                                </div>
-                                <!-- Agency Support Logo End -->
-
-                                <!-- Agency Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-logo">
-                                        <img src="images/company-logo-2.svg" alt="">
-                                    </div>
-                                </div>
-                                <!-- Agency Support Logo End -->
-
-                                <!-- Agency Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-logo">
-                                        <img src="images/company-logo-3.svg" alt="">
-                                    </div>
-                                </div>
-                                <!-- Agency Support Logo End -->
-                                
-                                <!-- Agency Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-logo">
-                                        <img src="images/company-logo-4.svg" alt="">
-                                    </div>
-                                </div>
-                                <!-- Agency Support Logo End -->
-                                
-                                <!-- Agency Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-logo">
-                                        <img src="images/company-logo-5.svg" alt="">
-                                    </div>
-                                </div>
-                                <!-- Agency Support Logo End -->
-                                
-                                <!-- Agency Support Logo Start -->
-                                <div class="swiper-slide">
-                                    <div class="company-logo">
-                                        <img src="images/company-logo-1.svg" alt="">
-                                    </div>
-                                </div>
-                                <!-- Agency Support Logo End -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Agency Support Slider End -->
-                </div>
+                
             </div>
         </div>
     </div>
     <!-- Our Testimonial Section End -->
-
-    <!-- Our Faqs Section Start -->
-    <div class="our-faqs">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-5">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">FAQs</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Frequently asked <span>questions</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-                <div class="col-lg-7">
-                    <!-- Section Button Start -->
-                    <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a href="faqs.html" class="btn-default"><span>all FAQs</span></a>
-                    </div>
-                    <!-- Section Button End -->
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Our Faqs Images Start -->
-                    <div class="our-faqs-images">
-                        <!-- Our Faqs Image Start -->
-                        <div class="our-faqs-img">
-                            <figure  class="image-anime">
-                                <img src="images/our-faqs-image.jpg" alt="">
-                            </figure>
-                        </div>
-                        <!-- Our Faqs Image End -->
-
-                        <!-- Faqs Image Cta Box Start -->
-                        <div class="faqs-img-cta-box">
-                            <ul>
-                                <li><a href="#"><img src="images/icon-phone-accent.svg" alt=""> +91 1236547890</a></li>
-                                <li><a href="#"><img src="images/icon-mail-accent.svg" alt=""> info@domainname.com</a></li>
-                            </ul>
-                        </div>
-                        <!-- Faqs Image Cta Box End -->
-                    </div>
-                    <!-- Our Faqs Images End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="our-faq-section">
-                        <!-- FAQ Accordion Start -->
-                        <div class="faq-accordion" id="faqaccordion">
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp">
-                                <h2 class="accordion-header" id="heading1">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                        What industries do you serve?
-                                    </button>
-                                </h2>
-                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End -->
-
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                                <h2 class="accordion-header" id="heading2">
-                                    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                        How do you ensure product quality?
-                                    </button>
-                                </h2>
-                                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End -->
-
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                                <h2 class="accordion-header" id="heading3">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                        What sustainability practices do you follow?
-                                    </button>
-                                </h2>
-                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End -->    
-
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                                <h2 class="accordion-header" id="heading4">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                        Do you offer customized solutions?
-                                    </button>
-                                </h2>
-                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End --> 
-                             
-                            <!-- FAQ Item Start -->
-                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
-                                <h2 class="accordion-header" id="heading5">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                        How do you handle safety in the workplace?
-                                    </button>
-                                </h2>
-                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqaccordion">
-                                    <div class="accordion-body">
-                                        <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FAQ Item End --> 
-                        </div>
-                        <!-- FAQ Accordion End -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Faqs Section End -->
-
     <!-- Footer Start -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Footer Header Start -->
-                    <div class="footer-header">
-                        <!-- Section Title Start -->
-                        <div class="section-title dark-section">
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Ready to work with us?</h2>
-                            <p>Join us to experience cutting-edge industrial solutions that drive innovation, lasting success.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Footer Contact Circle Start -->
-                        <div class="footer-contact-circle">
-                            <img src="images/contact-now-circle.svg" alt="">
-                        </div>
-                        <!-- Footer Contact Circle End -->
-                    </div>
-                    <!-- Footer Header End -->                  
-                </div>
-                
-                <div class="col-lg-6 col-md-12">
-                    <!-- About Footer Start -->
-                    <div class="about-footer">
-                        <!-- Footer Logo Start -->
-                        <div class="footer-logo">
-                            <img src="images/footer-logo.svg" alt="">
-                        </div>
-                        <!-- Footer Logo End -->
-
-                        <!-- About Footer Content Start -->
-                        <div class="about-footer-content">
-                            <p>We are committed to providing personalized industrial solutions.</p>
-                        </div>           
-                        <!-- About Footer Content End -->
-                         
-                        <!-- Footer Social Link Start -->
-                        <div class="footer-social-links">
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- Footer Social Link End -->
-                    </div>
-                    <!-- About Footer End -->
-                </div>
-                
-                <div class="col-lg-2 col-md-4 col-6">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3>quick links</h3>
-                        <ul>
-                            <li><a href="index-2.html">home</a></li>
-                            <li><a href="about.html">about us</a></li>
-                            <li><a href="services.html">services</a></li>
-                            <li><a href="blog.html">blog</a></li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3>Security</h3>
-                        <ul>
-                            <li><a href="#">term & condition</a></li>
-                            <li><a href="#">privacy policy</a></li>
-                            <li><a href="#">help</a></li>
-                            <li><a href="contact.html">contact us</a></li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-12">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3>Contact</h3>
-                        <ul>
-                            <li>+91 123654789</li>
-                            <li>info@domainname.com</li>
-                            <li>520, West Valley, Amin and minim</li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
-            </div>
-
-            <!-- Footer Copyright Section Start -->
-            <div class="footer-copyright">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <!-- Footer Copyright Start -->
-                        <div class="footer-copyright-text">
-                            <p>Copyright © 2024 All Rights Reserved.</p>
-                        </div>
-                        <!-- Footer Copyright End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Copyright Section End -->
-        </div>
-     </footer>
+    <footer class="main-footer" id="footer">
+        <script>
+            $('#footer').load('footer.html');
+        </script>
+    </footer>
     <!-- Footer End -->
 
     <!-- Jquery Library File -->
@@ -1553,5 +1399,4 @@
     <script src="js/function.js"></script>
 </body>
 
-<!-- Mirrored from html.awaikenthemes.com/toplax/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 May 2025 06:59:18 GMT -->
 </html>
