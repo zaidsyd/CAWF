@@ -36,6 +36,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
     <style>
         .text-justify {
             text-align: justify;
@@ -138,64 +140,10 @@
     <!-- Preloader End -->
 
     <!-- Header Start -->
-    <header class="main-header">
-        <div class="header-sticky">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <!-- Logo Start -->
-                    <a class="navbar-brand" href="#">
-                        <img src="images/logo/cawf black.png" alt="Logo">
-                    </a>
-                    <!-- Logo End -->
-
-                    <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="#">Home</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Our Programs</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="#">Artist Welfare Schemes</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="#">Worker Safety & Support</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="#">Skill Development &
-                                                Training</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#">Medical & Insurance Aid</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="#">LAMAA</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Registration</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Header Social Box Start -->
-                        <div class="header-social-box d-inline-flex">
-                            <!-- Header Social Links Start -->
-                            <div class="header-social-links">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/people/cawfindia/100093630427177/?rdid=NWYlETME5Dlhjc0d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15w7G7Ao36"
-                                            target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="https://www.instagram.com/cawf.india/#" target="_blank"><i
-                                                class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="https://www.youtube.com/@CAWF.official" target="_blank"><i
-                                                class="fa-brands fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Header Social Links End -->
-                        </div>
-                        <!-- Header Social Box End -->
-                    </div>
-                    <!-- Main Menu End -->
-                    <div class="navbar-toggle"></div>
-                </div>
-            </nav>
-            <div class="responsive-menu"></div>
-        </div>
+    <header class="main-header" id="header">
+        <script>
+            $('#header').load('header.html');
+        </script>
     </header>
     <!-- Header End -->
 
@@ -1032,7 +980,6 @@
     <!-- Our Faqs Section End -->
 
 
-
     <div class="cawf_slider__container">
         <div class="cawf_slider__wrapper">
             <div><img
@@ -1071,102 +1018,14 @@
 
 
     <!-- Footer Start -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-3 col-md-12">
-                    <!-- About Footer Start -->
-                    <div class="about-footer">
-                        <!-- Footer Logo Start -->
-                        <div class="footer-logo">
-                            <img src="images/logo/cawf white.png" alt="">
-                        </div>
-                        <!-- Footer Logo End -->
-
-                        <!-- About Footer Content Start -->
-                        <div class="about-footer-content">
-                            <p class="text-justify">Cine Artist & Workers Welfare Federation (CAWF) works tirelessly to
-                                bring dignity, recognition, and welfare to the film workforce.</p>
-                        </div>
-                        <!-- About Footer Content End -->
-
-                        <!-- Footer Social Link Start -->
-                        <div class="footer-social-links">
-                            <ul>
-
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- Footer Social Link End -->
-                    </div>
-                    <!-- About Footer End -->
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-6">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3 class="fw-bold">quick links</h3>
-                        <ul>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">Registration</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-6">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3 class="fw-bold">Programs</h3>
-                        <ul>
-                            <li><a href="#">Artist Welfare Schemes</a></li>
-                            <li><a href="#">Worker Safety & Support</a></li>
-                            <li><a href="#">Skill Development & Training</a></li>
-                            <li><a href="#">Medical & Insurance Aid</a></li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-12">
-                    <!-- Footer Links Start -->
-                    <div class="footer-links">
-                        <h3 class="fw-bold">Contact Info</h3>
-                        <ul>
-                            <li> <a href="tel:+919555584040">+91 9555584040</a></li>
-                            <li> <a href="mailto:hello@cawf.in" target="_blank">hello@cawf.in</a></li>
-                            <li> <a href="https://maps.app.goo.gl/uDZSvVwaLxqy85NT8 " target="_blank">C13 Shivalik
-                                    Colony, Basant Kaur Marg, Malviya Nagar, India, Delhi</a> </li>
-                        </ul>
-                    </div>
-                    <!-- Footer Links End -->
-                </div>
-            </div>
-
-            <!-- Footer Copyright Section Start -->
-            <div class="footer-copyright">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <!-- Footer Copyright Start -->
-                        <div class="footer-copyright-text">
-                            <p>Copyright © 2025 CAWF, All Rights Reserved.</p>
-                        </div>
-                        <!-- Footer Copyright End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Copyright Section End -->
-        </div>
+    <footer class="main-footer" id="footer">
+        <script>
+            $('#footer').load('footer.html');
+        </script>
     </footer>
     <!-- Footer End -->
 
-    <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
+
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Validator js file -->
