@@ -33,11 +33,97 @@
     <link rel="stylesheet" href="css/mousecursor.css">
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <style>
         .text-justify {
             text-align: justify;
         }
+
+        .cawf_slider__container {
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+            background: #000;
+            /* optional background */
+        }
+
+        .cawf_slider__wrapper div {
+            margin-left: 10px
+        }
+
+        .cawf_slider__wrapper img {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+
+        .cawf_cert_slider__wrapper .cawf_cert_slider__slide {
+            padding: 0 10px;
+        }
+
+        .cawf_cert_slider__slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Arrow custom (optional) */
+        .slick-prev:before,
+        .slick-next:before {
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .slick-dots li button:before {
+            font-size: 12px;
+            color: #0e0e0e;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #ffffff;
+        }
+
+        .navbar-brand img {
+            height: 80px;
+        }
+
+        .hero-slide .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-links h3 {
+            color: #b56b33;
+        }
+
+        @media (max-width:789px) {
+            .navbar-brand img {
+                height: 65px;
+            }
+
+            .cawf_cert_slider__slide img {
+                height: 200px;
+            }
+
+            .cawf_slider__wrapper img {
+                height: 150px;
+            }
+
+            .slicknav_nav .nav-item a {
+                font-weight: bold;
+            }
+        }
     </style>
+
 </head>
 
 <body>
@@ -57,8 +143,8 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/logo/cawf black.png" alt="Logo" style="height: 94px;">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo/cawf black.png" alt="Logo">
                     </a>
                     <!-- Logo End -->
 
@@ -66,10 +152,21 @@
                     <div class="collapse navbar-collapse main-menu">
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index-main.html">Home</a>
+                                <li class="nav-item"><a class="nav-link" href="#">Home</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Our Programs</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="#">Artist Welfare Schemes</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Worker Safety & Support</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Skill Development &
+                                                Training</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Medical & Insurance Aid</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="nav-item"><a class="nav-link" href="#">LAMAA</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Registration</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
@@ -111,11 +208,11 @@
                     <div class="hero-slide" style="height: 100%;">
                         <!-- Slider Image Start -->
                         <div class="hero-slider-image" style="height: 100%;">
-                            <img  src="images/banner-1.jpg" alt="">
+                            <img src="images/banner-1.jpg" alt="">
                         </div>
                         <!-- Slider Image End -->
 
-                        <div class="container" >
+                        <div class="container">
                             <div class="row">
                                 <div class="col-lg-7">
                                     <!-- Hero Content Start -->
@@ -126,7 +223,8 @@
                                             <h1 class="text-anime-style-2" data-cursor="-opaque">Empowering Every
                                                 <span>Artist and Worker </span>
                                             </h1>
-                                            <p class="wow fadeInUp text-justify d-none d-xl-block " data-wow-delay="0.25s">We stand with
+                                            <p class="wow fadeInUp text-justify d-none d-xl-block "
+                                                data-wow-delay="0.25s">We stand with
                                                 every artist and worker to ensure fair opportunities, respect, and
                                                 support.
                                                 Through training, welfare, and advocacy, we help build secure and
@@ -165,7 +263,8 @@
                                             <h1 class="text-anime-style-2" data-cursor="-opaque">From Set to Success:
                                                 <span>We’re With You </span>
                                             </h1>
-                                            <p class="wow fadeInUp text-justify d-none d-xl-block" data-wow-delay="0.25s">Join a creative
+                                            <p class="wow fadeInUp text-justify d-none d-xl-block"
+                                                data-wow-delay="0.25s">Join a creative
                                                 hub where aspiring models, actors, photographers, videographers, and
                                                 cinematographers transform their passion into profession under expert
                                                 guidance and real-world exposure. </p>
@@ -231,17 +330,20 @@
                     <div class="about-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            
-                            <h2 class="text-anime-style-2" data-cursor="-opaque" style="border-bottom: 2px solid #000; width: 50%;">About <span>CAWF</span></h2>
-                            <p class="wow fadeInUp text-justify text-dark" data-wow-delay="0.25s">Cine Artist & Workers Welfare
+
+                            <h2 class="text-anime-style-2" data-cursor="-opaque"
+                                style="border-bottom: 2px solid #000; width: 50%;">About <span>CAWF</span></h2>
+                            <p class="wow fadeInUp text-justify text-dark" data-wow-delay="0.25s">Cine Artist & Workers
+                                Welfare
                                 Federation (CAWF) is a welfare organization that supports artists and workers in the
                                 film, television, and entertainment industry. We aim to protect their rights, provide
                                 opportunities, and offer support in times of need.
-<br><br>
+                                <br><br>
                                 Our mission is to uplift the lives of those working behind and in front of the camera by
                                 offering guidance, training, legal help, medical aid, and financial support. Whether
                                 you're an actor, technician, writer, or worker, we stand by your side for a better and
-                                secure future.</p>
+                                secure future.
+                            </p>
                         </div>
                         <!-- Section Title End -->
 
@@ -261,12 +363,12 @@
                                         </div>
                                         <!-- About Content List End -->
 
-                                        
+
                                     </div>
                                     <!-- About List Btn Box End -->
                                 </div>
 
-                                
+
                             </div>
                         </div>
                     </div>
@@ -277,148 +379,11 @@
     </div>
     <!-- About Us End -->
 
-    <!-- Our Service Start -->
-    <div class="our-services parallaxie">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Section Title Start -->
-                    <div class="section-title dark-section">
-                        <h3 class="wow fadeInUp">Our Programs</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Your Creative Journey <span>Starts
-                                Here</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Section Title Content Start -->
-                    <div class="section-title-content dark-section wow fadeInUp text-justify" data-wow-delay="0.25s">
-                        <p>Discover expert-led training programs in Modeling, Acting, Photography, and Cinematography –
-                            designed to turn passion into profession. Whether you're stepping into the spotlight or
-                            behind the lens, our courses shape raw talent into industry-ready excellence.</p>
-                    </div>
-                    <!-- Section Title Content End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Service End -->
-
-    <!-- Our Service List Start -->
-    <div class="our-services-list">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Services List Box Start -->
-                    <div class="services-list-box">
-                        <!-- Service Item Start -->
-                        <div class="service-item">
-                            <div class="icon-box">
-                                <img src="images/icon-service-1.svg" alt="">
-                            </div>
-
-                            <div class="service-body">
-                                <h3>Modelling</h3>
-                            </div>
-
-                            <div class="service-footer">
-                                <a href="service-single.html" class="service-btn">
-                                    <img src="images/arrow-dark.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Service Item End -->
-
-                        <!-- Service Item Start -->
-                        <div class="service-item">
-                            <div class="icon-box">
-                                <img src="images/icon-service-2.svg" alt="">
-                            </div>
-
-                            <div class="service-body">
-                                <h3>Acting</h3>
-                            </div>
-
-                            <div class="service-footer">
-                                <a href="service-single.html" class="service-btn">
-                                    <img src="images/arrow-dark.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Service Item End -->
-
-                        <!-- Service Item Start -->
-                        <div class="service-item">
-                            <div class="icon-box">
-                                <img src="images/icon-service-3.svg" alt="">
-                            </div>
-
-                            <div class="service-body">
-                                <h3>Photography</h3>
-                            </div>
-
-                            <div class="service-footer">
-                                <a href="service-single.html" class="service-btn">
-                                    <img src="images/arrow-dark.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Service Item End -->
-
-                        <!-- Service Item Start -->
-                        <div class="service-item">
-                            <div class="icon-box">
-                                <img src="images/icon-service-4.svg" alt="">
-                            </div>
-
-                            <div class="service-body">
-                                <h3>Cinematography</h3>
-                            </div>
-
-                            <div class="service-footer">
-                                <a href="service-single.html" class="service-btn">
-                                    <img src="images/arrow-dark.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Service Item End -->
-                    </div>
-                    <!-- Services List Box End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Service List End -->
 
     <!-- Our Story Start -->
-    <div class="our-story">
+    <div class="our-story" style="background-color: #b57745;">
         <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">our story</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Transforming talent<span>with creative,
-                                industry-driven training</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
 
-                <div class="col-lg-6">
-                    <!-- Our Story Header Image Start -->
-                    <div class="our-story-header-img">
-                        <figure class="reveal image-anime">
-                            <img src="images/our-story-header-img-1.jpg" alt="">
-                        </figure>
-
-                        <figure class="reveal image-anime">
-                            <img src="images/our-story-header-img-2.jpg" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Story Header Image End -->
-                </div>
-            </div>
 
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -434,39 +399,32 @@
                 <div class="col-lg-6">
                     <div class="our-story-content">
                         <div class="our-story-content-body">
-                            <p class="text-justify">We are dedicated to shaping the next generation of stars and
-                                storytellers through hands-on training and real-world exposure. Our mission is to
-                                empower individuals with the skills, confidence, and vision to thrive in the
-                                entertainment and visual media industry.</p>
-                            <p class="text-justify">At CAWF, we believe that every great journey begins with the right
-                                guidance. Our expert-led programs in modeling, acting, photography, and cinematography
-                                are designed to turn raw passion into professional excellence. We don’t just train—you
-                                grow, perform, and shine.</p>
+                            <div class="section-title">
+
+                                <h2 class="text-anime-style-2 text-light" data-cursor="-opaque"><span>Our Story</span>
+                                </h2>
+                            </div>
+                            <p class="text-justify text-light">In the glittering world of cinema, thousands of dreams
+                                shine every
+                                day — not just on-screen, but behind the scenes too. From the lightman who sets the
+                                mood, to the spot boy running tirelessly, to the junior artist giving life to the crowd
+                                — every frame of entertainment carries the effort of unsung heroes.
+                                <br>
+                                Cine Artist & Workers Welfare Federation (CAWF) was born from a simple yet powerful
+                                idea:
+                                <b> "Every hand that builds cinema deserves dignity, respect, and security."</b>
+
+                            </p>
+                            <p class="text-justify text-light">Founded by a group of passionate film professionals and
+                                social
+                                leaders, CAWF is more than just a federation — it's a movement to uplift, protect, and
+                                empower every individual connected to the film and television industry. Whether you're a
+                                makeup artist, actor, technician, choreographer, or even part of the backstage crew —
+                                CAWF stands with you.
+
+                            </p>
+
                         </div>
-
-                        <div class="our-story-counters">
-                            <!-- Our Story Counter Start -->
-                            <div class="our-story-counter">
-                                <h3><span class="counter">1</span>k+</h3>
-                                <p>completed project</p>
-                            </div>
-                            <!-- Our Story Counter End -->
-
-                            <!-- Our Story Counter Start -->
-                            <div class="our-story-counter">
-                                <h3><span class="counter">5</span>k+</h3>
-                                <p>satisfied customer</p>
-                            </div>
-                            <!-- Our Story Counter End -->
-
-                            <!-- Our Story Counter Start -->
-                            <div class="our-story-counter">
-                                <h3><span class="counter">10</span>k+</h3>
-                                <p>years of mastery</p>
-                            </div>
-                            <!-- Our Story Counter End -->
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -474,107 +432,7 @@
     </div>
     <!-- Our Story End -->
 
-    <!-- What We Do Start -->
-    <div class="what-we-do">
-        <div class="container-fluid">
-            <div class="row no-gutters">
-                <div class="col-lg-6">
-                    <!-- What We Do Content Start -->
-                    <div class="what-we-do-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title dark-section">
-                            <h3 class="wow fadeInUp">Why Choose Us</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Empowering Creators Through
-                                <span>Passion and Skill</span>
-                            </h2>
-                        </div>
-                        <!-- Section Title End -->
 
-                        <!-- What We Do List Start -->
-                        <div class="what-we-do-list">
-                            <div class="what-we-do-list-box-1">
-                                <!-- What We Do Item Start -->
-                                <div class="what-we-do-item">
-                                    <div class="icon-box">
-                                        <img src="images/icon-who-we-do-1.svg" alt="">
-                                    </div>
-                                    <div class="what-we-item-content">
-                                        <h3> Professional Mentorship</h3>
-                                        <p class="text-justify">Learn from experienced industry experts who’ve worked
-                                            with top brands and productions.</p>
-                                    </div>
-                                </div>
-                                <!-- What We Do Item End -->
-
-                                <!-- What We Do Item Start -->
-                                <div class="what-we-do-item">
-                                    <div class="icon-box">
-                                        <img src="images/icon-who-we-do-2.svg" alt="">
-                                    </div>
-                                    <div class="what-we-item-content">
-                                        <h3> Hands-On Training</h3>
-                                        <p class="text-justify">Master real-world techniques through practical sessions
-                                            in professional-grade studios.</p>
-                                    </div>
-                                </div>
-                                <!-- What We Do Item End -->
-                            </div>
-
-                            <div class="what-we-do-list-box-2">
-                                <!-- What We Do Item Start -->
-                                <div class="what-we-do-item">
-                                    <div class="icon-box">
-                                        <img src="images/icon-who-we-do-3.svg" alt="">
-                                    </div>
-                                    <div class="what-we-item-content">
-                                        <h3>Career-Focused Curriculum</h3>
-                                        <p class="text-justify">Our programs are designed to prepare you for auditions,
-                                            shoots, and real project opportunities.</p>
-                                    </div>
-                                </div>
-                                <!-- What We Do Item End -->
-
-                                <!-- What We Do Item Start -->
-                                <div class="what-we-do-item">
-                                    <div class="icon-box">
-                                        <img src="images/icon-who-we-do-4.svg" alt="">
-                                    </div>
-                                    <div class="what-we-item-content">
-                                        <h3> Industry Network Access</h3>
-                                        <p class="text-justify">Connect with casting directors, agencies, and production
-                                            houses through our exclusive events.</p>
-                                    </div>
-                                </div>
-                                <!-- What We Do Item End -->
-                            </div>
-                        </div>
-                        <!-- What We Do List Start -->
-
-                    </div>
-                    <!-- What We Do Content End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- What We Do Image Start -->
-                    <div class="what-we-do-image">
-                        <figure class="image-anime">
-                            <img src="images/what-we-do-image.jpg" alt="">
-                        </figure>
-
-                        <!-- Contact Now Circle Start -->
-                        <div class="contact-now-circle">
-                            <img src="images/contact-now-circle.svg" alt="">
-                        </div>
-                        <!-- Contact Now Circle End -->
-                    </div>
-                    <!-- What We Do Image End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- What We Do End -->
-
-    <!-- Our Work Section Start -->
     <div class="our-work">
         <div class="container">
             <div class="row section-row align-items-center">
@@ -582,112 +440,107 @@
                     <!-- Section Title Start -->
                     <div class="section-title">
                         <h3 class="wow fadeInUp">Gallery</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Where Moments Become
-                            <span>Masterpieces</span>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">MOMENTS OF HOPE
+                            <span>OUR JOURNEY IN PICTURES</span>
                         </h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
 
-                <div class="col-lg-6">
-                    <!-- Section Title Content Start -->
-                    <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
-                        <p>Step into our world of creativity — where every frame captures talent, passion, and progress.
-                        </p>
-                    </div>
-                    <!-- Section Title Content End -->
-                </div>
+
             </div>
 
             <div class="row">
-                <div class="col-lg-12">
-                    <!-- Choose Our Project Nav start -->
-                    <div class="our-Project-nav wow fadeInUp" data-wow-delay="0.4s">
-                        <ul>
-                            <li><a href="#" class="active-btn" data-filter="*">all</a></li>
-                            <li><a href="#" data-filter=".manufacturing">Modelling</a></li>
-                            <li><a href="#" data-filter=".automation">Acting</a></li>
-                            <li><a href="#" data-filter=".sustainability">Photography</a></li>
-                            <li><a href="#" data-filter=".development">Cinematography</a></li>
-                            <li><a href="#" data-filter=".infrastructure">Others</a></li>
-                        </ul>
-                    </div>
-                    <!-- Choose Our Project Nav End -->
-                </div>
+
 
                 <div class="col-lg-12">
                     <!-- Project Item Boxes start -->
-                    <div class="row project-item-boxes align-items-center">
-                        <div class="col-md-6 project-item-box manufacturing automation">
-                            <!-- Project Item Start -->
-                            <div class="project-item wow fadeInUp">
-                                <div class="project-image">
-                                    <figure class="image-anime">
-                                        <img src="images/project-1.jpg" alt="">
-                                    </figure>
+                    <div class="row align-items-center ">
+                        <div class="row gallery-items page-gallery-box">
+                            <div class="col-lg-4 col-6 manufacturing">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.28%20(1).jpeg/:/rs=w:984,h:738">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.28%20(1).jpeg/:/rs=w:984,h:738"
+                                                alt="">
+                                        </figure>
+                                    </a>
                                 </div>
-
-                                <div class="project-tag">
-                                    <a href="#">Modelling</a>
-                                </div>
-
-
+                                <!-- image gallery end -->
                             </div>
-                            <!-- Project Item End -->
-                        </div>
 
-                        <div class="col-md-6 project-item-box automation sustainability development infrastructure">
-                            <!-- Project Item Start -->
-                            <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="project-image">
-                                    <figure class="image-anime">
-                                        <img src="images/gallery/12.webp" alt="">
-                                    </figure>
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.45%20(2).jpeg/:/rs=w:1160,h:870">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.45%20(2).jpeg/:/rs=w:1160,h:870"
+                                                alt="">
+                                        </figure>
+                                    </a>
                                 </div>
-
-                                <div class="project-tag">
-                                    <a href="#">Acting</a>
-                                </div>
-
-
+                                <!-- image gallery end -->
                             </div>
-                            <!-- Project Item End -->
-                        </div>
 
-                        <div class="col-md-6 project-item-box sustainability infrastructure">
-                            <!-- Project Item Start -->
-                            <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="project-image">
-                                    <figure class="image-anime">
-                                        <img src="images/project-3.jpg" alt="">
-                                    </figure>
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.57.00.jpeg/:/rs=w:984,h:952">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.57.00.jpeg/:/rs=w:984,h:952"
+                                                alt="">
+                                        </figure>
+                                    </a>
                                 </div>
-
-                                <div class="project-tag">
-                                    <a href="#">Photography</a>
-                                </div>
-
-
+                                <!-- image gallery end -->
                             </div>
-                            <!-- Project Item End -->
-                        </div>
 
-                        <div class="col-md-6 project-item-box manufacturing development">
-                            <!-- Project Item Start -->
-                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="project-image">
-                                    <figure class="image-anime">
-                                        <img src="images/project-4.jpg" alt="">
-                                    </figure>
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/88e0b29c-0c12-4455-84ea-a7da4cf94689.jpg/:/cr=t:1.97%25,l:0%25,w:100%25,h:96.06%25/rs=w:984,h:984">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/88e0b29c-0c12-4455-84ea-a7da4cf94689.jpg/:/cr=t:1.97%25,l:0%25,w:100%25,h:96.06%25/rs=w:984,h:984"
+                                                alt="">
+                                        </figure>
+                                    </a>
                                 </div>
-
-                                <div class="project-tag">
-                                    <a href="#">other</a>
-                                </div>
-
-
+                                <!-- image gallery end -->
                             </div>
-                            <!-- Project Item End -->
+
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.44%20(2).jpeg/:/rs=w:984,h:1312">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.44%20(2).jpeg/:/rs=w:984,h:1312"
+                                                alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="1s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.58%20(2).jpeg/:/rs=w:1160,h:549">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.58%20(2).jpeg/:/rs=w:1160,h:549"
+                                                alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+
                         </div>
                     </div>
                     <!-- Project Item Boxes End -->
@@ -695,16 +548,15 @@
             </div>
         </div>
     </div>
-    <!-- Our Work Section End -->
 
-    <!-- Our Process Section Start -->
+
     <div class="our-process">
         <div class="container">
             <div class="row section-row align-items-center">
                 <div class="col-lg-6">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">OUR CREATIVE JOURNEY</h3>
+                        <h3 class="wow fadeInUp">Why Choose Us</h3>
                         <h2 class="text-anime-style-2" data-cursor="-opaque">Guiding you from raw talent <span> to
                                 stardom</span></h2>
                     </div>
@@ -714,9 +566,9 @@
                 <div class="col-lg-6">
                     <!-- Section Title Content Start -->
                     <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
-                        <p class="text-justify">Our step-by-step process is crafted to unlock your full potential. From
-                            discovering your unique spark to showcasing it on the big stage — we mentor, mold, and
-                            magnify your artistic identity.</p>
+                        <p class="text-justify">At CAWF, we believe in more than just support — we believe in standing
+                            by our artists and workers like family. From healthcare to legal aid, from recognition to
+                            training — we are committed to uplifting every life behind the screen.</p>
                     </div>
                     <!-- Section Title Content End -->
                 </div>
@@ -742,9 +594,9 @@
                                 <h2>01</h2>
                             </div>
                             <div class="process-step-content">
-                                <h3>Talent Discovery</h3>
-                                <p class="text-justify">We begin by identifying your strengths and passions through
-                                    personalized assessments and creative interactions.</p>
+                                <h3>Full Support, On and Off Set</h3>
+                                <p class="text-justify">We provide medical aid, financial help, and emotional support to
+                                    our members during both professional and personal challenges.</p>
                             </div>
                         </div>
                         <!-- Process Step Item End -->
@@ -755,9 +607,9 @@
                                 <h2>02</h2>
                             </div>
                             <div class="process-step-content">
-                                <h3> Skill Building & Coaching</h3>
-                                <p class="text-justify">With expert-led sessions in acting, modeling, and technical
-                                    arts, we develop your core skills through hands-on practice and real-time feedback.
+                                <h3> Legal Protection for Every Worker</h3>
+                                <p class="text-justify">WFrom contract disputes to payment delays, our legal team
+                                    ensures your rights are protected at every step of your journey.
                                 </p>
                             </div>
                         </div>
@@ -769,9 +621,9 @@
                                 <h2>03</h2>
                             </div>
                             <div class="process-step-content">
-                                <h3>Industry Exposure & Portfolio Launch</h3>
-                                <p class="text-justify">Get featured in curated shoots, showreels, and projects — and
-                                    connect with agencies, casting directors, and studios.</p>
+                                <h3>Training to Build Your Future</h3>
+                                <p class="text-justify">We regularly conduct skill development programs, workshops, and
+                                    mentoring sessions to help you grow and stay relevant in the industry.</p>
                             </div>
                         </div>
                         <!-- Process Step Item End -->
@@ -781,163 +633,239 @@
             </div>
         </div>
     </div>
-    <!-- Our Process Section End -->
-    <!-- Our Team Section Start -->
-    <div class="our-team">
+
+
+    <div class="our-work">
         <div class="container">
             <div class="row section-row align-items-center">
                 <div class="col-lg-6">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">our team</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Meet the Passionate Minds Behind <span>the
-                                Magic</span></h2>
+                        <h3 class="wow fadeInUp">Gallery</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Moments That Define <span>Our
+                                Mission</span></h2>
                     </div>
                     <!-- Section Title End -->
                 </div>
 
+
             </div>
 
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-1.jpg" alt="">
-                                </figure>
-                            </a>
-
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="#">ronald richards</a></h3>
-                            <p>manufacturing executive</p>
-                        </div>
-                        <!-- Team Content End -->
+                <div class="col-lg-12">
+                    <!-- Choose Our Project Nav start -->
+                    <div class="our-Project-nav wow fadeInUp" data-wow-delay="0.4s">
+                        <ul>
+                            <li><a href="#" class="active-btn" data-filter="*">all</a></li>
+                            <li><a href="#" data-filter=".announcement">Announcement</a></li>
+                            <li><a href="#" data-filter=".news-media">News & Media</a></li>
+                            <li><a href="#" data-filter=".rakshak-award">Rakshak Award</a></li>
+                            <li><a href="#" data-filter=".infrastructure">Press Conference</a></li>
+                        </ul>
                     </div>
-                    <!-- Team Member Item End -->
+                    <!-- Choose Our Project Nav End -->
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-2.jpg" alt="">
-                                </figure>
-                            </a>
+                <div class="col-lg-12">
+                    <!-- Project Item Boxes start -->
+                    <div class="row project-item-boxes align-items-center">
 
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                </ul>
+                        <div class="col-md-4 project-item-box rakshak-award">
+                            <!-- Project Item Start -->
+                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="project-image">
+                                    <figure class="image-anime">
+                                        <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.32-c659bf6.jpeg/:/rs=w:1280,h:591"
+                                            alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-content">
+                                    <h3><a href="#">Rakshak Award</a></h3>
+                                </div>
                             </div>
-                            <!-- Team Social Icon End -->
+                            <!-- Project Item End -->
                         </div>
-                        <!-- Team Image End -->
 
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="#">brooklyn simmons</a></h3>
-                            <p>industrial engineer</p>
-                        </div>
-                        <!-- Team Content End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-3.jpg" alt="">
-                                </figure>
-                            </a>
+                        <div class="col-md-4 project-item-box news-media">
+                            <!-- Project Item Start -->
+                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="project-image">
+                                    <figure class="image-anime">
+                                        <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.38%20(2).jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
+                                            alt="">
+                                    </figure>
+                                </div>
 
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                </ul>
+                                <div class="project-content">
+                                    <h3><a href="#">News & Media</a></h3>
+                                </div>
                             </div>
-                            <!-- Team Social Icon End -->
+                            <!-- Project Item End -->
                         </div>
-                        <!-- Team Image End -->
 
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="#">cameron williamson</a></h3>
-                            <p>production supervisor</p>
-                        </div>
-                        <!-- Team Content End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
+                        <div class="col-md-4 project-item-box news-media">
+                            <!-- Project Item Start -->
+                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="project-image">
+                                    <figure class="image-anime">
+                                        <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.57.jpeg/:/rs=w:600,cg:true,m"
+                                            alt="">
+                                    </figure>
+                                </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="#" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-4.jpg" alt="">
-                                </figure>
-                            </a>
-
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                </ul>
+                                <div class="project-content">
+                                    <h3><a href="#">News & Media</a></h3>
+                                </div>
                             </div>
-                            <!-- Team Social Icon End -->
+                            <!-- Project Item End -->
                         </div>
-                        <!-- Team Image End -->
 
-                        <!-- Team Content Start -->
-                        <div class="team-content">
-                            <h3><a href="#">darlene robertson</a></h3>
-                            <p>project manager</p>
+                        <div class="col-md-4 project-item-box news-media">
+                            <!-- Project Item Start -->
+                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="project-image">
+                                    <figure class="image-anime">
+                                        <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.58.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
+                                            alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-content">
+                                    <h3><a href="#">News & Media</a></h3>
+                                </div>
+                            </div>
+                            <!-- Project Item End -->
                         </div>
-                        <!-- Team Content End -->
+
+                        <div class="col-md-4 project-item-box news-media">
+                            <!-- Project Item Start -->
+                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="project-image">
+                                    <figure class="image-anime">
+                                        <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.57%20(1).jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:600,cg:true"
+                                            alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-content">
+                                    <h3><a href="#">News & Media</a></h3>
+                                </div>
+                            </div>
+                            <!-- Project Item End -->
+                        </div>
+
+                        <div class="col-md-4 project-item-box news-media">
+                            <!-- Project Item Start -->
+                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="project-image">
+                                    <figure class="image-anime">
+                                        <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.56%20(2).jpeg/:/rs=w:600,cg:true,m"
+                                            alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-content">
+                                    <h3><a href="#">News & Media</a></h3>
+                                </div>
+                            </div>
+                            <!-- Project Item End -->
+                        </div>
+
+                        <div class="col-md-4 project-item-box news-media">
+                            <!-- Project Item Start -->
+                            <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="project-image">
+                                    <figure class="image-anime">
+                                        <img src="images/press-1.png" alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="project-content">
+                                    <h3><a href="#">Press Conference</a></h3>
+                                </div>
+                            </div>
+                            <!-- Project Item End -->
+                        </div>
                     </div>
-                    <!-- Team Member Item End -->
+                    <!-- Project Item Boxes End -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Our Team Section End -->
+
+
+    <div class="our-work" style="background-color: #b57745;">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-8">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+
+                        <h2 class="text-anime-style-2 text-light" data-cursor="-opaque">Official Certificates &
+                            <span>Government Registrations</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+
+                <div class="col-lg-12">
+                    <!-- Project Item Boxes start -->
+                    <div class="row align-items-center ">
+                        <div class="cawf_cert_slider__container">
+                            <div class="cawf_cert_slider__wrapper">
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/df909f7e-48ac-4cf8-9470-ed70540f4120.jpg/:/rs=w:984,h:1217"
+                                        alt="Certificate 1">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/IMG-20231219-WA0009.jpg/:/"
+                                        alt="Certificate 2">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/IMG-20231130-WA0016.jpg/:/rs=w:719,h:1278"
+                                        alt="Certificate 3">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/IMG-20231130-WA0015.jpg/:/"
+                                        alt="Certificate 4">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/IMG-20231228-WA0064.jpg/:/"
+                                        alt="Certificate 5">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/42e75ffc-dd92-4db9-bbd9-02a4a65aed0c.jpg/:/"
+                                        alt="Certificate 5">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/CAWF%20WEBSITE%20HEAD-9a72c94.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
+                                        alt="Certificate 5">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/70187e46-c712-4cd6-865b-cc69c09bbb68.jpg/:/cr=t:0%25,l:3.55%25,w:92.9%25,h:100%25"
+                                        alt="Certificate 5">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/348fa9b6-14e7-47dc-aec9-540f09ed4232.jpg/:/"
+                                        alt="Certificate 5">
+                                </div>
+                                <!-- Add more slides -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Item Boxes End -->
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Our Faqs Section Start -->
@@ -957,7 +885,7 @@
                 <div class="col-lg-7">
                     <!-- Section Button Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a href="#" class="btn-default"><span>all FAQs</span></a>
+                        <a href="#" class="btn-default"><span>Contact Us</span></a>
                     </div>
                     <!-- Section Button End -->
                 </div>
@@ -998,15 +926,19 @@
                                 <h2 class="accordion-header" id="heading1">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                        Who can join your training programs?
+                                        What is CAWF?
                                     </button>
                                 </h2>
                                 <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>Anyone with a passion for modelling, acting, or photography can join — no
-                                            prior experience is needed. We welcome beginners and aspiring professionals
-                                            alike.</p>
+                                        <p>
+                                            CAWF stands for Cine Artist & Workers Welfare Federation. It is a non-profit
+                                            organization that supports and empowers people working in the film and TV
+                                            industry.
+
+
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1017,14 +949,15 @@
                                 <h2 class="accordion-header" id="heading2">
                                     <button class="accordion-button " type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                        What is the duration of the courses?
+                                        Who can join CAWF?
                                     </button>
                                 </h2>
                                 <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>Our training programs typically range from 1 to 6 months, depending on the
-                                            course and the level (basic to advanced).</p>
+                                        <p>Any artist or worker from the entertainment industry can join — including
+                                            actors, junior artists, spot boys, lightmen, technicians, makeup artists,
+                                            cameramen, and more..</p>
                                     </div>
                                 </div>
                             </div>
@@ -1035,14 +968,16 @@
                                 <h2 class="accordion-header" id="heading3">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                        Will I get a certificate after completing the course?
+                                        What benefits do members get?
                                     </button>
                                 </h2>
                                 <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>Yes, we provide a professional certificate upon successful completion of each
-                                            course.</p>
+                                        <p>
+                                            Members receive access to medical support, emergency financial help, legal
+                                            aid, training workshops, and welfare programs.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1053,14 +988,16 @@
                                 <h2 class="accordion-header" id="heading4">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                        Do you offer real shoot or audition opportunities?
+                                        Is CAWF involved in media or press activities?
                                     </button>
                                 </h2>
                                 <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>Absolutely. We provide exposure to live shoots, auditions, and
-                                            portfolio-building sessions to prepare you for the real industry.</p>
+                                        <p>
+                                            Yes. CAWF regularly shares news, updates, and announcements through press
+                                            conferences and media platforms to keep everyone informed.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1071,14 +1008,16 @@
                                 <h2 class="accordion-header" id="heading5">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                        Is there any placement or project support?
+                                        How can I become a member of CAWF?
                                     </button>
                                 </h2>
                                 <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>Yes, we support our talented students by connecting them with casting calls,
-                                            model coordinators, and production houses.</p>
+                                        <p>
+                                            You can become a member by filling a simple registration form and submitting
+                                            basic documents. Membership can be applied online or by visiting our office.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1092,114 +1031,43 @@
     </div>
     <!-- Our Faqs Section End -->
 
-    <!-- Our Testimonial Section Start -->
-    <div class="our-testimonial">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Our Testimonial Image Start -->
-                    <div class="our-testimonial-image">
-                        <figure class="image-anime reveal">
-                            <img src="images/testimonial-image.jpg" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Testimonial Image End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Our Testimonial Content Start -->
-                    <div class="our-testimonial-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">Our client say</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">What our satisfied clients <span>are
-                                    saying</span></h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Testimonial Slider Start -->
-                        <div class="testimonial-slider">
-                            <div class="swiper">
-                                <div class="swiper-wrapper" data-cursor-text="Drag">
-                                    <!-- Testimonial Slide Start -->
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-
-                                            <div class="testimonial-content">
-                                                <p>"I joined with zero experience, but the mentors here transformed my
-                                                    confidence. Today, I’m doing shoots and auditions I never imagined!"
-                                                </p>
-                                            </div>
-
-                                            <div class="testimonial-body">
-                                                <div class="author-image">
-                                                    <figure class="image-anime">
-                                                        <img src="images/author-1.jpg" alt="">
-                                                    </figure>
-                                                </div>
-                                                <div class="author-content">
-                                                    <h3> Riya Sharma</h3>
-                                                    <p>Aspiring Model</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Slide End -->
-
-                                    <!-- Testimonial Slide Start -->
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <div class="testimonial-rating">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-
-                                            <div class="testimonial-content">
-                                                <p>"The acting classes helped me bring life to every scene. From stage
-                                                    fear to screen presence — this place made it happen."</p>
-                                            </div>
-
-                                            <div class="testimonial-body">
-                                                <div class="author-image">
-                                                    <figure class="image-anime">
-                                                        <img src="images/author-2.jpg" alt="">
-                                                    </figure>
-                                                </div>
-                                                <div class="author-content">
-                                                    <h3> Kunal Verma</h3>
-                                                    <p>Acting Student</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonial Slide End -->
-                                </div>
-                                <div class="testimonial-btn">
-                                    <div class="testimonial-button-prev"></div>
-                                    <div class="testimonial-button-next"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial Slider End -->
-                    </div>
-                    <!-- Our Testimonial Content End -->
-                </div>
 
 
-            </div>
+    <div class="cawf_slider__container">
+        <div class="cawf_slider__wrapper">
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.59%20(1).jpeg/:/"
+                    alt="Banner 1"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.45%20(2).jpeg/:/rs=w:1160,h:870"
+                    alt="Banner 2"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.26%20(1).jpeg/:/rs=w:984,h:738"
+                    alt="Banner 3"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.26%20(2).jpeg/:/rs=w:984,h:738"
+                    alt="Banner 4"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.57.00%20(1).jpeg/:/"
+                    alt="Banner 5"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.25%20(1).jpeg/:/rs=w:984,h:738"
+                    alt="Banner 6"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.28%20(2).jpeg/:/rs=w:1160,h:870"
+                    alt="Banner 7"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.28.jpeg/:/rs=w:984,h:738"
+                    alt="Banner 8"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.58%20(2).jpeg/:/rs=w:1160,h:549"
+                    alt="Banner 8"></div>
+            <div><img
+                    src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.45%20(1).jpeg/:/rs=w:719,h:1237"
+                    alt="Banner 8"></div>
+            <!-- Add more banners as needed -->
         </div>
     </div>
-    <!-- Our Testimonial Section End -->
 
 
     <!-- Footer Start -->
@@ -1207,7 +1075,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-3 col-md-12">
                     <!-- About Footer Start -->
                     <div class="about-footer">
                         <!-- Footer Logo Start -->
@@ -1218,17 +1086,18 @@
 
                         <!-- About Footer Content Start -->
                         <div class="about-footer-content">
-                            <p>"Every artist deserves a stage — we create it with belief, training, and opportunity.</p>
+                            <p class="text-justify">Cine Artist & Workers Welfare Federation (CAWF) works tirelessly to
+                                bring dignity, recognition, and welfare to the film workforce.</p>
                         </div>
                         <!-- About Footer Content End -->
 
                         <!-- Footer Social Link Start -->
                         <div class="footer-social-links">
                             <ul>
-                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+
                                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                             </ul>
                         </div>
                         <!-- Footer Social Link End -->
@@ -1236,10 +1105,10 @@
                     <!-- About Footer End -->
                 </div>
 
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-3 col-md-4 col-6">
                     <!-- Footer Links Start -->
                     <div class="footer-links">
-                        <h3>quick links</h3>
+                        <h3 class="fw-bold">quick links</h3>
                         <ul>
                             <li><a href="#">home</a></li>
                             <li><a href="#">about us</a></li>
@@ -1250,24 +1119,24 @@
                     <!-- Footer Links End -->
                 </div>
 
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-3 col-md-4 col-6">
                     <!-- Footer Links Start -->
                     <div class="footer-links">
-                        <h3>Programs</h3>
+                        <h3 class="fw-bold">Programs</h3>
                         <ul>
-                            <li><a href="#">Modelling</a></li>
-                            <li><a href="#">Acting</a></li>
-                            <li><a href="#">Photography</a></li>
-                            <li><a href="#">Cinematography</a></li>
+                            <li><a href="#">Artist Welfare Schemes</a></li>
+                            <li><a href="#">Worker Safety & Support</a></li>
+                            <li><a href="#">Skill Development & Training</a></li>
+                            <li><a href="#">Medical & Insurance Aid</a></li>
                         </ul>
                     </div>
                     <!-- Footer Links End -->
                 </div>
 
-                <div class="col-lg-2 col-md-4 col-12">
+                <div class="col-lg-3 col-md-4 col-12">
                     <!-- Footer Links Start -->
                     <div class="footer-links">
-                        <h3>Contact</h3>
+                        <h3 class="fw-bold">Contact Info</h3>
                         <ul>
                             <li> <a href="tel:+919555584040">+91 9555584040</a></li>
                             <li> <a href="mailto:hello@cawf.in" target="_blank">hello@cawf.in</a></li>
@@ -1329,6 +1198,63 @@
     <script src="js/wow.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.cawf_slider__wrapper').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: false,
+                dots: false,
+                infinite: true,
+                swipe: true,
+                responsive: [
+                    {
+                        breakpoint: 992, // tablet
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 768, // mobile
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.cawf_cert_slider__wrapper').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
 </body>
 
 </html>
