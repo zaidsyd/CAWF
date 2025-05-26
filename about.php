@@ -1,775 +1,892 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zxx">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Awaiken">
+	<!-- Page Title -->
+    <title>CAWF | About</title>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo/cawf black.png">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link href="css/all.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        .text-justify {
+            text-align: justify;
+        }
 
-  <title>CAWF| about</title>
+        .cawf_slider__container {
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+            background: #000;
+            /* optional background */
+        }
 
-  <!--== Favicon ==-->
-  <link rel="shortcut icon" href="assets/img/cawf-logo-1.jpg" type="image/x-icon" />
+        .cawf_slider__wrapper div {
+            margin-left: 10px
+        }
 
-  <!--== Google Fonts ==-->
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface:400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,900,900i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,700,900,900i" rel="stylesheet">
-
-  <!--== Bootstrap CSS ==-->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-  <!--== Font-awesome Icons CSS ==-->
-  <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-  <!--== Icofont Min Icons CSS ==-->
-  <link href="assets/css/icofont.min.css" rel="stylesheet" />
-  <!--== lastudioIcons CSS ==-->
-  <link href="assets/css/lastudioIcons.css" rel="stylesheet" />
-  <!--== Animate CSS ==-->
-  <link href="assets/css/animate.css" rel="stylesheet" />
-  <!--== Aos CSS ==-->
-  <link href="assets/css/aos.css" rel="stylesheet" />
-  <!--== FancyBox CSS ==-->
-  <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" />
-  <!--== Slicknav CSS ==-->
-  <link href="assets/css/slicknav.css" rel="stylesheet" />
-  <!--== Swiper CSS ==-->
-  <link href="assets/css/swiper.min.css" rel="stylesheet" />
-  <!--== Slick CSS ==-->
-  <link href="assets/css/slick.css" rel="stylesheet" />
-  <!--== Main Style CSS ==-->
-  <link href="assets/css/style.css" rel="stylesheet" />
-  <style>
-    #popup {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1000;
-    }
-
-    /* Popup Box */
-    .popup-content {
-      background: #fff;
-      width: 400px;
-      margin: 10% auto;
-      padding: 30px;
-      border-radius: 10px;
-      position: relative;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Close Button */
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 20px;
-      cursor: pointer;
-      color: #333;
-    }
-
-    .divider-area.divider-about-area-style2 .container {
-      max-width: 1470px;
-      padding-bottom: 100px;
-      padding-top: 100px;
-    }
-
-    .brand-logo-area.brand-logo-style1-area {
-      padding: 106px 0 106px;
-    }
-
-    .sticky-footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      border-top: 1px solid #ddd;
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    .demo-btn {
-      flex: 1;
-      height: 100%;
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(to right, #a64637, #e78d6d);
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-    }
-
-    .home-five-wrapper .header-area.header-default.header-style5.sticky-header.sticky .header-action-area .btn-menu i {
-      color: #333;
-    }
-
-    .text-justify {
-      text-align: justify;
-    }
-
-    .header-area.header-default .header-navigation-area .main-menu {
-      margin-left: 0px !important;
-    }
-
-    .header-area.sticky-header.sticky.header-style5 .header-logo-area .logo-light {
-      height: 108px;
-      width: 84px;
-      object-fit: contain;
-
-    }
-
-    .header-area.header-default.header-style5 .header-logo-area img {
-
-      height: 108px;
-      width: 84px;
-      object-fit: contain;
-      padding-top: 5px;
-      padding-bottom: 2px;
+        .cawf_slider__wrapper img {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
 
 
-    }
+        .cawf_cert_slider__wrapper .cawf_cert_slider__slide {
+            padding: 0 10px;
+        }
 
-    .footer-area.footer-style6 .footer-main .footer-logo-area a .logo-main {
-      height: 120px;
-      width: 118px;
-      object-fit: contain;
+        .cawf_cert_slider__slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            object-fit: cover;
+        }
 
-    }
+        /* Arrow custom (optional) */
+        .slick-prev:before,
+        .slick-next:before {
+            color: #ffffff;
+            font-size: 24px;
+        }
 
-    .blog-area.blog-default-area {
-      padding-bottom: 10px;
-    }
+        .slick-dots li button:before {
+            font-size: 12px;
+            color: #0e0e0e;
+        }
 
-    .category-area.category-style9-area {
-      margin-top: 5rem;
-    }
+        .slick-dots li.slick-active button:before {
+            color: #ffffff;
+        }
 
-    .text-justify {
-      text-align: justify;
-    }
+        .navbar-brand img {
+            height: 80px;
+        }
 
-    /* .header-area.header-default .header-action-area .btn-menu{
-            color:white;
-        } */
-    @media only screen and (max-width: 1199px) {
-      .header-area.header-default .container-fluid {
-        padding: 0px 9px;
-      }
+        .hero-slide .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      .header-area.header-default.header-style5 .header-logo-area img {
-        padding-top: 10px;
-        padding-bottom: 14px;
-      }
-    }
+        .footer-links h3 {
+            color: #b56b33;
+        }
 
-    @media (max-width: 768px) {
+        @media (max-width:789px) {
+            .navbar-brand img {
+                height: 65px;
+            }
 
-      .phone-link,
-      .demo-btn {
-        font-size: 0.9rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
+            .cawf_cert_slider__slide img {
+                height: 200px;
+            }
 
-    @media screen and (min-width: 768px) {
-      .res-dd-none {
-        display: none !important;
-      }
-    }
+            .cawf_slider__wrapper img {
+                height: 150px;
+            }
 
-    .phone-link {
-      flex: 1;
-      text-decoration: none;
-      color: #a64637;
-      font-size: 1rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      height: 100%;
-      background-color: white;
-    }
-  </style>
-
+            .slicknav_nav .nav-item a {
+                font-weight: bold;
+            }
+        }
+    </style>
 
 </head>
-
 <body>
 
-  <!--wrapper start-->
-  <div class="wrapper page-about-wrapper">
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon"><img src="images/logo/cawf black.png" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
 
-    <!--== Start Header Wrapper ==-->
-    <?php
-    include('header.php');
-    ?>
-    <!--== End Header Wrapper ==-->
+    <!-- Header Start -->
+    <header class="main-header" id="header">
+       <?php
+        include('header.php');
+       ?>
+    </header>
+    <!-- Header End -->
 
-    <main class="main-content">
-      <!--== Start Page Title Area ==-->
-      <section class="page-title-area bg-img bg-overlay-black2-5 bg-parallax" data-speed="1.1"
-        data-bg-img="assets/img/photos/bg-page2.jpg">
+    <!-- Page Header Start -->
+	<div class="page-header parallaxie">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<!-- Page Header Box Start -->
+					<div class="page-header-box">
+						<h1 class="text-anime-style-2" data-cursor="-opaque">About <span>Us</span></h1>
+						<nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.php">home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">about us</li>
+							</ol>
+						</nav>
+					</div>
+					<!-- Page Header Box End -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page Header End -->
+
+    <!-- About Us Start -->
+    <div class="about-us">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="page-title-content content-style2">
-                <h2 class="title">About Us</h2>
-                <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><span
-                    class="active">About Us</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--== End Page Title Area ==-->
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- About Us Image Start -->
+                    <div class="about-image">
+                        <!-- About Image Start -->
+                        <div class="about-img-1">
+                            <figure class="image-anime reveal">
+                                <img src="images/about-img-1.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- About Image End -->
 
-      <!--== Start Video Divider Area Wrapper ==-->
-      <section class="divider-area divider-about-area-style2">
+                        <!-- About Image Start -->
+                        <div class="about-img-2">
+                            <figure class="image-anime reveal">
+                                <img src="images/npo/about_imresizer.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- About Image End -->
+
+                        <!-- Company Experience Start -->
+                        <div class="company-experience">
+                            <div class="company-experience-counter">
+                                <h2><span class="counter">10</span>+</h2>
+                            </div>
+                            <div class="company-experience-content">
+                                <p>years of experience</p>
+                            </div>
+                        </div>
+                        <!-- Company Experience End -->
+                    </div>
+                    <!-- About Us Image End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- About Content Start -->
+                    <div class="about-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">about CAWF</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Dedicated to Artists &     <span>Workers</span></h2>
+                            <p class="wow fadeInUp text-justify text-justify" data-wow-delay="0.25s">Cine Artist & Worker Welfare Federation (CAWF) is a dedicated organization committed to the welfare and empowerment of professionals in the Indian film and television industry. We provide support, advocacy, and skill development opportunities to cine artists and workers, ensuring their rights and well-being are protected.</p>
+
+                            <p class="wow fadeInUp text-justify text-justify" data-wow-delay="0.25s">Our mission is to uplift the lives of those working behind and in front of the camera by offering guidance, training, legal help, medical aid, and financial support. Whether you're an actor, technician, writer, or worker, we stand by your side for a better and secure future.</p>               
+                        </div>
+                        <!-- Section Title End -->
+                
+                        <div class="about-content-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <!-- About List Btn Box Start -->
+                                    <div class="about-list-btn">
+                                        <!-- About Content List Start -->
+                                        <div class="about-content-list wow fadeInUp" data-wow-delay="0.5s">
+                                            <ul>
+                                                <li>Artist & Worker Welfare</li>
+                                                <li> Legal & Social Support</li>
+                                                <li>Skill Development & Training</li>
+                                                <li>ID Cards & Worker Registration</li>
+                                            </ul>
+                                        </div>
+                                        <!-- About Content List End -->
+                
+                                        
+                                    </div>
+                                    <!-- About List Btn Box End -->                                 
+                                </div>
+                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- About Content End -->
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- About Us End -->
+
+    <!-- Our Mission Vision Section Start -->
+    <div class="our-mission-vision">
+        <div class="mission-vision-bg parallaxie">
+            <div class="container">
+                <div class="row section-row align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Section Title Start -->
+                        <div class="section-title dark-section">
+                            <h3 class="wow fadeInUp">our approach</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Path to    <span>Progress </span></h2>
+                        </div>
+                        <!-- Section Title End -->
+                    </div>
+    
+                    <div class="col-lg-6">
+                        <!-- Section Title Content Start -->
+                        <div class="section-title-content dark-section wow fadeInUp" data-wow-delay="0.25s">
+                            <p class="text-justify">At CAWF, we prioritize understanding the unique needs of artists and workers by providing personalized support, skill development, and legal aid. We build strong industry connections and foster a supportive community, ensuring safety, respect, and growth for everyone involved. </p>
+                        </div>
+                        <!-- Section Title Content End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-lg-7">
-              <div class="divider-about-thumb">
-                <div class="video-content">
-                  <div class="thumb">
-                    <img src="assets/img/photos/video2.jpg" alt="Moren-Image">
-
-                  </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Mission Vision Box Start -->
+                    <div class="mission-vision-box tab-content wow fadeInUp" data-wow-delay="0.25s" id="missionvision">
+                        <!-- Sidebar Mission Vision Nav start -->
+                        <div class="mission-vision-nav">
+                            <ul class="nav nav-tabs" id="mvTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="remodeling-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button" role="tab" aria-selected="true"><img src="images/icon-mission-nav.svg" alt=""> our mission</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="installation-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button" role="tab" aria-selected="false"><img src="images/icon-vision-nav.svg" alt=""> our vision</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="value-tab" data-bs-toggle="tab" data-bs-target="#value" type="button" role="tab" aria-selected="false"><img src="images/icon-value-nav.svg" alt=""> Core value</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Sidebar Mission Vision Nav End -->
+                         
+                        <!-- Mission Vision Item Start -->
+                        <div class="mission-vision-item tab-pane fade show active" id="mission" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <!-- Mission Vision Content Start -->
+                                    <div class="mission-vision-content">
+                                        <div class="mission-vision-content-header">
+                                            <p class="text-justify"> CAWF is committed to uplifting the lives of artists and workers through welfare programs, skill development, and recognition. Our goal is to build a strong, united community where talent is nurtured, protected, and celebrated.</p>
+                                        </div>
+    
+                                        <div class="mission-vision-content-list">
+                                            <ul>
+                                                <li>Empowering Artists & Workers</li>
+                                                <li> Skill Development & Training</li>
+                                                <li> Equal Opportunities</li>
+                                                <li>Talent Nurturing</li>
+                                            </ul>
+                                        </div>                                     
+                                    </div>
+                                    <!-- Mission Vision Content End -->
+                                </div>
+    
+                                <div class="col-lg-6">
+                                    <!-- Mission Vision Image Start -->
+                                    <div class="mission-vision-image">
+                                        <figure  class="image-anime">
+                                            <img src="images/npo/npo1.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <!-- Mission Vision Image End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mission Vision Item End -->
+    
+                        <!-- Mission Vision Item Start -->
+                        <div class="mission-vision-item tab-pane fade" id="vision" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <!-- Mission Vision Content Start -->
+                                    <div class="mission-vision-content">
+                                        <div class="mission-vision-content-header">
+                                            <p class="text-justify">A world where no artist struggles in silence, no worker remains unseen — a future where passion meets protection and talent meets opportunity.</p>
+                                        </div>
+    
+                                        <div class="mission-vision-content-list">
+                                            <ul>
+                                                <li>Supportive Environment</li>
+                                                <li>Fair Treatment</li>
+                                                <li>Awareness Raising</li>
+                                                <li>Skill Growth</li>
+                                            </ul>
+                                        </div>                                    
+                                    </div>
+                                    <!-- Mission Vision Content End -->
+                                </div>
+    
+                                <div class="col-lg-6">
+                                    <!-- Mission Vision Image Start -->
+                                    <div class="mission-vision-image">
+                                        <figure  class="image-anime">
+                                            <img src="images/npo/npo2.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <!-- Mission Vision Image End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mission Vision Item End -->
+    
+                        <!-- Mission Vision Item Start -->
+                        <div class="mission-vision-item tab-pane fade" id="value" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <!-- Mission Vision Content Start -->
+                                    <div class="mission-vision-content">
+                                        <div class="mission-vision-content-header">
+                                            <p class="text-justify">At CAWF, we value dignity, equality, and collaboration. Our core belief is that every individual deserves respect, protection, and the opportunity to grow.</p>
+                                        </div>
+    
+                                        <div class="mission-vision-content-list">
+                                            <ul>
+                                                <li>Integrity & Honesty</li>
+                                                <li>Professionalism & Excellence</li>
+                                                <li>Innovation & Learning</li>
+                                                <li>Empowerment & Growth</li>
+                                            </ul>
+                                        </div>                                     
+                                    </div>
+                                    <!-- Mission Vision Content End -->
+                                </div>
+    
+                                <div class="col-lg-6">
+                                    <!-- Mission Vision Image Start -->
+                                    <div class="mission-vision-image">
+                                        <figure  class="image-anime" style="object-fit: contain;">
+                                            <img src="images/npo/npo3.webp" alt="">
+                                        </figure>
+                                    </div>
+                                    <!-- Mission Vision Image End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mission Vision Item End -->
+                    </div>
+                    <!-- Mission Vision Box End -->
                 </div>
-              </div>
             </div>
-            <div class="col-md-6 col-lg-5">
-              <div class="divider-about-content">
-                <div class="divider-content">
-                  <h2 class="title">Beyond the Camera<br>— It’s Confidence for Life</h2>
-                  <p class="text-justify">At our institute, we believe that true growth begins beyond the lens. It’s not
-                    just about how you look on camera — it’s about how you carry yourself in life. Our training is
-                    designed to build more than just technical skills; it builds self-belief, discipline, and the
-                    confidence to express who you truly are. Whether you're walking the ramp, performing on stage, or
-                    directing behind the scenes, we prepare you to own every space you step into — with clarity,
-                    creativity, and confidence that lasts a lifetime.</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <!--== End Video Divider Area Wrapper ==-->
-      <!--== Start Why choose Us Collection Area Wrapper ==-->
-      <section class="collection-area collection-winter-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="align-items">
-                <div class="col-left">
-                  <div class="content" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="section-title">
-                      <h2 class="title"><span>Why</span> Choose Us </h2>
-                      <p class="text-justify">At CAWF, we believe that talent needs the right training, direction, and
-                        exposure to shine. What sets us apart is our commitment to excellence – from expert mentors with
-                        real industry experience to hands-on practical learning that prepares you for the real world. We
-                        don’t just teach the craft; we build confidence, personality, and a strong professional
-                        foundation. Join us and experience the difference of industry-level training, right here in
-                        Lucknow. </p>
-                      <a href="#" class="btn-theme btn-black btn-border btn-size-lg text-uppercase">Explore More</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-right">
-                  <div class="category-items-style7">
-                    <div class="category-item hover-effect effect-style1 item-one">
-                      <div class="thumb">
-                        <a href="#"><img src="assets/img/shop/category/c1.jpg" alt="Moren-Images"></a>
-                        <div class="effect-content"></div>
-                      </div>
-                    </div>
-                    <div class="category-item hover-effect effect-style1 item-two">
-                      <div class="thumb">
-                        <a href="#"><img src="assets/img/shop/category/c2.jpg" alt="Moren-Images"></a>
-                        <div class="effect-content"></div>
-                      </div>
-                    </div>
-                    <div class="category-item hover-effect effect-style1 item-three">
-                      <div class="thumb">
-                        <a href="#"><img src="assets/img/shop/category/c3.jpg" alt="Moren-Images"></a>
-                        <div class="effect-content"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--== End Collection Area Wrapper ==-->
-
-      <!--== Start Brand Logo Area ==-->
-      <section class="brand-logo-area brand-logo-style1-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-lg-6 m-auto">
-              <div class="section-title text-center">
-                <h2 class="title">Our Partners</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row align-items-center">
-            <div class="col-lg-12">
-              <div class="swiper-container brand-logo-slider-container">
-                <div class="swiper-wrapper brand-logo-slider">
-                  <div class="swiper-slide brand-logo-item">
-                    <a href="#/"><img src="assets/img/brand-logo/1.png" alt="Brand-Logo"></a>
-                  </div>
-                  <div class="swiper-slide brand-logo-item">
-                    <a href="#/"><img src="assets/img/brand-logo/2.png" alt="Brand-Logo"></a>
-                  </div>
-                  <div class="swiper-slide brand-logo-item">
-                    <a href="#/"><img src="assets/img/brand-logo/3.png" alt="Brand-Logo"></a>
-                  </div>
-                  <div class="swiper-slide brand-logo-item">
-                    <a href="#/"><img src="assets/img/brand-logo/4.png" alt="Brand-Logo"></a>
-                  </div>
-                  <div class="swiper-slide brand-logo-item">
-                    <a href="#/"><img src="assets/img/brand-logo/5.png" alt="Brand-Logo"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--== End Brand Logo Area ==-->
-
-      <!--== Start Team Area Wrapper ==-->
-      <section class="team-area team-creative-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title text-center">
-                <h2 class="title">Our Team</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row team-members-style2 row-gutter-60">
-            <div class="col-sm-6 col-md-4">
-              <div class="team-member">
-                <div class="thumb">
-                  <img src="assets/img/team/1.jpg" alt="Broly-HasTech">
-                </div>
-                <div class="content">
-                  <div class="member-info">
-                    <h4 class="name">Agnes Wilson</h4>
-                    <p>Manager</p>
-                    <div class="social-icons">
-                      <a href="#"><i class="fa lastudioicon-b-facebook"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-twitter"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-pinterest"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-instagram"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="team-member mt-xs-30">
-                <div class="thumb">
-                  <img src="assets/img/team/2.jpg" alt="Broly-HasTech">
-                </div>
-                <div class="content">
-                  <div class="member-info">
-                    <h4 class="name">John Doe</h4>
-                    <p>Creative Director</p>
-                    <div class="social-icons">
-                      <a href="#"><i class="fa lastudioicon-b-facebook"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-twitter"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-pinterest"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-instagram"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="team-member mt-sm-30">
-                <div class="thumb">
-                  <img src="assets/img/team/3.jpg" alt="Broly-HasTech">
-                </div>
-                <div class="content">
-                  <div class="member-info">
-                    <h4 class="name">John Terry</h4>
-                    <p>Designer</p>
-                    <div class="social-icons">
-                      <a href="#"><i class="fa lastudioicon-b-facebook"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-twitter"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-pinterest"></i></a>
-                      <a href="#"><i class="fa lastudioicon-b-instagram"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--== End Team Area Wrapper ==-->
-
-      <!--== Start Testimonal Blog Area Wrapper ==-->
-      <section class="blog-area blog-default-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-lg-6 m-auto">
-              <div class="section-title text-center" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="title">#Testimonial</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row post-items" data-aos="fade-up" data-aos-duration="1200">
-            <div class="col-12">
-              <div class="swiper-container post-slider-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <!--== Start Blog Post Item ==-->
-                    <div class="post-item">
-                      <div class="thumb">
-                        <a href="#"><img src="assets/img/blog/s1.jpg" alt="Moren-Image"></a>
-                      </div>
-                      <div class="content">
-                        <div class="post-meta">
-                          <img src="assets/img/icons/s1.jpg" alt="Image">
-                          <a href="#">Priya S., Lucknow</a>
-                        </div>
-                        <div class="inner-content">
-                          <h4 class="title">
-                            <a href="#"> Aspiring Actress</a>
-                          </h4>
-                          <p class="text-justify">Joining this academy was the best decision of my life. I came in with
-                            zero experience and walked out with a professional portfolio and casting offers. The
-                            trainers push you, polish you, and prepare you for the real world.</p>
-                        </div>
-
-                      </div>
-                    </div>
-                    <!--== End Blog Post Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Blog Post Item ==-->
-                    <div class="post-item">
-                      <div class="thumb">
-                        <a href="#"><img src="assets/img/blog/s2.jpg" alt="Moren-Image"></a>
-                      </div>
-                      <div class="content">
-                        <div class="post-meta">
-                          <img src="assets/img/icons/s1.jpg" alt="Image">
-                          <a href="#">Ankit K.</a>
-                        </div>
-                        <div class="inner-content">
-                          <h4 class="title">
-                            <a href="#">Model & Influencer</a>
-                          </h4>
-                          <p class="text-justify">The way they teach camera presence and body language is just amazing.
-                            I not only learned modelling but also gained confidence I never had before. If you want to
-                            make it big — this is where you start.</p>
-                        </div>
-
-                      </div>
-                    </div>
-                    <!--== End Blog Post Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Blog Post Item ==-->
-                    <div class="post-item">
-                      <div class="thumb">
-                        <a href="#"><img src="assets/img/blog/s3.jpg" alt="Moren-Image"></a>
-                      </div>
-                      <div class="content">
-                        <div class="post-meta">
-                          <img src="assets/img/icons/s1.jpg" alt="Image">
-                          <a href="#">Neha R., Kanpur</a>
-                        </div>
-                        <div class="inner-content">
-                          <h4 class="title">
-                            <a href="#">Freelance Photographer</a>
-                          </h4>
-                          <p class="text-justify">As a photographer, I always struggled with creative direction. The
-                            mentors here helped me unlock my vision and taught me the technical skills I was missing.
-                            Today, I shoot for brands!</p>
-                        </div>
-
-                      </div>
-                    </div>
-                    <!--== End Blog Post Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Blog Post Item ==-->
-                    <div class="post-item">
-                      <div class="thumb">
-                        <a href="#"><img src="assets/img/blog/s4.jpg" alt="Moren-Image"></a>
-                      </div>
-                      <div class="content">
-                        <div class="post-meta">
-                          <img src="assets/img/icons/s1.jpg" alt="Image">
-                          <a href="#">Riya T., Lucknow</a>
-                        </div>
-                        <div class="inner-content">
-                          <h4 class="title">
-                            <a href="#"> Fashion Student</a>
-                          </h4>
-                          <p class="text-justify">Mujhe laga sirf talent kaafi hoga, par yahaan aakar samjha ki
-                            grooming, training aur right guidance kitni important hoti hai. Inke mock auditions aur
-                            portfolio shoots ne mujhe real confidence diya.</p>
-                        </div>
-
-                      </div>
-                    </div>
-                    <!--== End Blog Post Item ==-->
-                  </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--== End Blog Area Wrapper ==-->
-
-      <!--== Start Contact Area ==-->
-      <section class="contact-area contact-about-area bg-img" data-bg-img="assets/img/about/2.jpg">
-        <div class="container-fluid">
-          <div class="row row-gutter-0">
-            <div class="col-lg-6">
-              <div class="col-left">
-                <div class="section-title text-center">
-                  <h2 class="title">Get in Touch with Style</h2>
-                  <p>Ready to create something stunning? Whether it’s a custom design or a styling query, we’re here to
-                    help. Get in touch and let’s design fashion that’s as unique as you are.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="col-right">
-                <div class="contact-form">
-                  <form class="contact-form-wrapper" id="contact-form"
-                    action="http://whizthemes.com/mail-php/raju/arden/mail.php" method="post">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <input class="form-control" type="text" name="con_name" placeholder="Name*">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <input class="form-control" type="email" name="con_email" placeholder="Email*">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <input class="form-control" type="number" name="con_phone" placeholder="Phone Number*">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group mb-0">
-                          <textarea class="form-control textarea" name="con_message"
-                            placeholder="Your Message"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group mb-0">
-                          <button class="btn btn-theme btn-black" type="submit">Submit</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <!-- Message Notification -->
-                <div class="form-message"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="canvas-overlay"></div>
-      </section>
-      <!--== End Contact Area ==-->
-    </main>
-
-    <!--== Start Footer Area Wrapper ==-->
-    <?php
-    include('footer.php');
-    ?>
-    <!--== End Footer Area Wrapper ==-->
-    <!--== Scroll Top Button ==-->
-    <div class="scroll-to-top"><span class="icofont-arrow-up"></span></div>
-
-
-    <!--== Start Aside Search Menu ==-->
-    <div class="search-box-wrapper">
-      <div class="search-box-content-inner">
-        <div class="search-box-form-wrap">
-          <div class="search-note">
-            <p>Start typing and press Enter to search</p>
-          </div>
-          <form action="#" method="post">
-            <div class="search-form position-relative">
-              <label for="search-input" class="sr-only">Search</label>
-              <input type="search" class="form-control" placeholder="Search" id="search-input">
-              <button class="search-button"><i class="lastudioicon-zoom-1"></i></button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <!--== End Aside Search Menu ==-->
-      <a href="javascript:;" class="search-close"><i class="lastudioicon-e-remove"></i></a>
     </div>
-    <!--== End Aside Search Menu ==-->
+    <!-- Our Mission Vision Section End -->
 
-    <!--== Start Sidebar Cart Menu ==-->
-    <aside class="sidebar-cart-modal">
-      <div class="sidebar-cart-inner">
-        <div class="sidebar-cart-content">
-          <a class="cart-close" href="javascript:void(0);"><i class="lastudioicon-e-remove"></i></a>
-          <div class="sidebar-cart">
-            <h4 class="sidebar-cart-title">Shopping Cart</h4>
-            <div class="product-cart">
-              <div class="product-cart-item">
-                <div class="product-img">
-                  <a href="shop.html"><img src="assets/img/shop/cart/1.jpg" alt=""></a>
+    <!-- Our Process Section Start -->
+    <div class="our-process">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">Why Choose Us</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Trusted by Artists &   <span> Workers</span></h2>
+                    </div>
+                    <!-- Section Title End -->
                 </div>
-                <div class="product-info">
-                  <h4 class="title"><a href="shop.html">I’m a Unicorn Earrings</a></h4>
-                  <span class="info">1 × £69.00</span>
+
+                <div class="col-lg-6">
+                    <!-- Section Title Content Start -->
+                    <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
+                        <p class="text-justify">At CAWF, we are dedicated to empowering cine artists and workers by offering comprehensive support that truly makes a difference. From skill development and professional training to reliable legal assistance, we ensure every member receives the resources they need to succeed. </p>
+                    </div>
+                    <!-- Section Title Content End -->
                 </div>
-                <div class="product-delete"><a href="#/">×</a></div>
-              </div>
-              <div class="product-cart-item">
-                <div class="product-img">
-                  <a href="shop.html"><img src="assets/img/shop/cart/2.jpg" alt=""></a>
-                </div>
-                <div class="product-info">
-                  <h4 class="title"><a href="shop.html">Knit cropped cardigan</a></h4>
-                  <span class="info">1 × £29.90</span>
-                </div>
-                <div class="product-delete"><a href="#/">×</a></div>
-              </div>
             </div>
-            <div class="cart-total">
-              <h4>Subtotal: <span class="money">£98.90</span></h4>
-            </div>
-            <div class="shipping-info">
-              <div class="loading-bar">
-                <div class="load-percent"></div>
-                <div class="label-free-shipping">
-                  <div class="free-shipping svg-icon-style">
-                    <span class="svg-icon" id="svg-icon-shipping" data-svg-icon="assets/img/icons/shop1.svg"></span>
-                  </div>
-                  <p>Spend £101.10 to get Free Shipping</p>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Our Process Image Start -->
+                    <div class="our-process-image">
+                        <figure class="image-anime reveal">
+                            <img src="images/npo/14.webp" alt="">
+                        </figure>
+                    </div>
+                    <!-- Our Process Image End -->
                 </div>
-              </div>
+
+                <div class="col-lg-6">
+                    <!-- Process Step Box Start -->
+                    <div class="process-steps-box">
+                        <!-- Process Step Item Start -->
+                        <div class="process-step-item wow fadeInUp">
+                            <div class="process-step-no">
+                                <h2>01</h2>
+                            </div>
+                            <div class="process-step-content">
+                                <h3>Skill Development Training</h3>
+                                <p class="text-justify">We provide focused training to help artists and workers sharpen their skills and advance their careers. Our programs are designed to keep you industry-ready and confident.</p>
+                            </div>
+                        </div>
+                        <!-- Process Step Item End -->
+
+                        <!-- Process Step Item Start -->
+                        <div class="process-step-item active wow fadeInUp" data-wow-delay="0.25s">
+                            <div class="process-step-no">
+                                <h2>02</h2>
+                            </div>
+                            <div class="process-step-content">
+                                <h3> Strong Industry Network</h3>
+                                <p class="text-justify">We connect our members with key industry professionals to open doors for new opportunities. Our extensive network helps artists and workers build valuable relationships for career growth.</p>
+                            </div>
+                        </div>
+                        <!-- Process Step Item End -->
+
+                        <!-- Process Step Item Start -->
+                        <div class="process-step-item wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="process-step-no">
+                                <h2>03</h2>
+                            </div>
+                            <div class="process-step-content">
+                                <h3>Health & Welfare Programs</h3>
+                                <p class="text-justify">We prioritize the well-being of our members through health initiatives and welfare support. Our programs ensure access to medical care, insurance, and a safer work environment.</p>
+                            </div>
+                        </div>
+                        <!-- Process Step Item End -->
+                    </div>
+                    <!-- Process Step Box End -->
+                </div>
             </div>
-            <div class="cart-checkout-btn">
-              <a class="btn-theme" href="shop-cart.html">View cart</a>
-              <a class="btn-theme" href="shop-checkout.html">Checkout</a>
-            </div>
-          </div>
         </div>
-      </div>
-    </aside>
-    <div class="sidebar-cart-overlay"></div>
-    <!--== End Sidebar Cart Menu ==-->
+    </div>
+    <!-- Our Process Section End -->
 
-    <!--== Start Side Menu ==-->
-    <aside class="off-canvas-wrapper">
-      <div class="off-canvas-inner">
-        <div class="off-canvas-overlay d-none"></div>
-        <!-- Start Off Canvas Content Wrapper -->
-        <div class="off-canvas-content">
-          <!-- Off Canvas Header -->
-          <div class="off-canvas-header">
-            <div class="close-action">
-              <button class="btn-close"><i class="icofont-close-line"></i></button>
-            </div>
-          </div>
+    <!-- Our Features Section Start -->
+    <div class="our-features">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">our key feature</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Features That Represent  <span>CAWF</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
 
-          <div class="off-canvas-item">
-            <!-- Start Mobile Menu Wrapper -->
-            <div class="res-mobile-menu">
-              <!-- Note Content Auto Generate By Jquery From Main Menu -->
+                <div class="col-lg-6">
+                    <!-- Section Title Content Start -->
+                    <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
+                        <p class="text-justify">Our commitment lies in empowering every artist and industry worker through real support, fair opportunities, and consistent advocacy. We work to uplift the film, fashion, and creative communities by providing essential services, education, and a voice where it's needed most.</p>
+                    </div>
+                    <!-- Section Title Content End -->
+                </div>
             </div>
-            <!-- End Mobile Menu Wrapper -->
-          </div>
-          <!-- Off Canvas Footer -->
-          <div class="off-canvas-footer"></div>
+
+            <div class="row no-gutters">
+                <!-- Our Features Boxes Start -->
+                <div class="our-features-boxes">
+                    <!-- Our Features Item Start -->
+                    <div class="our-features-item">
+                        <div class="icon-box">
+                            <img src="images/icon-features-1.svg" alt="">
+                        </div>
+                        <div class="features-item-content">
+                            <h3>Comprehensive Skill Training</h3>
+                            <p class="text-justify">At CAWF, we offer comprehensive skill training programs designed to prepare artists and workers for real-world industry challenges. From acting and modeling to technical fields like cinematography and editing, our expert-led sessions ensure you gain practical knowledge, confidence, and career-ready skills.</p>
+                        </div>
+                    </div>
+                    <!-- Our Features Item End -->
+
+                    <!-- Our Features Item Start -->
+                    <div class="our-features-item">
+                        <div class="icon-box">
+                            <img src="images/icon-features-2.svg" alt="">
+                        </div>
+                        <div class="features-item-content">
+                            <h3>Health & Welfare Programs</h3>
+                            <p class="text-justify">CAWF prioritizes the well-being of its members through dedicated health and welfare programs. We offer access to medical support, insurance assistance, and emergency aid, ensuring a secure and supportive environment where artists and workers can thrive without worry.</p>
+                        </div>
+                    </div>
+                    <!-- Our Features Item End -->
+
+                    <!-- Our Features Item Start -->
+                    <div class="our-features-item">
+                        <div class="icon-box">
+                            <img src="images/icon-features-3.svg" alt="">
+                        </div>
+                        <div class="features-item-content">
+                            <h3> Strong Industry Connections</h3>
+                            <p class="text-justify">CAWF connects its members with top professionals, production houses, and agencies across the film, TV, and fashion industries. Our vast network opens doors to real opportunities, helping artists and workers collaborate, grow, and succeed in their creative careers.</p>
+                        </div>
+                    </div>
+                    <!-- Our Features Item End -->
+
+                    <!-- Our Features Item Start -->
+                    <div class="our-features-item features-image-box">
+                       <figure class="image-anime">
+                            <img src="images/npo/15.webp" alt="">
+                       </figure>
+                    </div>
+                    <!-- Our Features Item End -->
+                </div>
+                <!-- Our Features Boxes End -->
+            </div>
         </div>
-        <!-- End Off Canvas Content Wrapper -->
-      </div>
-    </aside>
-    <!--== End Side Menu ==-->
-  </div>
+    </div>
+    <!-- Our Features Section End -->
 
-  <!--=======================Javascript============================-->
+    
 
-  <!--=== Modernizr Min Js ===-->
-  <script src="assets/js/modernizr.js"></script>
-  <!--=== jQuery Min Js ===-->
-  <script src="assets/js/jquery-main.js"></script>
-  <!--=== jQuery Migration Min Js ===-->
-  <script src="assets/js/jquery-migrate.js"></script>
-  <!--=== Popper Min Js ===-->
-  <script src="assets/js/popper.min.js"></script>
-  <!--=== Bootstrap Min Js ===-->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <!--=== jquery Appear Js ===-->
-  <script src="assets/js/jquery.appear.js"></script>
-  <!--=== jquery Swiper Min Js ===-->
-  <script src="assets/js/swiper.min.js"></script>
-  <!--=== jquery Fancybox Min Js ===-->
-  <script src="assets/js/fancybox.min.js"></script>
-  <!--=== jquery Aos Min Js ===-->
-  <script src="assets/js/aos.min.js"></script>
-  <!--=== jquery Slicknav Js ===-->
-  <script src="assets/js/jquery.slicknav.js"></script>
-  <!--=== jquery Countdown Js ===-->
-  <script src="assets/js/jquery.countdown.min.js"></script>
-  <!--=== jquery Tippy Js ===-->
-  <script src="assets/js/tippy.all.min.js"></script>
-  <!--=== Isotope Min Js ===-->
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <!--=== jquery Vivus Js ===-->
-  <script src="assets/js/vivus.js"></script>
-  <!--=== Parallax Min Js ===-->
-  <script src="assets/js/parallax.min.js"></script>
-  <!--=== Slick  Min Js ===-->
-  <script src="assets/js/slick.min.js"></script>
-  <!--=== jquery Wow Min Js ===-->
-  <script src="assets/js/wow.min.js"></script>
-  <!--=== jquery Zoom Min Js ===-->
-  <script src="assets/js/jquery-zoom.min.js"></script>
+    <!-- Our Team Section Start -->
+    <div class="our-team">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">our team</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">The People Behind   <span>CAWF</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
 
-  <!--=== Custom Js ===-->
-  <script src="assets/js/custom.js"></script>
-  <div class="sticky-footer res-dd-none">
-    <!-- Left Section: Phone Number -->
-    <a href="https://wa.me/919555584040" class="phone-link" target="_blank">
-      <img width="25" height="25" src="https://img.icons8.com/sf-black-filled/64/a64637/whatsapp.png" alt="whatsapp" />
-      +91 9555584040
-    </a>
-    <!-- Right Section: Request a Demo Button -->
-    <a class="demo-btn" href="contact.html">Contact Us</a>
-  </div>
+                
+            </div>
 
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-member-item wow fadeInUp">
+                        <!-- Team Image Start -->
+                        <div class="team-image">
+                            <a href="#" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/npo/team.webp" alt="">
+                                </figure>
+                            </a>
+                
+                            
+                        </div>
+                        <!-- Team Image End -->
+                
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="#">ronald richards</a></h3>
+                            <p>Chairman</p>
+                        </div>
+                        <!-- Team Content End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.25s">
+                        <!-- Team Image Start -->
+                        <div class="team-image">
+                            <a href="#" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/npo/14.webp" alt="">
+                                </figure>
+                            </a>
+                
+                            
+                        </div>
+                        <!-- Team Image End -->
+                
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="#">brooklyn simmons</a></h3>
+                            <p>Artists</p>
+                        </div>
+                        <!-- Team Content End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
+                        <!-- Team Image Start -->
+                        <div class="team-image">
+                            <a href="#" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/npo/3.webp" alt="">
+                                </figure>
+                            </a>
+                
+                           
+                        </div>
+                        <!-- Team Image End -->
+                
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="#">cameron williamson</a></h3>
+                            <p>production supervisor</p>
+                        </div>
+                        <!-- Team Content End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
+                        <!-- Team Image Start -->
+                        <div class="team-image">
+                            <a href="#" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="images/npo/15.webp" alt="">
+                                </figure>
+                            </a>
+                
+                            
+                        </div>
+                        <!-- Team Image End -->
+                
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="#">darlene robertson</a></h3>
+                            <p>project manager</p>
+                        </div>
+                        <!-- Team Content End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Team Section End -->
+
+    <!-- Our Faqs Section Start -->
+    <div class="our-faqs">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-5">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">FAQs</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Frequently asked <span>questions</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+                <div class="col-lg-7">
+                    <!-- Section Button Start -->
+                    <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
+                        <a href="#" class="btn-default"><span>Contact Us</span></a>
+                    </div>
+                    <!-- Section Button End -->
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Our Faqs Images Start -->
+                    <div class="our-faqs-images">
+                        <!-- Our Faqs Image Start -->
+                        <div class="our-faqs-img">
+                            <figure class="image-anime">
+                                <img src="images/our-faqs-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Our Faqs Image End -->
+
+                        <!-- Faqs Image Cta Box Start -->
+                        <div class="faqs-img-cta-box">
+                            <ul>
+                                <li><a href="tel:+919555584040"><img src="images/icon-phone-accent.svg" alt=""> +91
+                                        9555584040</a></li>
+                                <li><a href="mailto:hello@cawf.in"><img src="images/icon-mail-accent.svg" alt="">
+                                        hello@cawf.in</a></li>
+                            </ul>
+                        </div>
+                        <!-- Faqs Image Cta Box End -->
+                    </div>
+                    <!-- Our Faqs Images End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="our-faq-section">
+                        <!-- FAQ Accordion Start -->
+                        <div class="faq-accordion" id="faqaccordion">
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                        What is CAWF?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            CAWF stands for Cine Artist & Workers Welfare Federation. It is a non-profit
+                                            organization that supports and empowers people working in the film and TV
+                                            industry.
+
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button " type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                        Who can join CAWF?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>Any artist or worker from the entertainment industry can join — including
+                                            actors, junior artists, spot boys, lightmen, technicians, makeup artists,
+                                            cameramen, and more..</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                        What benefits do members get?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Members receive access to medical support, emergency financial help, legal
+                                            aid, training workshops, and welfare programs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                        Is CAWF involved in media or press activities?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Yes. CAWF regularly shares news, updates, and announcements through press
+                                            conferences and media platforms to keep everyone informed.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
+                                <h2 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                        How can I become a member of CAWF?
+                                    </button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                    data-bs-parent="#faqaccordion">
+                                    <div class="accordion-body">
+                                        <p>
+                                            You can become a member by filling a simple registration form and submitting
+                                            basic documents. Membership can be applied online or by visiting our office.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+                        </div>
+                        <!-- FAQ Accordion End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Faqs Section End -->
+
+    
+    <!-- Footer Start -->
+    <footer class="main-footer" id="footer">
+        <?php
+            include('foter.php');
+        ?>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Isotop js file -->
+	<script src="js/isotope.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
 </body>
 
 </html>

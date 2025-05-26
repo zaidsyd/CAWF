@@ -2,40 +2,50 @@
 include('db_con.php');
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (empty($_POST['id'])) {
-        die("Required data missing.");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['id'] ?? null;
+
+    if (!$id || !is_numeric($id)) {
+        header("Location: error.php?msg=invalid_id");
+        exit;
     }
 
-    $id = intval($_POST['id']);
-
-    if (isset($_FILES['qr_image']) && $_FILES['qr_image']['error'] === 0) {
+    $qr_image = '';
+    if (isset($_FILES['qr_image']) && $_FILES['qr_image']['error'] == 0) {
         $target_dir = "uploads/qrimage/";
-        if (!is_dir($target_dir)) {
+        if (!file_exists($target_dir)) {
             mkdir($target_dir, 0777, true);
         }
 
-        $filename = uniqid() . "_" . basename($_FILES["qr_image"]["name"]);
+        $filename = uniqid("qr_") . "_" . basename($_FILES["qr_image"]["name"]);
         $target_file = $target_dir . $filename;
 
         if (move_uploaded_file($_FILES["qr_image"]["tmp_name"], $target_file)) {
-            $stmt = $con->prepare("UPDATE registration_form SET qr_image = ? WHERE id = ?");
-            $stmt->bind_param("si", $target_file, $id); // Corrected here
-
-            if ($stmt->execute()) {
-                $_SESSION['payment_update_msg'] = "Payment proof uploaded successfully.";
-                header("Location: congratulation.php");
-                exit;
-            } else {
-                die("Database update failed: " . $stmt->error);
-            }
+            $qr_image = $target_file;
         } else {
-            die("Failed to upload file.");
+            header("Location: error.php?msg=image_upload_failed");
+            exit;
         }
     } else {
-        die("No file uploaded or upload error.");
+        header("Location: error.php?msg=no_image");
+        exit;
     }
+
+    // Update qr_image for the existing registration_form record
+    $stmt = $con->prepare("UPDATE registration_form SET qr_image = ? WHERE id = ?");
+    $stmt->bind_param("si", $qr_image, $id);
+
+    if ($stmt->execute()) {
+        $_SESSION['payment_update_msg'] = "Payment screenshot uploaded successfully!";
+        header("Location: congratulation.php");
+        exit;
+    } else {
+        header("Location: error.php?msg=db_update_failed");
+        exit;
+    }
+
+    $stmt->close();
+    $con->close();
 }
 ?>
-
 

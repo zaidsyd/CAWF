@@ -126,7 +126,7 @@ if (isset($_GET['form_number'])) {
       </div>
     </div>
 
-    <img src="./assets/img/cawf black.png" class="stamp" alt="Stamp">
+    <img src="images/logo/cawf black.png" class="stamp" alt="Stamp">
 
     <div class="signature-block">
       <div class="sign">

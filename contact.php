@@ -1,405 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zxx">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
+    <title>CAWF | Contact Us</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/cawf black.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        .text-justify {
+            text-align: justify;
+        }
 
-  <title>CAWF | Contact</title>
+        .cawf_slider__container {
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+            background: #000;
+            /* optional background */
+        }
 
-  <!--== Favicon ==-->
-  <link rel="shortcut icon" href="assets/img/cawf-logo-1.jpg" type="image/x-icon" />
+        .cawf_slider__wrapper div {
+            margin-left: 10px
+        }
 
-  <!--== Google Fonts ==-->
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface:400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,900,900i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,700,900,900i" rel="stylesheet">
-
-  <!--== Bootstrap CSS ==-->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-  <!--== Font-awesome Icons CSS ==-->
-  <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-  <!--== Icofont Min Icons CSS ==-->
-  <link href="assets/css/icofont.min.css" rel="stylesheet" />
-  <!--== lastudioIcons CSS ==-->
-  <link href="assets/css/lastudioIcons.css" rel="stylesheet" />
-  <!--== Animate CSS ==-->
-  <link href="assets/css/animate.css" rel="stylesheet" />
-  <!--== Aos CSS ==-->
-  <link href="assets/css/aos.css" rel="stylesheet" />
-  <!--== FancyBox CSS ==-->
-  <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" />
-  <!--== Slicknav CSS ==-->
-  <link href="assets/css/slicknav.css" rel="stylesheet" />
-  <!--== Swiper CSS ==-->
-  <link href="assets/css/swiper.min.css" rel="stylesheet" />
-  <!--== Slick CSS ==-->
-  <link href="assets/css/slick.css" rel="stylesheet" />
-  <!--== Main Style CSS ==-->
-  <link href="assets/css/style.css" rel="stylesheet" />
-  <style>
-    .sticky-footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      border-top: 1px solid #ddd;
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    .demo-btn {
-      flex: 1;
-      height: 100%;
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(to right, #a64637, #e78d6d);
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-    }
-
-    .header-logo-area .logo-main {
-      height: 108px;
-      width: 84px;
-      object-fit: contain;
-    }
-
-    .header-area.header-default .header-navigation-area .main-menu {
-      margin-left: 0px !important;
-    }
-
-    .header-area.sticky-header.sticky.header-style5 .header-logo-area .logo-light {
-      height: 108px;
-      width: 84px;
-      object-fit: contain;
-
-    }
-
-    .header-area.header-default.header-style5 .header-logo-area img {
-
-      height: 108px;
-      width: 84px;
-      object-fit: contain;
-      padding-top: 5px;
-      padding-bottom: 2px;
+        .cawf_slider__wrapper img {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
 
 
-    }
+        .cawf_cert_slider__wrapper .cawf_cert_slider__slide {
+            padding: 0 10px;
+        }
 
-    .footer-area.footer-style6 .footer-main .footer-logo-area a .logo-main {
-      height: 108px;
-      width: 84px;
-      object-fit: contain;
+        .cawf_cert_slider__slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            object-fit: cover;
+        }
 
-    }
+        /* Arrow custom (optional) */
+        .slick-prev:before,
+        .slick-next:before {
+            color: #ffffff;
+            font-size: 24px;
+        }
 
-    .blog-area.blog-default-area {
-      padding-bottom: 10px;
-    }
+        .slick-dots li button:before {
+            font-size: 12px;
+            color: #0e0e0e;
+        }
 
-    .category-area.category-style9-area {
-      margin-top: 5rem;
-    }
+        .slick-dots li.slick-active button:before {
+            color: #ffffff;
+        }
 
-    .text-justify {
-      text-align: justify;
-    }
+        .navbar-brand img {
+            height: 80px;
+        }
 
-    /* .header-area.header-default .header-action-area .btn-menu{
-            color:white;
-        } */
-    @media only screen and (max-width: 1199px) {
-      .header-area.header-default .container-fluid {
-        padding: 0px 9px;
-      }
+        .hero-slide .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      .header-area.header-default.header-style5 .header-logo-area img {
-        padding-top: 10px;
-        padding-bottom: 14px;
-      }
-    }
+        .footer-links h3 {
+            color: #b56b33;
+        }
 
-    @media (max-width: 768px) {
+        @media (max-width:789px) {
+            .navbar-brand img {
+                height: 65px;
+            }
 
-      .phone-link,
-      .demo-btn {
-        font-size: 0.9rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
+            .cawf_cert_slider__slide img {
+                height: 200px;
+            }
 
-    @media screen and (min-width: 768px) {
-      .res-dd-none {
-        display: none !important;
-      }
-    }
+            .cawf_slider__wrapper img {
+                height: 150px;
+            }
 
-    .phone-link {
-      flex: 1;
-      text-decoration: none;
-      color: #a64637;
-      font-size: 1rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      height: 100%;
-      background-color: white;
-    }
-  </style>
-
-
+            .slicknav_nav .nav-item a {
+                font-weight: bold;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!--wrapper start-->
-  <div class="wrapper">
-
-    <!--== Start Header Wrapper ==-->
-    <?php
-    include('footer.php');
-    ?>
-    <!--== End Header Wrapper ==-->
-
-    <main class="main-content">
-      <!--== Start Page Title Area ==-->
-      <section class="page-title-area bg-img" data-bg-img="assets/img/photos/bg-page3.jpg">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="page-title-content">
-                <h2 class="title">Contact Us</h2>
-                <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><span
-                    class="active">Contact Us</span></div>
-              </div>
-            </div>
-          </div>
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="images/logo/cawf black.png" alt=""></div>
         </div>
-      </section>
-      <!--== End Page Title Area ==-->
+    </div>
+    <!-- Preloader End -->
 
-      <!--== Start Contact Area ==-->
-      <section class="contact-area">
+    <!-- Header Start -->
+    <header class="main-header" id="header">
+        <header class="main-header" id="header">
+            <?php
+            include('header.php');
+            ?>
+        </header>
+    </header>
+    <!-- Header End -->
+
+    <!-- Page Header Start -->
+    <div class="page-header parallaxie">
         <div class="container">
-          <div class="row">
-            <div class=" col-lg-7">
-              <div class="contact-form">
-                <form class="contact-form-wrapper form-style" id="contact-form"
-                  action="http://whizthemes.com/mail-php/raju/arden/mail.php" method="post">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="section-title">
-                        <h2 class="title">Get In Touch </h2>
-                      </div>
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">Contact <span>us</span></h1>
+                        <nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.php">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">contact us</li>
+                            </ol>
+                        </nav>
                     </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input class="form-control" type="text" name="con_name" placeholder="Name*">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input class="form-control" type="email" name="con_email" placeholder="Email*">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input class="form-control" type="number" name="con_phone" placeholder="Phone Number*">
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group mb-0">
-                        <textarea class="form-control textarea" name="con_message"
-                          placeholder="Your Message"></textarea>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group mb-0">
-                        <button class="btn btn-theme btn-black" type="submit">Contact Us</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <!-- Message Notification -->
-                <div class="form-message"></div>
-              </div>
-            </div>
-            <div class=" col-lg-5">
-              <div class="contact-info-wrapper">
-                <div class="section-title">
-                  <h2 class="title">Contact Us</h2>
+                    <!-- Page Header Box End -->
                 </div>
-                <div class="contact-info-content">
-                  <div class="align-top">
-                    <div class="contact-info-item">
-                      <div class="icon">
-                        <i class="lastudioicon lastudioicon-pin-3-2"></i>
-                      </div>
-                      <div class="content">
-                        <h4>Head Branch</h4>
-                        <p>C13 Shivalik Colony, Basant Kaur Marg, Malviya Nagar, India, Delhia</p>
-                      </div>
-                    </div>
-                    <div class="contact-info-item">
-                      <div class="icon">
-                        <span><i class="lastudioicon lastudioicon-pin-3-2"></i></span>
-                      </div>
-                      <div class="content">
-                        <h4>Second Branch</h4>
-                        <p>Lucknow</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="align-bottom">
-                    <div class="contact-info-item info-item2">
-                      <div class="icon">
-                        <span><i class="lastudioicon lastudioicon-mail"></i></span>
-                      </div>
-                      <div class="content">
-                        <p>hello@cawf.in</p>
-                      </div>
-                    </div>
-                    <div class="contact-info-item">
-                      <div class="icon">
-                        <span><i class="lastudioicon lastudioicon-phone-call-2"></i></span>
-                      </div>
-                      <div class="content">
-                        <p>+91 9555584040</p>
-                      </div>
-                    </div>
-                    <div class="contact-info-item social-icons-item mb-0 pb-0">
-                      <div class="content">
-                        <div class="social-widget">
-                          <a href="https://www.facebook.com/people/cawfindia/100093630427177/?rdid=NWYlETME5Dlhjc0d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15w7G7Ao36"
-                            target="_blank"><i class="lastudioicon lastudioicon-b-facebook"></i></a>
-                          <a href="https://www.youtube.com/@CAWF.official" target="_blank"><i
-                              class="lastudioicon lastudioicon-b-youtube"></i></a>
-                          <a href="https://www.instagram.com/cawf.india/#" target="_blank"><i
-                              class="lastudioicon lastudioicon-b-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Page Contact Us Start -->
+    <div class="page-contact-us">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <!-- Contact Information Start -->
+                    <div class="contact-information">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">contact us</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Get in touch <span>with us</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Reach out to explore how CAWF can support your
+                                creative journey.</p>
                         </div>
-                      </div>
+                        <!-- Section Title End -->
+
+                        <!-- Contact Info Box Start -->
+                        <div class="contact-info-box">
+                            <!-- Page Contact Item Start -->
+                            <div class="contact-info-item wow fadeInUp">
+                                <div class="icon-box">
+                                    <img src="images/icon-phone.svg" alt="">
+                                </div>
+                                <div class="contact-info-content">
+                                    <h3>contact</h3>
+                                    <a href="tel:+919555584040">+91 9555584040</a>
+                                </div>
+                            </div>
+                            <!-- Page Contact Item End -->
+
+                            <!-- Page Contact Item Start -->
+                            <div class="contact-info-item wow fadeInUp" data-wow-delay="0.25s">
+                                <div class="icon-box">
+                                    <img src="images/icon-mail.svg" alt="">
+                                </div>
+                                <div class="contact-info-content">
+                                    <h3>Email</h3>
+                                    <a href="mailto:hello@cawf.in" target="_blank">hello@cawf.in</a>
+                                </div>
+                            </div>
+                            <!-- Page Contact Item End -->
+
+                            <!-- Page Contact Item Start -->
+                            <div class="contact-info-item wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="icon-box">
+                                    <img src="images/icon-location.svg" alt="">
+                                </div>
+                                <div class="contact-info-content">
+                                    <h3>Our Address</h3>
+                                    <a href="https://maps.app.goo.gl/uDZSvVwaLxqy85NT8 " target="_blank">C13 Shivalik
+                                        Colony, Basant Kaur Marg, Malviya Nagar, India, Delhi</a>
+                                </div>
+                            </div>
+                            <!-- Page Contact Item End -->
+                        </div>
                     </div>
-                  </div>
+                    <!-- Contact Information End -->
                 </div>
-              </div>
+
+                <div class="col-lg-7">
+                    <!-- Page Contact Form Start -->
+                    <div class="contact-us-form">
+                        <div class="section-title">
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Contact <span>Us</span></h2>
+                        </div>
+
+                        <div class="contact-form">
+                            <!-- Contact Form Start -->
+                            <form method="POST" action="save_contact.php" id="enquiryForm" class="wow fadeInUp"
+                                data-wow-delay="0.5s">
+                                <div class="row">
+                                    <div class="form-group col-md-6 mb-4">
+                                        <input type="text" name="name" class="form-control" id="name"
+                                            placeholder="Enter Name" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group col-md-6 mb-4">
+                                        <input type="tel" name="phone" class="form-control" id="phone"
+                                            placeholder="Enter your phone number" pattern="[0-9]{10}" maxlength="10"
+                                            title="Please enter a 10-digit mobile number" required>
+                                    </div>
+                                    <div class="form-group col-md-12 mb-4">
+                                        <input type="email" name="email" class="form-control" id="email"
+                                            placeholder="Enter your email" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+
+                                    <div class="form-group col-md-6 mb-4">
+                                        <input type="text" name="state" class="form-control" id="state"
+                                            placeholder="Enter state Name" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group col-md-6 mb-4">
+                                        <input type="text" name="city" class="form-control" id="city"
+                                            placeholder="Enter your city" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="form-group col-md-12 mb-5">
+                                        <textarea name="message" class="form-control" id="message" rows="4"
+                                            placeholder="Write Message"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn-default"><span>submit </span></button>
+                                        <div id="msgSubmit" class="h3 hidden"></div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- Contact Form End -->
+                        </div>
+                    </div>
+                    <!-- Page Contact Form End -->
+                </div>
             </div>
-          </div>
         </div>
-      </section>
-      <!--== End Contact Area ==-->
+    </div>
+    <!--  Page Contact Us End -->
 
-      <!--== Start Map Area ==-->
-      <div class="contact-map-area">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.2297596097!2d80.86011211795565!3d26.848668124069338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sLucknow%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2ssg!4v1747633562990!5m2!1sen!2ssg"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <!--== End Map Area ==-->
-    </main>
-
-    <!--== Start Footer Area Wrapper ==-->
-    <?php
-    include('footer.php');
-    ?>
-    <!--== End Footer Area Wrapper ==-->
-
-
-    <!--== Scroll Top Button ==-->
-    <div class="scroll-to-top"><span class="icofont-arrow-up"></span></div>
-
-    <!--== Start Side Menu ==-->
-    <aside class="off-canvas-wrapper">
-      <div class="off-canvas-inner">
-        <div class="off-canvas-overlay d-none"></div>
-        <!-- Start Off Canvas Content Wrapper -->
-        <div class="off-canvas-content">
-          <!-- Off Canvas Header -->
-          <div class="off-canvas-header">
-            <div class="close-action">
-              <button class="btn-close"><i class="icofont-close-line"></i></button>
+    <!-- Google Map Start -->
+    <div class="google-map">
+        <div class="container-flude">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Google Map Start -->
+                    <div class="" style="margin-bottom: 5rem;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0450536524177!2d77.20934327616186!3d28.538365488349545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce376bb6ba515%3A0xcf4819652e5640ad!2sThe%20Desire%20Hostel!5e0!3m2!1sen!2sin!4v1748006130413!5m2!1sen!2sin"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <!-- Google Map End -->
+                </div>
             </div>
-          </div>
-
-          <div class="off-canvas-item">
-            <!-- Start Mobile Menu Wrapper -->
-            <div class="res-mobile-menu">
-              <!-- Note Content Auto Generate By Jquery From Main Menu -->
-            </div>
-            <!-- End Mobile Menu Wrapper -->
-          </div>
-          <!-- Off Canvas Footer -->
-          <div class="off-canvas-footer"></div>
         </div>
-        <!-- End Off Canvas Content Wrapper -->
-      </div>
-    </aside>
-    <!--== End Side Menu ==-->
-  </div>
+    </div>
+    <!-- Google Map End -->
 
-  <!--=======================Javascript============================-->
+    <!-- Footer Start -->
+    <footer class="main-footer" id="footer">
+        <?php
+        include('footer.php');
+        ?>
+    </footer>
+    <!-- Footer End -->
 
-  <!--=== Modernizr Min Js ===-->
-  <script src="assets/js/modernizr.js"></script>
-  <!--=== jQuery Min Js ===-->
-  <script src="assets/js/jquery-main.js"></script>
-  <!--=== jQuery Migration Min Js ===-->
-  <script src="assets/js/jquery-migrate.js"></script>
-  <!--=== Popper Min Js ===-->
-  <script src="assets/js/popper.min.js"></script>
-  <!--=== Bootstrap Min Js ===-->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <!--=== jquery Appear Js ===-->
-  <script src="assets/js/jquery.appear.js"></script>
-  <!--=== jquery Swiper Min Js ===-->
-  <script src="assets/js/swiper.min.js"></script>
-  <!--=== jquery Fancybox Min Js ===-->
-  <script src="assets/js/fancybox.min.js"></script>
-  <!--=== jquery Aos Min Js ===-->
-  <script src="assets/js/aos.min.js"></script>
-  <!--=== jquery Slicknav Js ===-->
-  <script src="assets/js/jquery.slicknav.js"></script>
-  <!--=== jquery Countdown Js ===-->
-  <script src="assets/js/jquery.countdown.min.js"></script>
-  <!--=== jquery Tippy Js ===-->
-  <script src="assets/js/tippy.all.min.js"></script>
-  <!--=== Isotope Min Js ===-->
-  <script src="assets/js/isotope.pkgd.min.js"></script>
-  <!--=== jquery Vivus Js ===-->
-  <script src="assets/js/vivus.js"></script>
-  <!--=== Parallax Min Js ===-->
-  <script src="assets/js/parallax.min.js"></script>
-  <!--=== Slick  Min Js ===-->
-  <script src="assets/js/slick.min.js"></script>
-  <!--=== jquery Wow Min Js ===-->
-  <script src="assets/js/wow.min.js"></script>
-  <!--=== jquery Zoom Min Js ===-->
-  <script src="assets/js/jquery-zoom.min.js"></script>
 
-  <!--=== Custom Js ===-->
-  <script src="assets/js/custom.js"></script>
-  <div class="sticky-footer res-dd-none">
-    <!-- Left Section: Phone Number -->
-    <a href="https://wa.me/919555584040" class="phone-link" target="_blank">
-      <img width="25" height="25" src="https://img.icons8.com/sf-black-filled/64/a64637/whatsapp.png" alt="whatsapp" />
-      +91 9555584040
-    </a>
-    <!-- Right Section: Request a Demo Button -->
-    <a class="demo-btn" href="contact.html">Contact Us</a>
-  </div>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Isotop js file -->
+    <script src="js/isotope.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function () {
+            $('#enquiryForm').submit(function (e) {
+                e.preventDefault();
+
+                var phone = $('#phone').val().trim();
+                if (!/^\d{10}$/.test(phone)) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Invalid Phone Number',
+                        text: 'Please enter a valid 10-digit phone number.'
+                    });
+                    return false;
+                }
+
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    url: 'save_contact.php',
+                    type: 'POST',
+                    data: formData,
+                    success: function (response) {
+                        if (response == 'success') {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'ThankYou!',
+                                text: 'Your message has been sent successfully.',
+                            }).then(function () {
+                                $('#enquiryForm')[0].reset();
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'Something went wrong. Please try again later.',
+                            });
+                        }
+                    },
+                    error: function () {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong. Please try again later.',
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

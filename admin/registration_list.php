@@ -70,7 +70,7 @@ include('header.php');
                                 </td>
 
                                 <td>
-                                    <form method="POST" action="contact_dlt.php">
+                                    <form method="POST" action="registration_dlt.php">
                                         <input type="hidden" name="user_id" value="<?php echo $row['id']; ?>">
                                         <button type="submit" class="btn btn-danger shadow btn-xs sharp" name="delete"
                                             onclick="return confirm('are you sure?')"><i class="fa fa-trash"></i></button>

@@ -19,8 +19,10 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone</th>
+                                        <th>State</th>
+                                        <th>City</th>
                                         <th>Message</th>
-                                        <th>Page Name</th>
+                                       
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -37,8 +39,10 @@
                                         <td><?php echo $row['name']; ?></td>
                                         <td><?php echo $row['email']; ?></td>
                                         <td><?php echo $row['phone']; ?></td>
-                                        <td><?php echo $row['message']; ?></td>
-                                        <td><?php echo $row['page_name']; ?></td>
+                                        
+                                        <td><?php echo $row['state']; ?></td>
+                                         <td><?php echo $row['city']; ?></td>
+                                         <td><?php echo $row['message']; ?></td>
                                         <td>
                                         <form method="POST" action="contact_dlt.php">
                                             <input type="hidden" name="user_id" value="<?php echo $row['id'];?>">
