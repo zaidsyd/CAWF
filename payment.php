@@ -203,9 +203,9 @@ $id = $_GET['id'] ?? 'N/A';
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="page-title-content">
-                                <h2 class="title">Pyament</h2>
+                                <h2 class="title">Payment</h2>
                                 <div class="bread-crumbs"><a href="index.html">Home<span
-                                            class="breadcrumb-sep">></span></a><span class="active">Pyament</span></div>
+                                            class="breadcrumb-sep">></span></a><span class="active">Payment</span></div>
                             </div>
                         </div>
                     </div>

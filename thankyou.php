@@ -50,140 +50,191 @@ $id = $_SESSION['id'] ?? 0;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <style>
-        .contact-form .contact-form-wrapper .form-group .form-control {
-            border-radius: 10px;
-        }
+    .contact-form .contact-form-wrapper .form-group .form-control {
+        border-radius: 10px;
+    }
 
-        .sticky-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 50px;
-            border-top: 1px solid #ddd;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+    .sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
 
-        .demo-btn {
-            flex: 1;
-            height: 100%;
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            background: linear-gradient(to right, #a64637, #e78d6d);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
+    .demo-btn {
+        flex: 1;
+        height: 100%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(to right, #a64637, #e78d6d);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+    }
 
-        select {
-            background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-            background-repeat: no-repeat;
-            background-position: right 0.75rem center;
-            background-size: 2rem;
-            padding-right: 2rem;
-        }
+    select {
+        background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 2rem;
+        padding-right: 2rem;
+    }
 
-        .header-logo-area .logo-main {
-            height: 108px;
-            width: 84px;
-            object-fit: contain;
-        }
+    .header-logo-area .logo-main {
+        height: 108px;
+        width: 84px;
+        object-fit: contain;
+    }
 
-        .header-area.header-default .header-navigation-area .main-menu {
-            margin-left: 0px !important;
-        }
+    .header-area.header-default .header-navigation-area .main-menu {
+        margin-left: 0px !important;
+    }
 
-        .header-area.sticky-header.sticky.header-style5 .header-logo-area .logo-light {
-            height: 108px;
-            width: 84px;
-            object-fit: contain;
+    .header-area.sticky-header.sticky.header-style5 .header-logo-area .logo-light {
+        height: 108px;
+        width: 84px;
+        object-fit: contain;
 
+    }
+
+    .header-area.header-default.header-style5 .header-logo-area img {
+
+        height: 108px;
+        width: 84px;
+        object-fit: contain;
+        padding-top: 5px;
+        padding-bottom: 2px;
+
+
+    }
+
+    .footer-area.footer-style6 .footer-main .footer-logo-area a .logo-main {
+        height: 120px;
+        width: 118px;
+        object-fit: contain;
+
+    }
+
+    .blog-area.blog-default-area {
+        padding-bottom: 10px;
+    }
+
+    .category-area.category-style9-area {
+        margin-top: 5rem;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    /* .header-area.header-default .header-action-area .btn-menu{
+            color:white;
+        } */
+    @media only screen and (max-width: 1199px) {
+        .header-area.header-default .container-fluid {
+            padding: 0px 9px;
         }
 
         .header-area.header-default.header-style5 .header-logo-area img {
-
-            height: 108px;
-            width: 84px;
-            object-fit: contain;
-            padding-top: 5px;
-            padding-bottom: 2px;
-
-
+            padding-top: 10px;
+            padding-bottom: 14px;
         }
+    }
 
-        .footer-area.footer-style6 .footer-main .footer-logo-area a .logo-main {
-            height: 120px;
-            width: 118px;
-            object-fit: contain;
+    @media (max-width: 768px) {
 
-        }
-
-        .blog-area.blog-default-area {
-            padding-bottom: 10px;
-        }
-
-        .category-area.category-style9-area {
-            margin-top: 5rem;
-        }
-
-        .text-justify {
-            text-align: justify;
-        }
-
-        /* .header-area.header-default .header-action-area .btn-menu{
-            color:white;
-        } */
-        @media only screen and (max-width: 1199px) {
-            .header-area.header-default .container-fluid {
-                padding: 0px 9px;
-            }
-
-            .header-area.header-default.header-style5 .header-logo-area img {
-                padding-top: 10px;
-                padding-bottom: 14px;
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            .phone-link,
-            .demo-btn {
-                font-size: 0.9rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            .res-dd-none {
-                display: none !important;
-            }
-        }
-
-        .phone-link {
-            flex: 1;
-            text-decoration: none;
-            color: #a64637;
-            font-size: 1rem;
-            font-weight: bold;
+        .phone-link,
+        .demo-btn {
+            font-size: 0.9rem;
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 10px;
-            height: 100%;
-            background-color: white;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .res-dd-none {
+            display: none !important;
+        }
+    }
+
+    .phone-link {
+        flex: 1;
+        text-decoration: none;
+        color: #a64637;
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: 100%;
+        background-color: white;
+    }
+
+    .contact-area {
+        background: #c0996f42;
+    }
+
+    .mini-note {
+        background-color: #fff3cd;
+        color: #856404;
+        padding: 7px;
+        margin-top: 30px;
+        border-left: 4px solid #ffc107;
+        border-radius: 8px;
+        font-size: 15px;
+        animation: fadeInUp 0.6s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
         }
 
-        .contact-area {
-            background: #c0996f42;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
+    }
+
+    .thank-you-buttons .btn-success:hover {
+        background-color: #218838;
+        transform: translateY(-3px);
+    }
+
+    .thank-you-buttons .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }
+
+    .check-icon {
+        animation: bounceUpDown 1.5s infinite;
+        color: #28a745;
+        font-size: 60px;
+    }
+
+    @keyframes bounceUpDown {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
     </style>
 
 
@@ -219,39 +270,45 @@ $id = $_SESSION['id'] ?? 0;
             <!--== End Page Title Area ==-->
 
             <!--== Start Contact Area ==-->
-            <section class="contact-area">
+            <section class="contact-area" style="background-image:url('https://img.freepik.com/free-vector/elegant-hexagonal-line-pattern_1017-20892.jpg?t=st=1748247884~exp=1748251484~hmac=26292c666d9e759f13c22e2e3ae2bdf1afea54426185c5fa2c69c17813703e40&w=1380')">
                 <div class="container">
-                    <div class="row justify-content-center mt-5">
+                    <div class="row justify-content-center">
                         <div class="col-lg-8 text-center p-4">
-                            <div class="card p-5">
-                                <div class="mb-4">
+                            <div class="card" style="padding:15px;box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;">
+                                <div class="mb-2 check-icon">
                                     <i class="fas fa-check-circle text-success" style="font-size: 60px;"
                                         aria-hidden="true"></i>
                                 </div>
-                                <h1 class="text-success mb-3">Thank You!</h1>
-                                <h4 class="text-dark mb-4 mt-4">Your form has been submitted successfully.</h4>
+                                <h1 class="text-success mb-3 fw-bold">Thank You!</h1>
+                                <h4 class="text-dark ">Your form has been submitted successfully.</h4>
 
-                                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap mt-4">
-                                    <h5 class="m-0 me-3">
+                                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap mt-3">
+                                    <h5 class="m-0 mb-2">
                                         <strong>User Name: </strong> <?php echo htmlspecialchars($name); ?>
                                     </h5>
                                     <h5 class="m-0">
-                                         <strong>Form Number: </strong> <?php echo htmlspecialchars($form_number); ?>
+                                        <strong>Form Number: </strong> <?php echo htmlspecialchars($form_number); ?>
                                     </h5>
-                                   
+
                                 </div>
 
-                                <div class="d-flex flex-column flex-sm-row justify-content-center gap-5 mt-5">
+                                <div class="d-flex flex-column flex-sm-row justify-content-center gap-2 ">
                                     <a href="download.php?form=<?php echo urlencode($_SESSION['thank_you_form_number']); ?>"
-                                        class="btn btn-success">
-                                        <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+                                        class="btn btn-primary">
+                                        <i class="fas fa-download" aria-hidden="true"></i> Download Form
                                     </a>
-                                    <a href="payment.php?id=<?php echo urlencode($id); ?>" class="btn btn-primary">
+                                    <a href="payment.php?id=<?php echo urlencode($id); ?>" class="btn btn-success">
                                         Proceed To Payment <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                     </a>
 
 
                                 </div>
+                                <div class="mini-note">
+                                    <strong>Note:</strong> Please complete your registration by making the payment.
+                                    After successful payment, our team will review your form and confirm your
+                                    registration.
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -356,15 +413,15 @@ $id = $_SESSION['id'] ?? 0;
         <a class="demo-btn" href="contact.html">Contact Us</a>
     </div>
     <script>
-        // Get query params
-        const params = new URLSearchParams(window.location.search);
-        const formNumber = params.get('formNumber');
+    // Get query params
+    const params = new URLSearchParams(window.location.search);
+    const formNumber = params.get('formNumber');
 
-        if (formNumber) {
-            document.getElementById('formNumber').textContent = formNumber;
-        } else {
-            document.getElementById('formNumber').textContent = 'Not Available';
-        }
+    if (formNumber) {
+        document.getElementById('formNumber').textContent = formNumber;
+    } else {
+        document.getElementById('formNumber').textContent = 'Not Available';
+    }
     </script>
 
 </body>
