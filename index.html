@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="Awaiken">
+    <meta name="author" content="Cine Artist & Workers Welfare Federation (CAWF)">
     <!-- Page Title -->
     <title>CAWF | Home</title>
     <!-- Favicon Icon -->
@@ -39,141 +39,76 @@
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <style>
-        .text-justify {
-            text-align: justify;
+        .cawf-video-gallery h2 {
+            font-size: 36px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #222;
         }
 
-        .cawf_slider__container {
-            width: 100%;
+        .cawf-video-gallery p {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .cawf-video-slider {
+            margin: 0 auto;
+        }
+
+        .cawf-video-slide {
+            padding: 10px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .cawf-video-slide:hover {
+            transform: scale(1.02);
+        }
+
+        .cawf-video-frame {
+            position: relative;
+            padding-top: 56.25%;
+            border-radius: 12px;
             overflow: hidden;
-            padding: 10px 0;
-            background: #000;
-            /* optional background */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
         }
 
-        .cawf_slider__wrapper div {
-            margin-left: 10px
-        }
-
-        .cawf_slider__wrapper img {
+        .cawf-video-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 200px;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-
-        .cawf_cert_slider__wrapper .cawf_cert_slider__slide {
-            padding: 0 10px;
-        }
-
-        .cawf_cert_slider__slide img {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            height: 400px;
-            object-fit: cover;
-        }
-
-        /* Arrow custom (optional) */
-        .slick-prev:before,
-        .slick-next:before {
-            color: #ffffff;
-            font-size: 24px;
+            height: 100%;
+            border: none;
         }
 
         .slick-dots li button:before {
             font-size: 12px;
-            color: #0e0e0e;
+            color: #999;
         }
 
         .slick-dots li.slick-active button:before {
-            color: #ffffff;
+            color: #222;
         }
 
-        .navbar-brand img {
-            height: 80px;
+
+        .cawf-video-slider .slick-prev:before,
+        .cawf-video-slider .slick-next:before {
+            color: #5c4b3e;
         }
 
-        .hero-slide .container {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .slick-next {
+            right: -15px;
         }
 
-        .footer-links h3 {
-            color: #b56b33;
-        }
-
-        .header-social-box {
-            border-left: 1px solid #b56b33;
-            padding-left: 20px;
-        }
-
-        .header-social-links ul li:hover a {
-            color: black !important;
-        }
-
-        .cawf_whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            left: 25px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            animation: floatW 3s ease-in-out infinite;
-            transition: transform 0.3s ease;
-        }
-
-        .cawf_whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        .cawf_whatsapp-float img {
-            width: 50px;
-            height: 50px;
-        }
-
-        @keyframes floatW {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-6px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width:789px) {
-            .navbar-brand img {
-                height: 65px;
-            }
-
-            .cawf_cert_slider__slide img {
-                height: 200px;
-            }
-
-            .cawf_slider__wrapper img {
-                height: 150px;
-            }
-
-            .slicknav_nav .nav-item a {
-                font-weight: bold;
-            }
+        .slick-prev {
+            left: -15px;
         }
     </style>
+
 
 </head>
 
@@ -216,16 +151,14 @@
                                     <div class="hero-content">
                                         <!-- Section Title Start -->
                                         <div class="section-title dark-section">
-                                            <h3 class="wow fadeInUp">WELCOME TO CAWF</h3>
-                                            <h1 class="text-anime-style-2" data-cursor="-opaque">Empowering Every
-                                                <span>Artist and Worker </span>
+                                            <h3 class="wow fadeInUp">Welcome to CAWF</h3>
+                                            <h1 class="text-anime-style-2" data-cursor="-opaque">Rakshak Honour &
+                                                <span>Bravery awards ceremony</span>
                                             </h1>
                                             <p class="wow fadeInUp text-justify d-none d-xl-block "
-                                                data-wow-delay="0.25s">We stand with
-                                                every artist and worker to ensure fair opportunities, respect, and
-                                                support.
-                                                Through training, welfare, and advocacy, we help build secure and
-                                                dignified futures. </p>
+                                                data-wow-delay="0.25s">A tribute to the unwavering courage and
+                                                dedication of Uttar Pradesh Police, protecting citizens with selfless
+                                                service.</p>
                                             <br><br>
                                         </div>
                                         <!-- Section Title End -->
@@ -257,14 +190,13 @@
                                         <!-- Section Title Start -->
                                         <div class="section-title dark-section">
                                             <h3 class="wow fadeInUp">Welcome to CAWF</h3>
-                                            <h1 class="text-anime-style-2" data-cursor="-opaque">From Set to Success:
-                                                <span>We’re With You </span>
+                                            <h1 class="text-anime-style-2" data-cursor="-opaque">LAMAA –
+                                                <span>The Creative Academy for Artists</span>
                                             </h1>
                                             <p class="wow fadeInUp text-justify d-none d-xl-block"
-                                                data-wow-delay="0.25s">Join a creative
-                                                hub where aspiring models, actors, photographers, videographers, and
-                                                cinematographers transform their passion into profession under expert
-                                                guidance and real-world exposure. </p>
+                                                data-wow-delay="0.25s">LAMAA grooms emerging talents in modeling,
+                                                acting, music, and more—creating a platform for artistic dreams to
+                                                flourish. </p>
                                             <br>
                                         </div>
                                         <!-- Section Title End -->
@@ -279,6 +211,85 @@
                     </div>
                 </div>
                 <!-- Hero Slide End -->
+
+
+
+                <!-- Hero Slide Start -->
+                <div class="swiper-slide" style="height: 80vh;">
+                    <div class="hero-slide" style="height: 100%;">
+                        <!-- Slider Image Start -->
+                        <div class="hero-slider-image" style="height: 100%;">
+                            <img src="images/banner-2.jpg" alt="">
+                        </div>
+                        <!-- Slider Image End -->
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <!-- Hero Content Start -->
+                                    <div class="hero-content">
+                                        <!-- Section Title Start -->
+                                        <div class="section-title dark-section">
+                                            <h3 class="wow fadeInUp">Welcome to CAWF</h3>
+                                            <h1 class="text-anime-style-2" data-cursor="-opaque">Programs for
+                                                <span>Artists & Workers</span>
+                                            </h1>
+                                            <p class="wow fadeInUp text-justify d-none d-xl-block"
+                                                data-wow-delay="0.25s">We support skilled and unskilled workers with
+                                                training, job linkage, and recognition programs that elevate their
+                                                livelihoods. </p>
+                                            <br>
+                                        </div>
+                                        <!-- Section Title End -->
+
+
+                                    </div>
+                                    <!-- Hero Content End -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Slide End -->
+
+                <!-- Hero Slide Start -->
+                <div class="swiper-slide" style="height: 80vh;">
+                    <div class="hero-slide" style="height: 100%;">
+                        <!-- Slider Image Start -->
+                        <div class="hero-slider-image" style="height: 100%;">
+                            <img src="images/banner-2.jpg" alt="">
+                        </div>
+                        <!-- Slider Image End -->
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <!-- Hero Content Start -->
+                                    <div class="hero-content">
+                                        <!-- Section Title Start -->
+                                        <div class="section-title dark-section">
+                                            <h3 class="wow fadeInUp">Welcome to CAWF</h3>
+                                            <h1 class="text-anime-style-2" data-cursor="-opaque">Conference on 
+                                                <span>Community Action & Reform</span>
+                                            </h1>
+                                            <p class="wow fadeInUp text-justify d-none d-xl-block"
+                                                data-wow-delay="0.25s">A powerful gathering of changemakers working towards inclusive progress and social justice. </p>
+                                            <br>
+                                        </div>
+                                        <!-- Section Title End -->
+
+
+                                    </div>
+                                    <!-- Hero Content End -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Slide End -->
+
             </div>
             <div class="hero-pagination"></div>
         </div>
@@ -401,26 +412,28 @@
                                 <h2 class="text-anime-style-2 text-light" data-cursor="-opaque"><span>Our Story</span>
                                 </h2>
                             </div>
-                            <p class="text-justify text-light">In the glittering world of cinema, thousands of dreams
-                                shine every
-                                day — not just on-screen, but behind the scenes too. From the lightman who sets the
-                                mood, to the spot boy running tirelessly, to the junior artist giving life to the crowd
-                                — every frame of entertainment carries the effort of unsung heroes.
-                                <br>
-                                Cine Artist & Workers Welfare Federation (CAWF) was born from a simple yet powerful
-                                idea:
-                                <b> "Every hand that builds cinema deserves dignity, respect, and security."</b>
+                            <p class="text-justify text-light">
+
+                                Cine Artist & Workers Welfare Federation (CAWF) was born with a single vision — to
+                                uplift, empower, and protect every individual working in the world of cinema, media, and
+                                entertainment. From junior artists and backstage technicians to rising models and
+                                celebrated performers, CAWF stands as a strong support system for all.
+
+                                <br><br>
+                                Our Modeling Campaigns are designed to bring fresh talent into the spotlight — guiding,
+                                mentoring, and launching them into mainstream media. We don’t just promote glamour; we
+                                promote skill, dedication, and authenticity.
+                                <br><br>
+                                Taking our vision one step ahead, we founded LAMAA — Life & Media Artist Academy, a
+                                training ground for future stars. At LAMAA, budding actors, models, influencers, and
+                                creators receive professional guidance, industry exposure, and life-changing
+                                opportunities to rise and shine.
+                                <br><br>
+                                From providing welfare support and legal aid to hosting awareness drives and talent
+                                showcases, CAWF is not just an organization — it's a movement. A movement that says
+                                <b> “From Set to Success: We’re With You.”</b>
 
                             </p>
-                            <p class="text-justify text-light">Founded by a group of passionate film professionals and
-                                social
-                                leaders, CAWF is more than just a federation — it's a movement to uplift, protect, and
-                                empower every individual connected to the film and television industry. Whether you're a
-                                makeup artist, actor, technician, choreographer, or even part of the backstage crew —
-                                CAWF stands with you.
-
-                            </p>
-
                         </div>
                     </div>
                 </div>
@@ -428,209 +441,6 @@
         </div>
     </div>
     <!-- Our Story End -->
-
-
-    <div class="our-work">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Gallery</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">MOMENTS OF HOPE
-                            <span>OUR JOURNEY IN PICTURES</span>
-                        </h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-
-            </div>
-
-            <div class="row">
-
-
-                <div class="col-lg-12">
-                    <!-- Project Item Boxes start -->
-                    <div class="row align-items-center ">
-                        <div class="row gallery-items page-gallery-box">
-                            <div class="col-lg-4 col-6 manufacturing">
-                                <!-- image gallery start -->
-                                <div class="photo-gallery wow fadeInUp" data-cursor-text="View">
-                                    <a
-                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.28%20(1).jpeg/:/rs=w:984,h:738">
-                                        <figure class="image-anime">
-                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.28%20(1).jpeg/:/rs=w:984,h:738"
-                                                alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- image gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <!-- image gallery start -->
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s" data-cursor-text="View">
-                                    <a
-                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.45%20(2).jpeg/:/rs=w:1160,h:870">
-                                        <figure class="image-anime">
-                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.45%20(2).jpeg/:/rs=w:1160,h:870"
-                                                alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- image gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <!-- image gallery start -->
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s" data-cursor-text="View">
-                                    <a
-                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.57.00.jpeg/:/rs=w:984,h:952">
-                                        <figure class="image-anime">
-                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.57.00.jpeg/:/rs=w:984,h:952"
-                                                alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- image gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <!-- image gallery start -->
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s" data-cursor-text="View">
-                                    <a
-                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/88e0b29c-0c12-4455-84ea-a7da4cf94689.jpg/:/cr=t:1.97%25,l:0%25,w:100%25,h:96.06%25/rs=w:984,h:984">
-                                        <figure class="image-anime">
-                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/88e0b29c-0c12-4455-84ea-a7da4cf94689.jpg/:/cr=t:1.97%25,l:0%25,w:100%25,h:96.06%25/rs=w:984,h:984"
-                                                alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- image gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <!-- image gallery start -->
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s" data-cursor-text="View">
-                                    <a
-                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.44%20(2).jpeg/:/rs=w:984,h:1312">
-                                        <figure class="image-anime">
-                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.44%20(2).jpeg/:/rs=w:984,h:1312"
-                                                alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- image gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <!-- image gallery start -->
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="1s" data-cursor-text="View">
-                                    <a
-                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.58%20(2).jpeg/:/rs=w:1160,h:549">
-                                        <figure class="image-anime">
-                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.58%20(2).jpeg/:/rs=w:1160,h:549"
-                                                alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <!-- image gallery end -->
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- Project Item Boxes End -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="our-process">
-        <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Why Choose Us</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Guiding you from raw talent <span> to
-                                stardom</span></h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Section Title Content Start -->
-                    <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
-                        <p class="text-justify">At CAWF, we believe in more than just support — we believe in standing
-                            by our artists and workers like family. From healthcare to legal aid, from recognition to
-                            training — we are committed to uplifting every life behind the screen.</p>
-                    </div>
-                    <!-- Section Title Content End -->
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Our Process Image Start -->
-                    <div class="our-process-image">
-                        <figure class="image-anime reveal">
-                            <img src="images/our-process-image.jpg" alt="">
-                        </figure>
-                    </div>
-                    <!-- Our Process Image End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Process Step Box Start -->
-                    <div class="process-steps-box">
-                        <!-- Process Step Item Start -->
-                        <div class="process-step-item wow fadeInUp">
-                            <div class="process-step-no">
-                                <h2>01</h2>
-                            </div>
-                            <div class="process-step-content">
-                                <h3>Full Support, On and Off Set</h3>
-                                <p class="text-justify">We provide medical aid, financial help, and emotional support to
-                                    our members during both professional and personal challenges.</p>
-                            </div>
-                        </div>
-                        <!-- Process Step Item End -->
-
-                        <!-- Process Step Item Start -->
-                        <div class="process-step-item active wow fadeInUp" data-wow-delay="0.25s">
-                            <div class="process-step-no">
-                                <h2>02</h2>
-                            </div>
-                            <div class="process-step-content">
-                                <h3> Legal Protection for Every Worker</h3>
-                                <p class="text-justify">From contract disputes to payment delays, our legal team
-                                    ensures your rights are protected at every step of your journey.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Process Step Item End -->
-
-                        <!-- Process Step Item Start -->
-                        <div class="process-step-item wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="process-step-no">
-                                <h2>03</h2>
-                            </div>
-                            <div class="process-step-content">
-                                <h3>Training to Build Your Future</h3>
-                                <p class="text-justify">We regularly conduct skill development programs, workshops, and
-                                    mentoring sessions to help you grow and stay relevant in the industry.</p>
-                            </div>
-                        </div>
-                        <!-- Process Step Item End -->
-                    </div>
-                    <!-- Process Step Box End -->
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <div class="our-work">
         <div class="container">
@@ -784,6 +594,319 @@
                                 </div>
                             </div>
                             <!-- Project Item End -->
+                        </div>
+                    </div>
+                    <!-- Project Item Boxes End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-work" style="background-color: #faebd7;">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+
+                        <h2 class="text-anime-style-2 " data-cursor="-opaque">Proof of Excellence from
+                            <span>Around the World</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Project Item Boxes start -->
+                    <div class="row align-items-center ">
+                        <div class="cawf_cert_slider__container">
+                            <div class="cawf_cert_slider__wrapper">
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/df909f7e-48ac-4cf8-9470-ed70540f4120.jpg/:/rs=w:984,h:1217"
+                                        alt="Certificate 1">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/IMG-20231219-WA0009.jpg/:/"
+                                        alt="Certificate 2">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/IMG-20231130-WA0016.jpg/:/rs=w:719,h:1278"
+                                        alt="Certificate 3">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/IMG-20231130-WA0015.jpg/:/"
+                                        alt="Certificate 4">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/IMG-20231228-WA0064.jpg/:/"
+                                        alt="Certificate 5">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/42e75ffc-dd92-4db9-bbd9-02a4a65aed0c.jpg/:/"
+                                        alt="Certificate 5">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/CAWF%20WEBSITE%20HEAD-9a72c94.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25"
+                                        alt="Certificate 5">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/70187e46-c712-4cd6-865b-cc69c09bbb68.jpg/:/cr=t:0%25,l:3.55%25,w:92.9%25,h:100%25"
+                                        alt="Certificate 5">
+                                </div>
+                                <div class="cawf_cert_slider__slide"><img
+                                        src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/348fa9b6-14e7-47dc-aec9-540f09ed4232.jpg/:/"
+                                        alt="Certificate 5">
+                                </div>
+                                <!-- Add more slides -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Item Boxes End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="our-work">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-8">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">Our Video Gallery</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Experience our impact through
+                            <span> events, awards & campaigns.</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cawf-video-slider">
+                        <div class="cawf-video-slide">
+                            <div class="cawf-video-frame">
+                                <iframe src="https://youtu.be/mzqFBbQTPmo?si=i0Q_LBansNBmOpoR" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="cawf-video-slide">
+                            <div class="cawf-video-frame">
+                                <iframe src="https://www.youtube.com/watch?v=S5SXGYgrkgw" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="cawf-video-slide">
+                            <div class="cawf-video-frame">
+                                <iframe src="https://www.youtube.com/watch?v=TdpjZmNb26w" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="cawf-video-slide">
+                            <div class="cawf-video-frame">
+                                <iframe src="https://www.youtube.com/watch?v=mzqFBbQTPmo" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="our-process">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">Why Choose Us</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Guiding you from raw talent <span> to
+                                stardom</span></h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Section Title Content Start -->
+                    <div class="section-title-content wow fadeInUp" data-wow-delay="0.25s">
+                        <p class="text-justify">At CAWF, we believe in more than just support — we believe in standing
+                            by our artists and workers like family. From healthcare to legal aid, from recognition to
+                            training — we are committed to uplifting every life behind the screen.</p>
+                    </div>
+                    <!-- Section Title Content End -->
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Our Process Image Start -->
+                    <div class="our-process-image">
+                        <figure class="image-anime reveal">
+                            <img src="images/our-process-image.jpg" alt="">
+                        </figure>
+                    </div>
+                    <!-- Our Process Image End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- Process Step Box Start -->
+                    <div class="process-steps-box">
+                        <!-- Process Step Item Start -->
+                        <div class="process-step-item wow fadeInUp">
+                            <div class="process-step-no">
+                                <h2>01</h2>
+                            </div>
+                            <div class="process-step-content">
+                                <h3>Full Support, On and Off Set</h3>
+                                <p class="text-justify">We provide medical aid, financial help, and emotional support to
+                                    our members during both professional and personal challenges.</p>
+                            </div>
+                        </div>
+                        <!-- Process Step Item End -->
+
+                        <!-- Process Step Item Start -->
+                        <div class="process-step-item active wow fadeInUp" data-wow-delay="0.25s">
+                            <div class="process-step-no">
+                                <h2>02</h2>
+                            </div>
+                            <div class="process-step-content">
+                                <h3> Legal Protection for Every Worker</h3>
+                                <p class="text-justify">From contract disputes to payment delays, our legal team
+                                    ensures your rights are protected at every step of your journey.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Process Step Item End -->
+
+                        <!-- Process Step Item Start -->
+                        <div class="process-step-item wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="process-step-no">
+                                <h2>03</h2>
+                            </div>
+                            <div class="process-step-content">
+                                <h3>Training to Build Your Future</h3>
+                                <p class="text-justify">We regularly conduct skill development programs, workshops, and
+                                    mentoring sessions to help you grow and stay relevant in the industry.</p>
+                            </div>
+                        </div>
+                        <!-- Process Step Item End -->
+                    </div>
+                    <!-- Process Step Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="our-work">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-6">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">Gallery</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Captured
+                            <span>Highlights of CAWF</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Project Item Boxes start -->
+                    <div class="row align-items-center ">
+                        <div class="row gallery-items page-gallery-box">
+                            <div class="col-lg-4 col-6 manufacturing">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.28%20(1).jpeg/:/rs=w:984,h:738">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.54.28%20(1).jpeg/:/rs=w:984,h:738"
+                                                alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.45%20(2).jpeg/:/rs=w:1160,h:870">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.45%20(2).jpeg/:/rs=w:1160,h:870"
+                                                alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.57.00.jpeg/:/rs=w:984,h:952">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2019.57.00.jpeg/:/rs=w:984,h:952"
+                                                alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/88e0b29c-0c12-4455-84ea-a7da4cf94689.jpg/:/cr=t:1.97%25,l:0%25,w:100%25,h:96.06%25/rs=w:984,h:984">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/88e0b29c-0c12-4455-84ea-a7da4cf94689.jpg/:/cr=t:1.97%25,l:0%25,w:100%25,h:96.06%25/rs=w:984,h:984"
+                                                alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.44%20(2).jpeg/:/rs=w:984,h:1312">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.41.44%20(2).jpeg/:/rs=w:984,h:1312"
+                                                alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-wow-delay="1s" data-cursor-text="View">
+                                    <a
+                                        href="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.58%20(2).jpeg/:/rs=w:1160,h:549">
+                                        <figure class="image-anime">
+                                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.58%20(2).jpeg/:/rs=w:1160,h:549"
+                                                alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+
                         </div>
                     </div>
                     <!-- Project Item Boxes End -->
@@ -946,15 +1069,16 @@
                                 <h2 class="accordion-header" id="heading2">
                                     <button class="accordion-button " type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                        Who can join CAWF?
+                                        What is the process for CAWF Card registration?
                                     </button>
                                 </h2>
                                 <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>Any artist or worker from the entertainment industry can join — including
-                                            actors, junior artists, spot boys, lightmen, technicians, makeup artists,
-                                            cameramen, and more..</p>
+                                        <p>Simply visit our official website, go to the ‘Registration’ section, fill in
+                                            your details, upload the payment screenshot and required documents, and
+                                            submit the form. We will verify the payment and then email you the card link
+                                            on your provided email ID.</p>
                                     </div>
                                 </div>
                             </div>
@@ -985,15 +1109,16 @@
                                 <h2 class="accordion-header" id="heading4">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                        Is CAWF involved in media or press activities?
+                                        What is LAMAA Academy?
                                     </button>
                                 </h2>
                                 <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
                                         <p>
-                                            Yes. CAWF regularly shares news, updates, and announcements through press
-                                            conferences and media platforms to keep everyone informed.
+                                            LAMAA is a professional training and grooming academy for aspiring artists,
+                                            models, and creative individuals, helping them build careers in the
+                                            performing arts industry.
                                         </p>
                                     </div>
                                 </div>
@@ -1005,15 +1130,15 @@
                                 <h2 class="accordion-header" id="heading5">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                        How can I become a member of CAWF?
+                                        How will I get confirmation after registration?
                                     </button>
                                 </h2>
                                 <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
                                         <p>
-                                            You can become a member by filling a simple registration form and submitting
-                                            basic documents. Membership can be applied online or by visiting our office.
+                                            Once your payment screenshot and details are verified, you’ll receive a
+                                            confirmation on your provided email ID from our team.
                                         </p>
                                     </div>
                                 </div>
@@ -1027,82 +1152,6 @@
         </div>
     </div>
     <!-- Our Faqs Section End -->
-
-
-        <!-- Page Contact Us Start -->
-    <div class="page-contact-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <!-- Contact Information Start -->
-                    <div class="contact-information">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">contact us</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Get in touch <span>with us</span></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Reach out for any inquiries, support, or to discuss how we can meet your industrial needs.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Contact Info Box Start -->
-                        <div class="contact-info-box">
-                            <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/a2380b5c-4c3a-4af7-96ea-de96dddb143e%20Copy.jpeg/:/cr=t:5%25,l:3.3%25,w:94.96%25,h:94.96%25/rs=w:1280" alt="">
-                        </div>
-                    </div>
-                    <!-- Contact Information End -->
-                </div>
-
-                <div class="col-lg-7">
-                    <!-- Page Contact Form Start -->
-                    <div class="contact-us-form">
-                        <div class="section-title">
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Contact <span>me</span></h2>
-                        </div>
-
-                        <div class="contact-form">
-                            <!-- Contact Form Start -->
-                            <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="row">
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="fname" class="form-control" id="fname" placeholder="Enter first name" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="lname" class="form-control" id="lname" placeholder="Enter last name" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-12 mb-4">
-                                        <input type="email" name ="email" class="form-control" id="email" placeholder="Enter your e-mail" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-12 mb-4">
-                                        <input type="text" name="phone" class="form-control" id="phone" placeholder="Enter your phone no." required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="form-group col-md-12 mb-5">
-                                        <textarea name="message" class="form-control" id="message" rows="4" placeholder="Write Message"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn-default"><span>submit message</span></button>
-                                        <div id="msgSubmit" class="h3 hidden"></div>
-                                    </div>
-                                </div>
-                            </form>
-                            <!-- Contact Form End -->
-                        </div>
-                    </div>
-                    <!-- Page Contact Form End -->
-                </div> 
-            </div>
-        </div>
-    </div>
-    <!--  Page Contact Us End -->
 
 
     <div class="cawf_slider__container">
@@ -1150,6 +1199,20 @@
     </footer>
     <!-- Footer End -->
 
+    <!-- Registration Popup Modal -->
+    <div class="modal fade cawf-popup" id="cawfRegistrationPopup" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-3">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    style="position: absolute; right:-3px; top: -1px;"></button>
+                <img src="https://imgs.search.brave.com/g456tllkVs-sjQOcGJ_C5PB3SrkixHH49vJe6KmbCsQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vMDZWbDRK/YklMYnJPWTBJZ0FV/aVJiQWMxTno4bWdB/cEZsX1RjajU2ZHdz/VS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlq/Wkc0dS9ZM0psWVhS/bExuWnBjM1JoL0xt/TnZiUzloY0drdmJX/VmsvYVdFdmMyMWhi/R3d2TVRreS9OVFU0/TWpBNEwzTjBiMk5y/L0xYQm9iM1J2TFhS/bGVIUXQvYzJsbmJp/MXphRzkzYVc1bi9M/VzFsYldKbGNuTm9h/WEF0L1lYQndiR2xq/WVhScGIyNHQvWTI5/dVkyVndkSFZoYkMx/dy9hRzkwYnkxeVpX/ZHBjM1J5L1lYUnBi/MjR0ZEc4dGFtOXAv/YmkxaExYUmxZVzB0/WjNKdi9kWEF0YjNJ/dGIzSm5ZVzVwL2Vt/RjBhVzl1"
+                    alt="Register" class="img-fluid rounded mb-3 popup-image">
+                <a href="#register" class="btn px-4 py-2" style="background-color: #b57745; color: #ffffff;">Register
+                    Now</a>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
@@ -1182,7 +1245,9 @@
     <script src="js/wow.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $('.cawf_slider__wrapper').slick({
@@ -1210,8 +1275,7 @@
                 ]
             });
         });
-    </script>
-    <script>
+
         $(document).ready(function () {
             $('.cawf_cert_slider__wrapper').slick({
                 slidesToShow: 4,
@@ -1220,7 +1284,7 @@
                 dots: true,
                 infinite: true,
                 autoplay: true,
-                autoplaySpeed: 3000,
+                autoplaySpeed: 1000,
                 responsive: [
                     {
                         breakpoint: 992,
@@ -1236,6 +1300,58 @@
                     }
                 ]
             });
+        });
+
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#cawfRegistrationPopup').modal('show');
+            }, 500);
+        });
+
+        $(document).ready(function () {
+            $('.cawf-video-slider').slick({
+                dots: true,
+                arrows: true,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const iframes = document.querySelectorAll('.cawf-video-slider iframe');
+
+            iframes.forEach(iframe => {
+                const originalUrl = iframe.getAttribute('src');
+                const videoId = getYouTubeVideoId(originalUrl);
+
+                if (videoId) {
+                    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                    iframe.setAttribute('src', embedUrl);
+                }
+            });
+
+            function getYouTubeVideoId(url) {
+                const regex = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+                const match = url.match(regex);
+                return match ? match[1] : null;
+            }
         });
     </script>
 
