@@ -912,7 +912,7 @@ header.main-header .header-sticky.active {
 }
 
 .hero.hero-slider-layout .hero-slide::before {
-	content: '';
+	/* content: ''; */
 	display: block;
 	position: absolute;
 	top: 0;
@@ -1694,8 +1694,8 @@ header.main-header .header-sticky.active {
 
 .our-process-image img {
 	width: 100%;
-	aspect-ratio: 1 / 0.93;
-	object-fit: cover;
+	/* aspect-ratio: 1 / 0.93;
+	object-fit: cover; */
 	border-radius: 40px;
 }
 
@@ -2747,7 +2747,7 @@ header.main-header .header-sticky.active {
 	width: 100%;
 	height: 100%;
 	aspect-ratio: 1 / 0.485;
-	object-fit: cover;
+	
 }
 
 .our-team {
