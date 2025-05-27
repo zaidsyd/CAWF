@@ -129,7 +129,7 @@ label {
     }
 }
 .bg-silver-300{
-    background-image:url('./assets/img/solar.jpg');
+    background: white;
     background-repeat: no-repeat;
     object-fit: cover;
     background-size:cover;
