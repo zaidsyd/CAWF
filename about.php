@@ -144,7 +144,7 @@
     <!-- Header End -->
 
     <!-- Page Header Start -->
-	<div class="page-header parallaxie">
+	<div class="page-header parallaxie" style="background-image: url(&quot;images/about-image/9.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center 64.4414px;">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-12">
@@ -175,7 +175,7 @@
                         <!-- About Image Start -->
                         <div class="about-img-1">
                             <figure class="image-anime reveal">
-                                <img src="images/about-img-1.jpg" alt="">
+                                <img src="images/about-image/10.jpg" alt="">
                             </figure>
                         </div>
                         <!-- About Image End -->
@@ -183,20 +183,13 @@
                         <!-- About Image Start -->
                         <div class="about-img-2">
                             <figure class="image-anime reveal">
-                                <img src="images/npo/about_imresizer.jpg" alt="">
+                                <img src="images/about-image/11.jpg" alt="">
                             </figure>
                         </div>
                         <!-- About Image End -->
 
                         <!-- Company Experience Start -->
-                        <div class="company-experience">
-                            <div class="company-experience-counter">
-                                <h2><span class="counter">10</span>+</h2>
-                            </div>
-                            <div class="company-experience-content">
-                                <p>years of experience</p>
-                            </div>
-                        </div>
+                        
                         <!-- Company Experience End -->
                     </div>
                     <!-- About Us Image End -->
@@ -249,7 +242,7 @@
 
     <!-- Our Mission Vision Section Start -->
     <div class="our-mission-vision">
-        <div class="mission-vision-bg parallaxie">
+        <div class="mission-vision-bg parallaxie" style="background-image: url(&quot;images/about-image/12.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center 64.4414px;">
             <div class="container">
                 <div class="row section-row align-items-center">
                     <div class="col-lg-6">
@@ -319,7 +312,7 @@
                                     <!-- Mission Vision Image Start -->
                                     <div class="mission-vision-image">
                                         <figure  class="image-anime">
-                                            <img src="images/npo/npo1.jpg" alt="">
+                                            <img src="images/about-image/13.jpg" alt="">
                                         </figure>
                                     </div>
                                     <!-- Mission Vision Image End -->
@@ -354,7 +347,7 @@
                                     <!-- Mission Vision Image Start -->
                                     <div class="mission-vision-image">
                                         <figure  class="image-anime">
-                                            <img src="images/npo/npo2.jpg" alt="">
+                                            <img src="images/about-image/14.jpg" alt="">
                                         </figure>
                                     </div>
                                     <!-- Mission Vision Image End -->
@@ -389,7 +382,7 @@
                                     <!-- Mission Vision Image Start -->
                                     <div class="mission-vision-image">
                                         <figure  class="image-anime" style="object-fit: contain;">
-                                            <img src="images/npo/npo3.webp" alt="">
+                                            <img src="images/about-image/15.jpg" alt="">
                                         </figure>
                                     </div>
                                     <!-- Mission Vision Image End -->
@@ -432,7 +425,7 @@
                     <!-- Our Process Image Start -->
                     <div class="our-process-image">
                         <figure class="image-anime reveal">
-                            <img src="images/npo/14.webp" alt="">
+                            <img src="images/about-image/16.jpg" alt="">
                         </figure>
                     </div>
                     <!-- Our Process Image End -->
@@ -548,7 +541,7 @@
                     <!-- Our Features Item Start -->
                     <div class="our-features-item features-image-box">
                        <figure class="image-anime">
-                            <img src="images/npo/15.webp" alt="">
+                            <img src="images/about-image/17.jpg" alt="">
                        </figure>
                     </div>
                     <!-- Our Features Item End -->
@@ -562,51 +555,43 @@
     
 
     <!-- Our Team Section Start -->
-    <div class="our-team">
+    <!-- <div class="our-team">
         <div class="container">
             <div class="row section-row align-items-center">
                 <div class="col-lg-6">
-                    <!-- Section Title Start -->
+                  
                     <div class="section-title">
                         <h3 class="wow fadeInUp">our team</h3>
                         <h2 class="text-anime-style-2" data-cursor="-opaque">The People Behind   <span>CAWF</span></h2>
                     </div>
-                    <!-- Section Title End -->
+                   
                 </div>
-
-                
             </div>
 
             <div class="row">
                 <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
+                   
                     <div class="team-member-item wow fadeInUp">
-                        <!-- Team Image Start -->
+                  
                         <div class="team-image">
                             <a href="#" data-cursor-text="View">
                                 <figure class="image-anime">
                                     <img src="images/npo/team.webp" alt="">
                                 </figure>
                             </a>
-                
-                            
                         </div>
-                        <!-- Team Image End -->
-                
-                        <!-- Team Content Start -->
                         <div class="team-content">
                             <h3><a href="#">ronald richards</a></h3>
                             <p>Chairman</p>
                         </div>
-                        <!-- Team Content End -->
+                    
                     </div>
-                    <!-- Team Member Item End -->
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
+               
                     <div class="team-member-item wow fadeInUp" data-wow-delay="0.25s">
-                        <!-- Team Image Start -->
+    
                         <div class="team-image">
                             <a href="#" data-cursor-text="View">
                                 <figure class="image-anime">
@@ -616,22 +601,20 @@
                 
                             
                         </div>
-                        <!-- Team Image End -->
-                
-                        <!-- Team Content Start -->
+                  
                         <div class="team-content">
                             <h3><a href="#">brooklyn simmons</a></h3>
                             <p>Artists</p>
                         </div>
-                        <!-- Team Content End -->
+               
                     </div>
-                    <!-- Team Member Item End -->
+            
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
+           
                     <div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Team Image Start -->
+        
                         <div class="team-image">
                             <a href="#" data-cursor-text="View">
                                 <figure class="image-anime">
@@ -641,22 +624,19 @@
                 
                            
                         </div>
-                        <!-- Team Image End -->
-                
-                        <!-- Team Content Start -->
                         <div class="team-content">
                             <h3><a href="#">cameron williamson</a></h3>
                             <p>production supervisor</p>
                         </div>
-                        <!-- Team Content End -->
+                  
                     </div>
-                    <!-- Team Member Item End -->
+               
                 </div>
 
                 <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
+            
                     <div class="team-member-item wow fadeInUp" data-wow-delay="0.5s">
-                        <!-- Team Image Start -->
+              
                         <div class="team-image">
                             <a href="#" data-cursor-text="View">
                                 <figure class="image-anime">
@@ -666,20 +646,17 @@
                 
                             
                         </div>
-                        <!-- Team Image End -->
-                
-                        <!-- Team Content Start -->
                         <div class="team-content">
                             <h3><a href="#">darlene robertson</a></h3>
                             <p>project manager</p>
                         </div>
-                        <!-- Team Content End -->
+            
                     </div>
-                    <!-- Team Member Item End -->
+          
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Our Team Section End -->
 
     <!-- Our Faqs Section Start -->
@@ -699,7 +676,7 @@
                 <div class="col-lg-7">
                     <!-- Section Button Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a href="#" class="btn-default"><span>Contact Us</span></a>
+                        <a href="contact.php" class="btn-default"><span>Contact Us</span></a>
                     </div>
                     <!-- Section Button End -->
                 </div>
@@ -712,7 +689,7 @@
                         <!-- Our Faqs Image Start -->
                         <div class="our-faqs-img">
                             <figure class="image-anime">
-                                <img src="images/our-faqs-image.jpg" alt="">
+                                <img src="images\home-image\8.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Our Faqs Image End -->
@@ -849,7 +826,7 @@
     <!-- Footer Start -->
     <footer class="main-footer" id="footer">
         <?php
-            include('foter.php');
+            include('footer.php');
         ?>
     </footer>
     <!-- Footer End -->

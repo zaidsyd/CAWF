@@ -10,28 +10,34 @@ use PHPMailer\PHPMailer\Exception;
 
 $response = ['status' => 'error', 'message' => 'Something went wrong.'];
 
-if (isset($_POST['id']) && isset($_POST['status'])) {
+if (isset($_POST['id']) && isset($_POST['status']))
+{
     $id = $_POST['id'];
     $status = $_POST['status'];
 
     $query = mysqli_query($con, "SELECT * FROM registration_form WHERE id='$id'");
     $data = mysqli_fetch_assoc($query);
 
-    if ($data) {
-        if (!empty($data['qr_image'])) {
+    if ($data)
+    {
+        if (!empty($data['qr_image']))
+        {
             $update = mysqli_query($con, "UPDATE registration_form SET status='$status' WHERE id='$id'");
 
-            if ($update) {
-                if ($status == 'Approved') {
+            if ($update)
+            {
+                if ($status == 'Approved')
+                {
                     $mail = new PHPMailer(true);
-                    try {
+                    try
+                    {
                         $mail->isSMTP();
-                        $mail->Host       = 'smtp.gmail.com';
-                        $mail->SMTPAuth   = true;
-                        $mail->Username   = 'development@auctech.in';
-                        $mail->Password   = 'ioup wsjt sbtj pdch';
+                        $mail->Host = 'smtp.gmail.com';
+                        $mail->SMTPAuth = true;
+                        $mail->Username = 'development@auctech.in';
+                        $mail->Password = 'ioup wsjt sbtj pdch';
                         $mail->SMTPSecure = 'tls';
-                        $mail->Port       = 587;
+                        $mail->Port = 587;
 
                         $mail->setFrom('development@auctech.in', 'Cawf Team');
                         $mail->addAddress($data['email'], $data['first_name']);
@@ -41,37 +47,49 @@ if (isset($_POST['id']) && isset($_POST['status'])) {
                         $form_link = "http://localhost/CAWF/download.php?form=" . $form_number;
 
                         $mail->isHTML(true);
-                        $mail->Subject = "Your Registration ID Card and Form";
-                        $mail->Body    = "
+                        $mail->Subject = "Welcome to the Lamaa Program – Documents Approved";
+                        $mail->Body = "
                             Dear {$data['first_name']},<br><br>
-                            Your form has been approved.<br>
-                            Click the links below to download your documents:<br>
-                            <a href='$id_link'>Download ID Card</a><br>
-                            <a href='$form_link'>Download Registration Form</a><br><br>
-                            Regards,<br>Cawf Team
+                            Congratulations !<br><br>
+                           We are happy to inform you that your enrollment in the Lamaa Program has been successfully approved.<br>
+                           You can now download your documents using the links below:<br><br>
+                            <a href='$id_link'>[Download ID Card]</a><br>
+                            <a href='$form_link'>[Download Registration Form]</a><br><br>
+                            We’re excited to have you as part of the Lamaa Program and look forward to your active participation.<br>
+                           If you have any questions or need support, feel free to contact us.<br><br>
+                           Best regards,<br>
+                           Cawf Team
                         ";
 
-                        if ($mail->send()) {
+                        if ($mail->send())
+                        {
                             $response = ['status' => 'success', 'message' => "✅ Mail sent successfully to {$data['email']}"];
-                        } else {
+                        } else
+                        {
                             $response = ['status' => 'error', 'message' => "❌ Mail failed to send."];
                         }
-                    } catch (Exception $e) {
+                    } catch (Exception $e)
+                    {
                         $response = ['status' => 'error', 'message' => "❌ Mailer Error: {$mail->ErrorInfo}"];
                     }
-                } else {
+                } else
+                {
                     $response = ['status' => 'success', 'message' => "✔ Status updated to $status, no mail sent."];
                 }
-            } else {
+            } else
+            {
                 $response = ['status' => 'error', 'message' => "❌ Failed to update status."];
             }
-        } else {
+        } else
+        {
             $response = ['status' => 'error', 'message' => "❌ Payment screenshot not uploaded."];
         }
-    } else {
+    } else
+    {
         $response = ['status' => 'error', 'message' => "❌ Invalid form ID."];
     }
-} else {
+} else
+{
     $response = ['status' => 'error', 'message' => "❌ ID or Status not provided."];
 }
 

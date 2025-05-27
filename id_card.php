@@ -7,7 +7,7 @@ if (isset($_GET['form_number'])) {
     $data = mysqli_fetch_assoc($query);
 
     if ($data) {
-        ?>
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,7 +120,7 @@ if (isset($_GET['form_number'])) {
       <div class="col-md-9 details">
         <p><strong>Name:</strong> <?= htmlspecialchars($data['first_name']) ?></p>
         <p><strong>D.O.B:</strong> <?= htmlspecialchars($data['dob']) ?></p>
-        <p><strong>Designation:</strong> <?= htmlspecialchars($data['program_type']) ?></p>
+        <p><strong>Program:</strong> <?= htmlspecialchars($data['program_type']) ?></p>
         <p><strong>Contact No:</strong> <?= htmlspecialchars($data['phone']) ?></p>
         <p><strong>Address:</strong> <?= htmlspecialchars($data['address']) ?></p>
       </div>

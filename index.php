@@ -39,6 +39,7 @@
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <style>
+        
     .cawf-video-gallery h2 {
         font-size: 36px;
         text-align: center;
@@ -152,7 +153,7 @@
                 while ($row = $result->fetch_assoc()):
                     ?>
                 <!-- Hero Slide Start -->
-                <div class="swiper-slide">
+                <div class="swiper-slide ">
                     <div class="hero-slide" style="height: 100%;">
                         <!-- Slider Image Start -->
                         <div class="hero-slider-image" style="height: 100%;">
@@ -173,6 +174,7 @@
                                                 </h1> -->
                                             <p class="wow fadeInUp text-justify d-none d-xl-block "
                                                 data-wow-delay="0.25s"> <?php echo ($row['details']); ?></p>
+                                                
                                             <br><br>
                                         </div>
                                         <!-- Section Title End -->
@@ -204,7 +206,7 @@
                         <!-- About Image Start -->
                         <div class="about-img-1">
                             <figure class="image-anime reveal">
-                                <img src="images/about-img-1.jpg" alt="">
+                                <img src="images\home-image\1.jpg" alt="">
                             </figure>
                         </div>
                         <!-- About Image End -->
@@ -212,7 +214,7 @@
                         <!-- About Image Start -->
                         <div class="about-img-2">
                             <figure class="image-anime reveal">
-                                <img src="images/about-img-2.jpg" alt="">
+                                <img src="images\home-image\2.jpg" alt="">
                             </figure>
                         </div>
                         <!-- About Image End -->
@@ -292,7 +294,7 @@
                     <!-- Our Story Image Start -->
                     <div class="our-story-img">
                         <figure class="reveal image-anime">
-                            <img src="images/our-story-img.jpg" alt="">
+                            <img src="images\home-image\3.jpg" alt="">
                         </figure>
                     </div>
                     <!-- Our Story Image End -->
@@ -642,7 +644,7 @@
                     <!-- Our Process Image Start -->
                     <div class="our-process-image">
                         <figure class="image-anime reveal">
-                            <img src="images/our-process-image.jpg" alt="">
+                            <img src="images\home-image\4.jpg" alt="">
                         </figure>
                     </div>
                     <!-- Our Process Image End -->
@@ -840,7 +842,7 @@
                     <!-- Our Story Header Image Start -->
                     <div class="our-story-header-img">
                         <figure class="reveal image-anime">
-                            <img src="images/home-image/5.jpg" alt="">
+                            <img src="images\home-image\5.jpg" alt="">
                         </figure>
 
                         <figure class="reveal image-anime">
@@ -880,7 +882,7 @@
                                 ID and a recent photo.
                             </p>
                             <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                                <a href="#" class="btn-default"><span>About LAMAA</span></a>
+                                <a href="lamma/index.php" class="btn-default"><span>About LAMAA</span></a>
                             </div>
                         </div>
 
@@ -909,7 +911,7 @@
                 <div class="col-lg-7">
                     <!-- Section Button Start -->
                     <div class="section-btn wow fadeInUp" data-wow-delay="0.25s">
-                        <a href="#" class="btn-default"><span>Contact Us</span></a>
+                        <a href="contact.php" class="btn-default"><span>Contact Us</span></a>
                     </div>
                     <!-- Section Button End -->
                 </div>
@@ -922,7 +924,7 @@
                         <!-- Our Faqs Image Start -->
                         <div class="our-faqs-img">
                             <figure class="image-anime">
-                                <img src="images/our-faqs-image.jpg" alt="">
+                                <img src="images\home-image\8.jpg" alt="">
                             </figure>
                         </div>
                         <!-- Our Faqs Image End -->

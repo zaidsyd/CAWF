@@ -1,91 +1,213 @@
 <?php
-require('fpdf/fpdf.php');
 include('db_con.php');
 
 $form_number = isset($_GET['form']) ? $_GET['form'] : '';
+
+if (empty($form_number))
+{
+    die("Form number is missing.");
+}
 
 $stmt = $con->prepare("SELECT * FROM registration_form WHERE form_number = ?");
 $stmt->bind_param("s", $form_number);
 $stmt->execute();
 $result = $stmt->get_result();
 
-if ($result->num_rows !== 1) {
-    die("No data found.");
+if ($result->num_rows !== 1)
+{
+    die("No record found.");
 }
 
 $data = $result->fetch_assoc();
-
-$pdf = new FPDF();
-$pdf->AddPage();
-$pdf->SetAutoPageBreak(true, 20);
-$pdf->SetFillColor(245, 245, 245);
-$pdf->SetDrawColor(100, 100, 100);
-$pdf->SetTextColor(0, 0, 0);
-$pdf->SetLineWidth(0.2);
-
-$pdf->SetFont('Arial', 'B', 16);
-$pdf->Cell(0, 15, 'Student Registration Details', 0, 1, 'C');
-$pdf->Ln(25);
-
-// Function to create a row with padding and aligned text
-function cell_row($pdf, $label, $value, $fill = false) {
-    $totalWidth = 180;
-    $startX = (210 - $totalWidth) / 2;
-    $pdf->SetX($startX);
-    
-    $pdf->SetFont('Arial', 'B', 12);
-    $pdf->Cell(50, 10, "  " . $label, 1, 0, 'L', $fill); // padded left label
-
-    // Add inner left padding of ~5mm to right cell content
-    $pdf->SetFont('Arial', '', 12);
-    $pdf->Cell(130, 10, "     " . $value, 1, 1, 'L', $fill); 
-}
-
-// Profile Photo Section - Centered
-$fill = false;
-$totalWidth = 180;
-$startX = (210 - $totalWidth) / 2;
-$pdf->SetX($startX);
-$pdf->SetFont('Arial', 'B', 12);
-$pdf->Cell(50, 40, "  Profile Photo", 1, 0, 'L', $fill);
-
-$x = $pdf->GetX(); // x of right cell
-$y = $pdf->GetY(); // y of row
-$pdf->Cell(130, 40, '', 1, 0, 'C', $fill); 
-$pdf->Ln(40);
-
-// Show image inside right cell
-if (!empty($data['image_path']) && file_exists($data['image_path'])) {
-    $img_w = 30;
-    $img_h = 30;
-    $img_x = $x + (130 / 2) - ($img_w / 2); // center image inside 130mm
-    $img_y = $y + (40 / 2) - ($img_h / 2);
-    $pdf->Image($data['image_path'], $img_x, $img_y, $img_w, $img_h);
-    $pdf->Rect($img_x, $img_y, $img_w, $img_h);
-} else {
-    $pdf->SetXY($x, $y + 15);
-    $pdf->SetFont('Arial', '', 12);
-    $pdf->Cell(130, 10, 'No photo available', 0, 0, 'C');
-    $pdf->Ln(10);
-}
-
-// Registration Rows - With alternating fill
-$fill = false;
-cell_row($pdf, 'Form Number', $data['form_number'], $fill); $fill = !$fill;
-cell_row($pdf, 'Full Name', $data['first_name'], $fill); $fill = !$fill;
-cell_row($pdf, 'Phone', $data['phone'], $fill); $fill = !$fill;
-cell_row($pdf, 'Email', $data['email'], $fill); $fill = !$fill;
-cell_row($pdf, 'DOB', $data['dob'], $fill); $fill = !$fill;
-cell_row($pdf, 'Gender', $data['gender'], $fill); $fill = !$fill;
-cell_row($pdf, 'Aadhaar', $data['aadhaar'], $fill); $fill = !$fill;
-cell_row($pdf, 'Program', $data['program_type'], $fill); $fill = !$fill;
-cell_row($pdf, 'Address', $data['address'], $fill);
-
-// Footer
-$pdf->Ln(10);
-$pdf->SetFont('Arial', 'I', 10);
-$pdf->Cell(0, 10, 'Generated on: ' . date('d-m-Y'), 0, 0, 'R');
-
-// Output PDF
-$pdf->Output('D', "Registration_{$data['first_name']}.pdf");
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Download Registration Form PDF</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .pdf-page {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            padding: 14mm 25mm;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            text-transform: uppercase;
+            color: #222;
+            padding-bottom: 14px;
+            border-bottom: 2px solid #c3a388;
+            display: inline-block;
+        }
+
+        .header h3 {
+            margin: 5px 0 15px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .info-table td {
+            padding: 16px 19px;
+            border: 1px solid #aaa;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .info-table td strong {
+            color: #333;
+        }
+
+        .info-table img {
+            max-height: 120px;
+            display: block;
+            border: 2px solid #2e2c2c;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20mm;
+            left: 25mm;
+            right: 25mm;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+            border-top: 1px dashed #aaa;
+            padding-top: 6px;
+        }
+
+        .td-color {
+            background: #f0f0f05e !important;
+        }
+
+        .logo-image {
+            display: flex;
+            justify-content: center;
+            gap: 290px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .logo-image img {
+            height: 100px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pdf-page" id="pdfContent">
+        <div class="logo-image">
+            <div class="cawf-logo">
+                <img src="images/logo/cawf black.png" alt="Federation Logo">
+            </div>
+            <div class="lama-logo">
+                <img src="images/logo/lama.jpeg" alt="Federation Logo" style="height: 90px;
+    width: 159px;">
+            </div>
+        </div><br>
+        <div class="header">
+            <h1>Cine Artist & Worker Welfare Federation</h1><br><br><br>
+            <h3>Student Registration Form Details</h3><br>
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <td class="td-color"><strong>Photo</strong></td>
+                <td>
+                    <?php
+                    if (!empty($data['image_path']) && file_exists($data['image_path']))
+                    {
+                        echo '<img src="' . htmlspecialchars($data['image_path']) . '" alt="Profile Photo">';
+                    } else
+                    {
+                        echo 'No photo available';
+                    }
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Form Number</strong></td>
+                <td><?php echo htmlspecialchars($data['form_number']); ?></td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Name</strong></td>
+                <td><?php echo htmlspecialchars($data['first_name']); ?></td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Phone</strong></td>
+                <td><?php echo htmlspecialchars($data['phone']); ?></td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Email</strong></td>
+                <td><?php echo htmlspecialchars($data['email']); ?></td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Program</strong></td>
+                <td><?php echo htmlspecialchars($data['program_type']); ?></td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Date of Birth</strong></td>
+                <td><?php echo date("d-m-Y", strtotime($data['dob'])); ?></td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Gender</strong></td>
+                <td><?php echo htmlspecialchars($data['gender']); ?></td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Aadhaar Number</strong></td>
+                <td><?php echo htmlspecialchars($data['aadhaar']); ?></td>
+            </tr>
+            <tr>
+                <td class="td-color"><strong>Address</strong></td>
+                <td><?php echo htmlspecialchars($data['address']); ?></td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            Cine Artist & Worker Welfare Federation &nbsp; | &nbsp; www.cawf.in &nbsp; | &nbsp; Contact: +91 99999 88888
+        </div>
+    </div>
+
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script>
+        window.onload = () => {
+            const element = document.getElementById('pdfContent');
+            html2pdf().from(element).save('<?php echo htmlspecialchars($data["form_number"]); ?>.pdf');
+        };
+    </script>
+
+</body>
+
+</html>

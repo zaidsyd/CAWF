@@ -21,9 +21,9 @@
                 <div class="footer-social-links">
                     <ul>
 
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/cawfindia/100093630427177/?rdid=NWYlETME5Dlhjc0d&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15w7G7Ao36" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/cawf.india/#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/@CAWF.official" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                     </ul>
                 </div>
                 <!-- Footer Social Link End -->
