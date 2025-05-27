@@ -231,8 +231,10 @@
             </div>
           </div>
         </div>
+        
         <div class="col-8 col-xs-9 col-sm-9 col-md-9 col-xl-3 col-xxl-3">
-          <div class="header-action-area">    
+          <div class="header-action-area"> 
+               
             <div class="header-action-login">    
             </div>         
             <button class="btn-menu d-xl-none">

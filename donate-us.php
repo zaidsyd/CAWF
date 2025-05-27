@@ -260,7 +260,7 @@
     <!-- Header End -->
 
     <!-- Page Header Start -->
-    <div class="page-header parallaxie">
+    <div class="page-header parallaxie" style="background-image: url(&quot;images/about-image/9.jpg&quot;); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center 64.4414px;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
