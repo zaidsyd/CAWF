@@ -408,6 +408,7 @@ $id = $_SESSION['id'];
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   
     <script>
         $(document).ready(function () {
             $('.cawf_slider__wrapper').slick({

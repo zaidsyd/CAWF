@@ -11,16 +11,20 @@ if (isset($_GET['form_number'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Cine Artist ID Card</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
   <style>
     body {
       background: #f0f0f0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
     }
 
     .id-card {
@@ -30,6 +34,7 @@ if (isset($_GET['form_number'])) {
       padding: 20px 30px;
       font-family: Arial, sans-serif;
       position: relative;
+      box-sizing: border-box;
     }
 
     .header {
@@ -92,30 +97,25 @@ if (isset($_GET['form_number'])) {
       width: 200px;
       opacity: 0.3;
     }
-
-    .watermark {
-      position: absolute;
-      top: 145px;
-      left: 320px;
-      width: 180px;
-      opacity: 0.2;
-      z-index: 0;
-    }
   </style>
+
+  <!-- html2pdf.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
 </head>
 <body>
 
-  <div class="id-card">
+  <div class="id-card" id="idCard">
     <div class="header">
       <h4>Cine Artist And Worker Welfare Federation</h4>
-      <small>Orgnation Trade Union ACT 1926<br>
-      Registration No AUA/Delhi/2104/2023<br>
+      <small>Organization Trade Union ACT 1926<br />
+      Registration No AUA/Delhi/2104/2023<br />
       <span class="red-text">(Registered With GOVT OF Delhi)</span></small>
     </div>
 
     <div class="row">
       <div class="col-md-3 text-center">
-        <img src="<?= htmlspecialchars($data['image_path']) ?>" class="photo" alt="Photo">
+        <img src="<?= htmlspecialchars($data['image_path']) ?>" class="photo" alt="Photo" />
       </div>
       <div class="col-md-9 details">
         <p><strong>Name:</strong> <?= htmlspecialchars($data['first_name']) ?></p>
@@ -126,16 +126,16 @@ if (isset($_GET['form_number'])) {
       </div>
     </div>
 
-    <img src="images/logo/cawf black.png" class="stamp" alt="Stamp">
+    <img src="images/logo/cawf black.png" class="stamp" alt="Stamp" />
 
     <div class="signature-block">
       <div class="sign">
         <p>President</p>
-       <p>President Sign</p>
+        <p>President Sign</p>
       </div>
       <div class="sign">
         <p>Secretary</p>
-       <p>Secretary Sign</p>
+        <p>Secretary Sign</p>
       </div>
     </div>
 
@@ -144,13 +144,28 @@ if (isset($_GET['form_number'])) {
     </div>
   </div>
 
+  <script>
+    window.onload = function () {
+      const element = document.getElementById('idCard');
+      const opt = {
+        margin: 0.5,
+        filename: 'ID_Card_<?= htmlspecialchars($data['form_number']) ?>.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().from(element).set(opt).save();
+    };
+  </script>
+
 </body>
 </html>
- <?php
+
+<?php
     } else {
-        echo "<h3>Invalid or Unapproved Form Number.</h3>";
+        echo "<h3 style='text-align:center;margin-top:50px;'>Invalid or Unapproved Form Number.</h3>";
     }
 } else {
-    echo "<h3>No Form Number Provided.</h3>";
+    echo "<h3 style='text-align:center;margin-top:50px;'>No Form Number Provided.</h3>";
 }
 ?>
