@@ -39,74 +39,84 @@
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <style>
-        .cawf-video-gallery h2 {
-            font-size: 36px;
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #222;
+    .cawf-video-gallery h2 {
+        font-size: 36px;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #222;
+    }
+
+    .cawf-video-gallery p {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 40px;
+    }
+
+    .cawf-video-slider {
+        margin: 0 auto;
+    }
+
+    .cawf-video-slide {
+        padding: 10px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .cawf-video-slide:hover {
+        transform: scale(1.02);
+    }
+
+    .cawf-video-frame {
+        position: relative;
+        padding-top: 56.25%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .cawf-video-frame iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .slick-dots li button:before {
+        font-size: 12px;
+        color: #999;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #222;
+    }
+
+
+    .cawf-video-slider .slick-prev:before,
+    .cawf-video-slider .slick-next:before {
+        color: #5c4b3e;
+    }
+
+    .slick-next {
+        right: -15px;
+    }
+
+    .slick-prev {
+        left: -15px;
+    }
+
+    @media (min-width:1200px) {
+        .hero-slider-layout .swiper-slide {
+            height: 80vh;
         }
 
-        .cawf-video-gallery p {
-            text-align: center;
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 40px;
+        .company-experience {
+            right: 90px;
         }
-
-        .cawf-video-slider {
-            margin: 0 auto;
-        }
-
-        .cawf-video-slide {
-            padding: 10px;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .cawf-video-slide:hover {
-            transform: scale(1.02);
-        }
-
-        .cawf-video-frame {
-            position: relative;
-            padding-top: 56.25%;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .cawf-video-frame iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .slick-dots li button:before {
-            font-size: 12px;
-            color: #999;
-        }
-
-        .slick-dots li.slick-active button:before {
-            color: #222;
-        }
-
-
-        .cawf-video-slider .slick-prev:before,
-        .cawf-video-slider .slick-next:before {
-            color: #5c4b3e;
-        }
-
-        .slick-next {
-            right: -15px;
-        }
-
-        .slick-prev {
-            left: -15px;
-        }
+    }
     </style>
 
 
@@ -141,41 +151,41 @@
 
                 while ($row = $result->fetch_assoc()):
                     ?>
-                    <!-- Hero Slide Start -->
-                    <div class="swiper-slide" style="height: 80vh;">
-                        <div class="hero-slide" style="height: 100%;">
-                            <!-- Slider Image Start -->
-                            <div class="hero-slider-image" style="height: 100%;">
-                                <img src="admin/<?php echo ($row['image_path']); ?>" alt="">
-                            </div>
-                            <!-- Slider Image End -->
+                <!-- Hero Slide Start -->
+                <div class="swiper-slide">
+                    <div class="hero-slide" style="height: 100%;">
+                        <!-- Slider Image Start -->
+                        <div class="hero-slider-image" style="height: 100%;">
+                            <img src="admin/<?php echo ($row['image_path']); ?>" alt="">
+                        </div>
+                        <!-- Slider Image End -->
 
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-7">
-                                        <!-- Hero Content Start -->
-                                        <div class="hero-content">
-                                            <!-- Section Title Start -->
-                                            <div class="section-title dark-section">
-                                                <h3 class="wow fadeInUp">Welcome to CAWF</h3>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <!-- Hero Content Start -->
+                                    <div class="hero-content">
+                                        <!-- Section Title Start -->
+                                        <div class="section-title dark-section">
+                                            <!-- <h3 class="wow fadeInUp">Welcome to CAWF</h3>
                                                 <h1 class="text-anime-style-2" data-cursor="-opaque">
                                                     <?php echo ($row['title']); ?>
-                                                </h1>
-                                                <p class="wow fadeInUp text-justify d-none d-xl-block "
-                                                    data-wow-delay="0.25s"> <?php echo ($row['details']); ?></p>
-                                                <br><br>
-                                            </div>
-                                            <!-- Section Title End -->
-
+                                                </h1> -->
+                                            <p class="wow fadeInUp text-justify d-none d-xl-block "
+                                                data-wow-delay="0.25s"> <?php echo ($row['details']); ?></p>
+                                            <br><br>
                                         </div>
-                                        <!-- Hero Content End -->
-                                    </div>
+                                        <!-- Section Title End -->
 
+                                    </div>
+                                    <!-- Hero Content End -->
                                 </div>
+
                             </div>
                         </div>
                     </div>
-                    <!-- Hero Slide End -->
+                </div>
+                <!-- Hero Slide End -->
 
                 <?php endwhile; ?>
             </div>
@@ -209,12 +219,8 @@
 
                         <!-- Company Experience Start -->
                         <div class="company-experience">
-                            <div class="company-experience-counter">
-                                <h2><span class="counter">10</span>+</h2>
-                            </div>
-                            <div class="company-experience-content">
-                                <p>years of experience</p>
-                            </div>
+                            <img style="height:90px;" src="images/logo/cawf black.png" alt="">
+
                         </div>
                         <!-- Company Experience End -->
                     </div>
@@ -573,7 +579,7 @@
                     <!-- Section Title End -->
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="cawf-video-slider">
                         <div class="cawf-video-slide">
@@ -598,7 +604,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -717,21 +723,21 @@
 
                         <div class="row gallery-items page-gallery-box">
                             <?php if ($result->num_rows > 0): ?>
-                                <?php while ($row = $result->fetch_assoc()): ?>
-                                    <div class="col-lg-4 col-6 manufacturing">
-                                        <!-- image gallery start -->
-                                        <div class="photo-gallery wow fadeInUp" data-cursor-text="View">
-                                            <a href="admin/<?php echo ($row['image_path']); ?>">
-                                                <figure class="image-anime">
-                                                    <img src="admin/<?php echo ($row['image_path']); ?>" alt="">
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <!-- image gallery end -->
-                                    </div>
-                                <?php endwhile; ?>
+                            <?php while ($row = $result->fetch_assoc()): ?>
+                            <div class="col-lg-4 col-6 manufacturing">
+                                <!-- image gallery start -->
+                                <div class="photo-gallery wow fadeInUp" data-cursor-text="View">
+                                    <a href="admin/<?php echo ($row['image_path']); ?>">
+                                        <figure class="image-anime">
+                                            <img src="admin/<?php echo ($row['image_path']); ?>" alt="">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- image gallery end -->
+                            </div>
+                            <?php endwhile; ?>
                             <?php else: ?>
-                                <p class="text-center">No Gallery Images found.</p>
+                            <p class="text-center">No Gallery Images found.</p>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -834,11 +840,11 @@
                     <!-- Our Story Header Image Start -->
                     <div class="our-story-header-img">
                         <figure class="reveal image-anime">
-                            <img src="images/our-story-header-img-1.jpg" alt="">
+                            <img src="images/home-image/5.jpg" alt="">
                         </figure>
 
                         <figure class="reveal image-anime">
-                            <img src="images/our-story-header-img-2.jpg" alt="">
+                            <img src="images/home-image/6.jpg" alt="">
                         </figure>
                     </div>
                     <!-- Our Story Header Image End -->
@@ -850,7 +856,7 @@
                     <!-- Our Story Image Start -->
                     <div class="our-story-img">
                         <figure class="reveal image-anime">
-                            <img src="images/our-story-img.jpg" alt="">
+                            <img src="images/home-image/7.jpg" alt="">
                         </figure>
                     </div>
                     <!-- Our Story Image End -->
@@ -859,19 +865,17 @@
                 <div class="col-lg-6">
                     <div class="our-story-content">
                         <div class="our-story-content-body">
-                            <p>LAMAA (Leading Academy for Modeling and Artistic Advancement) is a dedicated initiative
-                                by CAWF to support and uplift artists, performers, and creative talents. It serves as a
-                                hub where aspiring individuals in modeling, acting, music, and other art forms can
-                                learn, grow, and shine. From grooming to real-world exposure, LAMAA helps shape raw
-                                talent into professional excellence.</p>
-                            <p>
-                                The academy provides workshops, training programs, talent shows, and industry
-                                connections to boost career opportunities. Whether you are just starting or looking to
-                                upgrade your skills, LAMAA opens doors for recognition, creativity, and success. It’s
-                                not just an academy — it’s a launchpad for passionate creators to reach new heights.
+                            <p>LAMAA (La Modeling & Acting Academy) is where passion meets profession. As a leading
+                                institute for acting, modeling, and performing arts, we empower aspiring talents to
+                                unlock their true potential through industry-driven, hands-on training. Backed by over a
+                                decade of real-world experience, LAMAA offers a unique blend of creativity,
+                                confidence-building, and career-focused mentorship.</p>
+                            <p>LAMAA is a powerhouse of talent transformation, where dreams take shape and stars are
+                                born. With expert mentors from the film, fashion, and television industries, we provide
+                                immersive training in acting, modeling, and on-camera performance. Our focus is not just
+                                on teaching—but on launching careers.
                             </p>
-                            <p>
-                                If you are passionate about performing arts and want to join LAMAA, simply fill out the
+                            <p>If you are passionate about performing arts and want to join LAMAA, simply fill out the
                                 registration form available on our website. Submit your basic details along with a valid
                                 ID and a recent photo.
                             </p>
@@ -1107,18 +1111,19 @@
         ?>
         <div class="modal-dialog modal-dialog-centered">
             <?php if ($result->num_rows > 0): ?>
-                <?php while ($row = $result->fetch_assoc()): ?>
-                    <div class="modal-content text-center p-3">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                            style="position: absolute; right:-3px; top: -1px;"></button>
-                        <img src="admin/<?php echo ($row['image_path']); ?>"
-                            alt="Register" class="img-fluid rounded mb-3 popup-image">
-                        <a href="registeration.php" class="btn px-4 py-2" style="background-color: #b57745; color: #ffffff;">Register
-                            Now</a>
-                    </div>
-                <?php endwhile; ?>
+            <?php while ($row = $result->fetch_assoc()): ?>
+            <div class="modal-content text-center p-3">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    style="position: absolute; right:-3px; top: -1px;"></button>
+                <img src="admin/<?php echo ($row['image_path']); ?>" alt="Register"
+                    class="img-fluid rounded mb-3 popup-image">
+                <a href="registeration.php" class="btn px-4 py-2"
+                    style="background-color: #b57745; color: #ffffff;">Register
+                    Now</a>
+            </div>
+            <?php endwhile; ?>
             <?php else: ?>
-                <p class="text-center">No Pop-Up Images found.</p>
+            <p class="text-center">No Pop-Up Images found.</p>
             <?php endif; ?>
         </div>
     </div>
@@ -1159,110 +1164,107 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $('.cawf_slider__wrapper').slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                arrows: false,
-                dots: false,
-                infinite: true,
-                swipe: true,
-                responsive: [
-                    {
-                        breakpoint: 992, // tablet
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    },
-                    {
-                        breakpoint: 768, // mobile
-                        settings: {
-                            slidesToShow: 3
-                        }
+    $(document).ready(function() {
+        $('.cawf_slider__wrapper').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            infinite: true,
+            swipe: true,
+            responsive: [{
+                    breakpoint: 992, // tablet
+                    settings: {
+                        slidesToShow: 4
                     }
-                ]
-            });
-        });
-
-        $(document).ready(function () {
-            $('.cawf_cert_slider__wrapper').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                arrows: true,
-                dots: true,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                responsive: [
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2
-                        }
+                },
+                {
+                    breakpoint: 768, // mobile
+                    settings: {
+                        slidesToShow: 3
                     }
-                ]
-            });
-        });
-
-        $(document).ready(function () {
-            setTimeout(function () {
-                $('#cawfRegistrationPopup').modal('show');
-            }, 500);
-        });
-
-        $(document).ready(function () {
-            $('.cawf-video-slider').slick({
-                dots: true,
-                arrows: true,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const iframes = document.querySelectorAll('.cawf-video-slider iframe');
-
-            iframes.forEach(iframe => {
-                const originalUrl = iframe.getAttribute('src');
-                const videoId = getYouTubeVideoId(originalUrl);
-
-                if (videoId) {
-                    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-                    iframe.setAttribute('src', embedUrl);
                 }
-            });
+            ]
+        });
+    });
 
-            function getYouTubeVideoId(url) {
-                const regex = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-                const match = url.match(regex);
-                return match ? match[1] : null;
+    $(document).ready(function() {
+        $('.cawf_cert_slider__wrapper').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+    });
+
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#cawfRegistrationPopup').modal('show');
+        }, 500);
+    });
+
+    $(document).ready(function() {
+        $('.cawf-video-slider').slick({
+            dots: true,
+            arrows: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const iframes = document.querySelectorAll('.cawf-video-slider iframe');
+
+        iframes.forEach(iframe => {
+            const originalUrl = iframe.getAttribute('src');
+            const videoId = getYouTubeVideoId(originalUrl);
+
+            if (videoId) {
+                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                iframe.setAttribute('src', embedUrl);
             }
         });
+
+        function getYouTubeVideoId(url) {
+            const regex = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+            const match = url.match(regex);
+            return match ? match[1] : null;
+        }
+    });
     </script>
 
 </body>

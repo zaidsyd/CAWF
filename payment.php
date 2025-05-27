@@ -51,193 +51,291 @@ $name = $_SESSION['thank_you_name'];
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <style>
-        .contact-form .contact-form-wrapper .form-group .form-control {
-            border-radius: 10px;
-        }
+    .contact-form .contact-form-wrapper .form-group .form-control {
+        border-radius: 10px;
+    }
 
-        .sticky-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 50px;
-            border-top: 1px solid #ddd;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+    .sticky-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
 
-        .demo-btn {
-            flex: 1;
-            height: 100%;
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            background: linear-gradient(to right, #a64637, #e78d6d);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
+    .demo-btn {
+        flex: 1;
+        height: 100%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(to right, #a64637, #e78d6d);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+    }
 
-        select {
-            background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
-            background-repeat: no-repeat;
-            background-position: right 0.75rem center;
-            background-size: 2rem;
-            padding-right: 2rem;
-        }
+    select {
+        background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 2rem;
+        padding-right: 2rem;
+    }
 
-        .header-logo-area .logo-main {
-            height: 108px;
-            width: 84px;
-            object-fit: contain;
-        }
+    .header-logo-area .logo-main {
+        height: 108px;
+        width: 84px;
+        object-fit: contain;
+    }
 
-        .header-area.header-default .header-navigation-area .main-menu {
-            margin-left: 0px !important;
-        }
+    .header-area.header-default .header-navigation-area .main-menu {
+        margin-left: 0px !important;
+    }
 
-        .header-area.sticky-header.sticky.header-style5 .header-logo-area .logo-light {
-            height: 108px;
-            width: 84px;
-            object-fit: contain;
+    .header-area.sticky-header.sticky.header-style5 .header-logo-area .logo-light {
+        height: 108px;
+        width: 84px;
+        object-fit: contain;
 
+    }
+
+    .header-area.header-default.header-style5 .header-logo-area img {
+
+        height: 108px;
+        width: 84px;
+        object-fit: contain;
+        padding-top: 5px;
+        padding-bottom: 2px;
+
+
+    }
+
+    .footer-area.footer-style6 .footer-main .footer-logo-area a .logo-main {
+        height: 120px;
+        width: 118px;
+        object-fit: contain;
+
+    }
+
+    .blog-area.blog-default-area {
+        padding-bottom: 10px;
+    }
+
+    .category-area.category-style9-area {
+        margin-top: 5rem;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    /* .header-area.header-default .header-action-area .btn-menu{
+            color:white;
+        } */
+    @media only screen and (max-width: 1199px) {
+        .header-area.header-default .container-fluid {
+            padding: 0px 9px;
         }
 
         .header-area.header-default.header-style5 .header-logo-area img {
-
-            height: 108px;
-            width: 84px;
-            object-fit: contain;
-            padding-top: 5px;
-            padding-bottom: 2px;
-
-
+            padding-top: 10px;
+            padding-bottom: 14px;
         }
+    }
 
-        .footer-area.footer-style6 .footer-main .footer-logo-area a .logo-main {
-            height: 120px;
-            width: 118px;
-            object-fit: contain;
+    @media (max-width: 768px) {
 
-        }
-
-        .blog-area.blog-default-area {
-            padding-bottom: 10px;
-        }
-
-        .category-area.category-style9-area {
-            margin-top: 5rem;
-        }
-
-        .text-justify {
-            text-align: justify;
-        }
-
-        /* .header-area.header-default .header-action-area .btn-menu{
-            color:white;
-        } */
-        @media only screen and (max-width: 1199px) {
-            .header-area.header-default .container-fluid {
-                padding: 0px 9px;
-            }
-
-            .header-area.header-default.header-style5 .header-logo-area img {
-                padding-top: 10px;
-                padding-bottom: 14px;
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            .phone-link,
-            .demo-btn {
-                font-size: 0.9rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            .res-dd-none {
-                display: none !important;
-            }
-        }
-
-        .phone-link {
-            flex: 1;
-            text-decoration: none;
-            color: #a64637;
-            font-size: 1rem;
-            font-weight: bold;
+        .phone-link,
+        .demo-btn {
+            font-size: 0.9rem;
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 10px;
-            height: 100%;
-            background-color: white;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .res-dd-none {
+            display: none !important;
+        }
+    }
+
+    .phone-link {
+        flex: 1;
+        text-decoration: none;
+        color: #a64637;
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: 100%;
+        background-color: white;
+    }
+
+    .contact-area {
+        padding: 100px;
+    }
+
+    .mini-note {
+        background-color: #fff3cd;
+        color: #856404;
+        padding: 7px;
+        margin-top: 30px;
+        border-left: 4px solid #ffc107;
+        border-radius: 8px;
+        font-size: 15px;
+        animation: fadeInUp 0.6s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
         }
 
-        .contact-area {
-            padding: 100px;
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .thank-you-buttons .btn-success:hover {
+        background-color: #218838;
+        transform: translateY(-3px);
+    }
+
+    .thank-you-buttons .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }
+
+    .check-icon {
+        animation: bounceUpDown 1.5s infinite;
+        color: #28a745;
+        font-size: 60px;
+    }
+
+    @keyframes bounceUpDown {
+
+        0%,
+        100% {
+            transform: translateY(0px);
         }
 
-        .mini-note {
-            background-color: #fff3cd;
-            color: #856404;
-            padding: 7px;
-            margin-top: 30px;
-            border-left: 4px solid #ffc107;
-            border-radius: 8px;
-            font-size: 15px;
-            animation: fadeInUp 0.6s ease-in-out;
+        50% {
+            transform: translateY(-10px);
         }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .thank-you-buttons .btn-success:hover {
-            background-color: #218838;
-            transform: translateY(-3px);
-        }
-
-        .thank-you-buttons .btn-primary:hover {
-            background-color: #0056b3;
-            transform: translateY(-3px);
-        }
-
-        .check-icon {
-            animation: bounceUpDown 1.5s infinite;
-            color: #28a745;
-            font-size: 60px;
-        }
-
-        @keyframes bounceUpDown {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
+    }
     </style>
+    <style>
+    .cawf-video-gallery h2 {
+        font-size: 36px;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #222;
+    }
 
+    .cawf-video-gallery p {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 40px;
+    }
+
+    .cawf-video-slider {
+        margin: 0 auto;
+    }
+
+    .cawf-video-slide {
+        padding: 10px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .cawf-video-slide:hover {
+        transform: scale(1.02);
+    }
+
+    .cawf-video-frame {
+        position: relative;
+        padding-top: 56.25%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .cawf-video-frame iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .slick-dots li button:before {
+        font-size: 12px;
+        color: #999;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #222;
+    }
+
+
+    .cawf-video-slider .slick-prev:before,
+    .cawf-video-slider .slick-next:before {
+        color: #5c4b3e;
+    }
+
+    .slick-next {
+        right: -15px;
+    }
+
+    .slick-prev {
+        left: -15px;
+    }
+
+    @media (min-width:1200px) {
+        .hero-slider-layout .swiper-slide {
+            height: 80vh;
+        }
+    }
+
+    .mini-note {
+        background-color: #fff3cd;
+        color: #856404;
+        padding: 7px;
+        margin-top: 30px;
+        border-left: 4px solid #ffc107;
+        border-radius: 8px;
+        font-size: 15px;
+        animation: fadeInUp 0.6s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
 </head>
 
 <body>
@@ -259,27 +357,7 @@ $name = $_SESSION['thank_you_name'];
     </header>
     <!-- Header End -->
 
-    <!-- Page Header Start -->
-    <div class="page-header parallaxie">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">Payment</h1>
-                        <nav class="wow fadeInUp">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Payment</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <!-- Page Header Box End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
+
 
     <section class="contact-area py-5"
         style="background-image: url('https://img.freepik.com/free-vector/elegant-hexagonal-line-pattern_1017-20892.jpg?t=st=1748247884~exp=1748251484~hmac=26292c666d9e759f13c22e2e3ae2bdf1afea54426185c5fa2c69c17813703e40&w=1380'); background-size: cover; background-position: center;">
@@ -292,6 +370,12 @@ $name = $_SESSION['thank_you_name'];
                             <img src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/a2380b5c-4c3a-4af7-96ea-de96dddb143e%20Copy.jpeg/:/cr=t:5%25,l:3.3%25,w:94.96%25,h:94.96%25/rs=w:1280"
                                 alt="QR Code" class="img-fluid" style="max-width: 250px;">
                             <h4 class="text-dark mt-3">Scan the QR Code for Payment</h4>
+                             <div class="mini-note">
+                                    <strong>Note:</strong> Please scan the QR code below to make the payment and upload
+                                    the payment screenshot as proof.
+                                    Our team will verify your payment, and your registration will be completed
+                                    afterward.
+                                </div>
                         </div>
 
                         <!-- Payment Upload Form -->
@@ -315,6 +399,8 @@ $name = $_SESSION['thank_you_name'];
                                         accept="image/*" required>
                                 </div>
 
+                               
+
                                 <!-- Submit Button -->
                                 <div class="d-grid mt-5 mb-3">
                                     <button type="submit" class="btn btn-success btn-lg">
@@ -335,7 +421,7 @@ $name = $_SESSION['thank_you_name'];
 
 
     <div class="cawf_slider__container">
-        <div class="cawf_ser__wrapper">
+        <div class="cawf_slider__wrapper">
             <div><img
                     src="https://img1.wsimg.com/isteam/ip/7df9562b-d3ea-471c-940d-fb82bcadca2d/WhatsApp%20Image%202025-02-16%20at%2018.40.59%20(1).jpeg/:/"
                     alt="Banner 1"></div>
@@ -370,6 +456,7 @@ $name = $_SESSION['thank_you_name'];
         </div>
     </div>
 
+
     <!-- Footer Start -->
     <footer class="main-footer" id="footer">
         <?php
@@ -378,8 +465,6 @@ $name = $_SESSION['thank_you_name'];
     </footer>
     <!-- Footer End -->
 
-    <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Validator js file -->
@@ -411,88 +496,91 @@ $name = $_SESSION['thank_you_name'];
     <script src="js/wow.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script>
-        $(document).ready(function () {
-            $('.cawf_slider__wrapper').slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                arrows: false,
-                dots: false,
-                infinite: true,
-                swipe: true,
-                responsive: [
-                    {
-                        breakpoint: 992, // tablet
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    },
-                    {
-                        breakpoint: 768, // mobile
-                        settings: {
-                            slidesToShow: 3
-                        }
+    $(document).ready(function() {
+        $('.cawf_slider__wrapper').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            infinite: true,
+            swipe: true,
+            responsive: [{
+                    breakpoint: 992, // tablet
+                    settings: {
+                        slidesToShow: 4
                     }
-                ]
-            });
-        });
-
-        $(document).ready(function () {
-            $('.cawf_cert_slider__wrapper').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                arrows: true,
-                dots: true,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                responsive: [
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2
-                        }
+                },
+                {
+                    breakpoint: 768, // mobile
+                    settings: {
+                        slidesToShow: 3
                     }
-                ]
-            });
-        });
-
-        $(document).ready(function () {
-            setTimeout(function () {
-                $('#cawfRegistrationPopup').modal('show');
-            }, 500);
-        });
-    </script>
-    <script>
-        document.getElementById('screenshot').addEventListener('change', function () {
-            const file = this.files[0];
-            const errorMsg = document.getElementById('errorMsg');
-            errorMsg.textContent = ''; // Reset error
-
-            if (file) {
-                // Check file type (should be image)
-                if (!file.type.startsWith('image/')) {
-                    errorMsg.textContent = 'Please upload a valid image file.';
-                    this.value = ''; // Clear input
-                    return;
                 }
-                // Check file size (max 500KB)
-                if (file.size > 500 * 1024) {
-                    errorMsg.textContent = 'File size must be 500KB or less.';
-                    this.value = ''; // Clear input
-                    return;
-                }
-            }
+            ]
         });
+    });
+
+    $(document).ready(function() {
+        $('.cawf_cert_slider__wrapper').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            responsive: [{
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }
+            ]
+        });
+    });
+
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#cawfRegistrationPopup').modal('show');
+        }, 500);
+    });
+
+    $(document).ready(function() {
+        $('.cawf-video-slider').slick({
+            dots: true,
+            arrows: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
     </script>
 
 </body>

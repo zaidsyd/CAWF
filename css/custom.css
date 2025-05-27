@@ -911,7 +911,7 @@ header.main-header .header-sticky.active {
 	padding: 210px 0;
 }
 
-.hero.hero-slider-layout .hero-slide::before {
+/* .hero.hero-slider-layout .hero-slide::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -923,7 +923,7 @@ header.main-header .header-sticky.active {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-}
+} */
 
 .hero.hero-slider-layout .hero-slide .hero-slider-image {
 	position: absolute;

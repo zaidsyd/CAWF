@@ -24,7 +24,7 @@ $id = $_SESSION['id'];
     <meta name="keywords" content="">
     <meta name="author" content="Cine Artist & Workers Welfare Federation (CAWF)">
     <!-- Page Title -->
-    <title>CAWF | Donate</title>
+    <title>CAWF | Thankyou for Registration</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo/cawf black.png">
     <!-- Google Fonts Css-->
@@ -261,27 +261,7 @@ $id = $_SESSION['id'];
     </header>
     <!-- Header End -->
 
-    <!-- Page Header Start -->
-    <div class="page-header parallaxie">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">Thank You</h1>
-                        <nav class="wow fadeInUp">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Thank You</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <!-- Page Header Box End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
+
 
     <section class="contact-area"
         style="background-image:url('https://img.freepik.com/free-vector/elegant-hexagonal-line-pattern_1017-20892.jpg?t=st=1748247884~exp=1748251484~hmac=26292c666d9e759f13c22e2e3ae2bdf1afea54426185c5fa2c69c17813703e40&w=1380')">
